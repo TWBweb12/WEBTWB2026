@@ -312,87 +312,87 @@
     },
     "location": {
         "title": "Unser Standort",
-        "subtitle": "Im Herzen des Berges Puntang gelegen, nur 2 Stunden von Jakarta entfernt. Erleben Sie die Ruhe der Natur.",
-        "getDirections": "Wegbeschreibung",
+        "subtitle": "Ein exklusives Refugium inmitten der Natur. Verborgen an den fruchtbaren Hängen des Gunung Puntang bietet das Taman Wisata Bougenville unvergleichliche Ruhe – bei bester Erreichbarkeit von den Hauptverkehrsknotenpunkten der Region.",
+        "getDirections": "Wegbeschreibung erhalten",
         "yourJourney": "Ihre Reise",
-        "travelTimesTitle": "Reisezeiten & Wegbeschreibung",
-        "mapSectionLabel": "Karte",
+        "travelTimesTitle": "Routen & Reisezeiten",
+        "mapSectionLabel": "Interaktive Karte",
         "ourLocation": "Unser Standort",
-        "nearbyLabel": "Attraktionen in der Nähe",
-        "nearbyTitle": "Attraktionen in der Nähe",
+        "nearbyLabel": "Die Umgebung entdecken",
+        "nearbyTitle": "Nahegelegene Attraktionen",
         "info": {
             "title": "Wichtige Informationen",
-            "address": "Adresse",
+            "address": "Vollständige Adresse",
             "gps": "GPS-Koordinaten",
-            "road": "Straßenbedingungen",
-            "roadDesc": "Paved road, suitable for most vehicles. Last 3km is a scenic mountain road.",
-            "signal": "Handysignal",
-            "signalDesc": "Strong 4G signal data. Wi-Fi available in resort.",
-            "parking": "Parken",
-            "parkingDesc": "Spacious parking area available.",
-            "transport": "Öffentliche Verkehrsmittel",
-            "transportDesc": "From Bandung, take bus to Banjaran, then Angkot to Cimaung."
+            "road": "Straßenzugang",
+            "roadDesc": "Bestens asphaltierte und sichere Straßen für Fahrzeuge jeder Art (Limousinen, SUVs, Kleinbusse). Genießen Sie auf den letzten 3 Kilometern zum Resort ein herrliches Bergpanorama.",
+            "signal": "Mobilfunknetz",
+            "signalDesc": "Hervorragendes 4G-Netz (Telkomsel und XL). Auf dem gesamten Resortgelände steht Ihnen kostenfreies Highspeed-WLAN zur Verfügung.",
+            "parking": "Parkmöglichkeiten",
+            "parkingDesc": "Großzügiger und geordneter Privatparkplatz, welcher rund um die Uhr von unserem Sicherheitsteam bewacht wird.",
+            "transport": "Verkehrsanbindung",
+            "transportDesc": "Mühelose Anreise vom Stadtzentrum aus. Für höchsten Komfort empfehlen wir die Anfahrt mit dem eigenen Auto oder Fahrdiensten. Regionale Transportmöglichkeiten sind ebenfalls vorhanden."
         },
         "routes": {
             "airport": {
-                "from": "Bandung Airport (Husein Sastranegara)",
-                "via": "Jl. Soekarno-Hatta → Soreang",
-                "time": "45-60 Mins",
+                "from": "Flughafen Husein Sastranegara (BDO)",
+                "via": "Über Soroja-Autobahn",
+                "time": "45-60 Min",
                 "distance": "35 km",
                 "steps": [
-                    "Exit airport south onto Jl. Husein Sastranegara towards city.",
-                    "Merge onto Jl. Soekarno-Hatta south, continue to Jl. Soreang.",
-                    "Pass Banjaran town, follow Jl. Gunung Puntang signs to Campaka Mulya, Cimaung."
+                    "Verlassen Sie den Flughafen in Richtung der Mautstellen Pasteur oder Pasir Koja.",
+                    "Nutzen Sie die Soroja-Schnellstraße (Soreang-Pasir Koja), um den Stadtverkehr zu umgehen.",
+                    "Nehmen Sie die Ausfahrt Soreang, biegen Sie links Richtung Banjaran ab und folgen Sie der malerischen Route zum Gunung Puntang."
                 ],
-                "note": "Estimated time: 45-60 mins | Distance: 35 km. Paved roads with curves—watch for traffic."
+                "note": "Unsere bevorzugte Route: Eine entspannte Autobahnfahrt, an deren Ende Sie eine frische Bergbrise empfängt."
             },
             "whoosh": {
-                "from": "Whoosh Padalarang Station",
-                "via": "Tol Padaleunyi → Tol Soroja",
-                "time": "40-50 Mins",
+                "from": "Whoosh-Schnellzug (Padalarang)",
+                "via": "Über Soroja-Autobahn",
+                "time": "40-50 Min",
                 "distance": "32 km",
                 "steps": [
-                    "From station, enter Tol Padaleunyi towards Cileunyi/Bandung.",
-                    "Take exit to Tol Soroja (Soreang-Pasir Koja).",
-                    "Exit Soreang, head towards Banjaran - Cimaung."
+                    "Fahren Sie ab dem Bahnhof nahtlos auf die Padaleunyi-Autobahn Richtung Bandung auf.",
+                    "Wechseln Sie auf die Soroja-Mautstraße (Soreang-Pasir Koja).",
+                    "Verlassen Sie die Autobahn in Soreang und folgen Sie der Hauptstraße bis Cimaung."
                 ],
-                "note": "Fastest route via toll road. Ideal for visitors from Jakarta using High Speed Train."
+                "note": "Die schnellste und eleganteste Option für Gäste, die mit dem Hochgeschwindigkeitszug aus Jakarta anreisen."
             },
             "station": {
-                "from": "Bandung Station (Train)",
-                "via": "Jl. Moh. Toha → Banjaran",
-                "time": "50-70 Mins",
+                "from": "Hauptbahnhof Bandung",
+                "via": "Über Moh. Toha",
+                "time": "50-70 Min",
                 "distance": "30 km",
                 "steps": [
-                    "From station, head south to Jl. Oto Iskandar Dinata.",
-                    "Continue to Jl. Moh. Toha, then straight to Banjaran.",
-                    "Follow signs to Gunung Puntang/Bougenville at Cimaung intersection."
+                    "Fahren Sie vom Bahnhof aus in südlicher Richtung zur Auffahrt Moh. Toha.",
+                    "Wählen Sie zwischen den Stadtstraßen oder der direkten Mautstraße nach Soreang.",
+                    "Sobald Sie die Kreuzung in Cimaung erreichen, erwartet Sie die klare Höhenluft."
                 ],
-                "note": "Route passes through city traffic. Best to travel early morning or late afternoon."
+                "note": "Diese Strecke führt quer durchs Stadtzentrum. Für eine ruhigere Fahrt empfehlen wir, den Berufsverkehr zu meiden."
             },
             "jakarta": {
-                "from": "Jakarta (via Tol Soroja)",
-                "via": "Tol Cipularang → Tol Soroja",
-                "time": "2-2.5 Hours",
+                "from": "Anreise aus Jakarta",
+                "via": "Über Cipularang & Soroja-Autobahn",
+                "time": "2-2,5 Stunden",
                 "distance": "160 km",
                 "steps": [
-                    "Take Tol Cipularang towards Bandung.",
-                    "Merge onto Tol Soroja (Soreang-Pasir Koja) at Pasir Koja interchange.",
-                    "Exit Soreang (end of toll), turn right to Banjaran, straight to Cimaung."
+                    "Genießen Sie eine direkte Fahrt über die Cipularang-Autobahn in Richtung Bandung.",
+                    "Wechseln Sie am Kreuz Pasir Koja entspannt auf die Soroja-Mautstraße und umgehen Sie den Stadtstau.",
+                    "Nach der Ausfahrt Soreang ist unser nobles Bergrefugium nur noch 30 malerische Fahrminuten entfernt."
                 ],
-                "note": "Direct toll access makes the journey smooth. Exit Soreang is only 30-40 mins from resort."
+                "note": "Eine durchgehende Autobahnstrecke bietet Ihnen höchste Zeiteffizienz auf dem Weg von der Hauptstadt in die Natur."
             },
             "city": {
-                "from": "Bandung City Center",
-                "via": "Jl. Moh. Toha → Dayeuhkolot",
-                "time": "50-60 Mins",
+                "from": "Bandung Stadtzentrum",
+                "via": "Hauptverkehrszugang Süd",
+                "time": "50-60 Min",
                 "distance": "28 km",
                 "steps": [
-                    "Head south on Jl. Moh. Toha via Dayeuhkolot area.",
-                    "Continue straight until Banjaran market intersection.",
-                    "Continue straight towards Pangalengan, turn left to Gunung Puntang."
+                    "Fahren Sie südwärts via Moh. Toha oder dem Viertel Dayeuhkolot.",
+                    "Passieren Sie in gerader Linie den geschäftigen Marktplatz von Banjaran.",
+                    "Nehmen Sie Kurs auf Pangalengan und biegen Sie links ab, um den Berg Puntang hinaufzufahren."
                 ],
-                "note": "Standard route. Can be busy during rush hours around Dayeuhkolot."
+                "note": "Eine klassische Wegstrecke für all jene, die vor der vollkommenen Stille noch die Lebendigkeit der Stadt spüren möchten."
             }
         }
     },

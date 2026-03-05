@@ -253,87 +253,87 @@
     },
     "location": {
         "title": "Lokasi Kami",
-        "subtitle": "Tempat perlindungan pegunungan Anda menanti di tengah mekarnya bougenville dan pemandangan Gunung Puntang. Mudah diakses dari Bandara Bandung dan stasiun utama.",
-        "getDirections": "Petunjuk Arah",
-        "yourJourney": "Perjalanan Anda",
-        "travelTimesTitle": "Waktu Perjalanan & Petunjuk Arah",
-        "mapSectionLabel": "Peta Lokasi",
-        "ourLocation": "Lokasi Kami",
-        "nearbyLabel": "Wisata Sekitar",
-        "nearbyTitle": "Tempat Wisata Terdekat",
+        "subtitle": "Sebuah pelarian eksklusif di pelukan alam. Tersembunyi di lereng Gunung Puntang yang asri, Taman Wisata Bougenville menawarkan ketenangan tak terlupakan dengan kemudahan akses dari berbagai titik utama kota Bandung.",
+        "getDirections": "Lihat Peta Arahan",
+        "yourJourney": "Panduan Perjalanan",
+        "travelTimesTitle": "Rute & Estimasi Waktu",
+        "mapSectionLabel": "Peta Interaktif",
+        "ourLocation": "Titik Lokasi",
+        "nearbyLabel": "Eksplorasi Sekitar",
+        "nearbyTitle": "Destinasi Terdekat",
         "info": {
-            "title": "Informasi Penting",
-            "address": "Alamat",
-            "gps": "Koordinat GPS",
-            "road": "Kondisi Jalan",
-            "roadDesc": "Jalan beraspal, cocok untuk semua kendaraan (Sedan, SUV, Bus Medium/Elf). 3km terakhir adalah jalan pegunungan yang indah.",
-            "signal": "Sinyal Seluler",
-            "signalDesc": "Sinyal 4G kuat untuk Telkomsel dan XL. Wi-Fi gratis tersedia di area resort.",
-            "parking": "Parkir",
-            "parkingDesc": "Area parkir luas tersedia untuk mobil dan bus medium.",
-            "transport": "Transportasi Umum",
-            "transportDesc": "Dari Bandung (Terminal Leuwipanjang), naik bus ke Banjaran, lalu Angkot ke Cimaung/Puntang."
+            "title": "Informasi Perjalanan",
+            "address": "Alamat Lengkap",
+            "gps": "Titik Koordinat",
+            "road": "Akses Jalan Raya",
+            "roadDesc": "Kondisi jalan beraspal mulus dan aman diakses oleh berbagai jenis kendaraan (Sedan, SUV, hingga Medium Bus). Nikmati suguhan panorama alam di sepanjang 3 kilometer terakhir menuju resort.",
+            "signal": "Konektivitas Seluler",
+            "signalDesc": "Sinyal 4G yang prima (khususnya Telkomsel dan XL). Tersedia juga akses Wi-Fi berkecepatan tinggi secara gratis di area resort untuk kenyamanan Anda.",
+            "parking": "Fasilitas Parkir",
+            "parkingDesc": "Area parkir pribadi yang luas dan tertata, dilindungi oleh layanan keamanan 24 jam untuk kendaraan Anda.",
+            "transport": "Akses Transportasi",
+            "transportDesc": "Perjalanan mudah dari pusat kota. Kami merekomendasikan layanan taksi atau transportasi pribadi untuk kenyamanan maksimal Anda. Tersedia juga opsi transportasi lokal dari terminal terdekat."
         },
         "routes": {
             "airport": {
-                "from": "Bandara Bandung (Husein Sastranegara)",
-                "via": "Jl. Soekarno-Hatta → Soreang",
+                "from": "Bandara Husein Sastranegara (BDO)",
+                "via": "Via Tol Soroja",
                 "time": "45-60 Menit",
                 "distance": "35 km",
                 "steps": [
-                    "Keluar bandara ke arah selatan menuju Jl. Husein Sastranegara ke arah kota.",
-                    "Masuk ke Jl. Soekarno-Hatta ke selatan, lanjutkan ke Jl. Soreang.",
-                    "Lewati kota Banjaran, ikuti petunjuk arah Gunung Puntang ke Campaka Mulya, Cimaung."
+                    "Keluar dari area bandara menuju Gerbang Tol Pasteur atau Pasir Koja.",
+                    "Masuk ke jalur Tol Soroja (Soreang-Pasir Koja) untuk menghindari kemacetan kota.",
+                    "Keluar di gerbang akhir Soreang, belok kiri menuju Banjaran, lalu ikuti petunjuk alam menuju Gunung Puntang."
                 ],
-                "note": "Perkiraan waktu: 45-60 menit | Jarak: 35 km. Jalan beraspal dengan tikungan—hati-hati dengan lalu lintas."
+                "note": "Rute paling direkomendasikan. Perjalanan lancar melalui jalan tol dengan pemandangan pegunungan yang menyambut di akhir perjalanan."
             },
             "whoosh": {
-                "from": "Stasiun Whoosh Padalarang",
-                "via": "Tol Padaleunyi → Tol Soroja",
+                "from": "Stasiun Kereta Cepat Whoosh Padalarang",
+                "via": "Via Tol Soroja",
                 "time": "40-50 Menit",
                 "distance": "32 km",
                 "steps": [
-                    "Dari stasiun, masuk Tol Padaleunyi menuju Cileunyi/Bandung.",
-                    "Ambil jalan keluar ke Tol Soroja (Soreang-Pasir Koja).",
-                    "Keluar Soreang, menuju Banjaran - Cimaung."
+                    "Dari stasiun Whoosh, akses langsung Gerbang Tol Padaleunyi arah Bandung.",
+                    "Transisi ke Tol Soroja (Soreang-Pasir Koja).",
+                    "Keluar di Soreang dan lanjutkan perjalanan melintasi jalan raya menuju Cimaung."
                 ],
-                "note": "Rute tercepat via jalan tol. Ideal untuk pengunjung dari Jakarta menggunakan Kereta Cepat."
+                "note": "Pilihan rute tercepat dan ternyaman bagi Anda yang bepergian dari Jakarta menggunakan Kereta Cepat."
             },
             "station": {
-                "from": "Stasiun Bandung (Kereta)",
-                "via": "Jl. Moh. Toha → Banjaran",
+                "from": "Stasiun Kereta Api Bandung",
+                "via": "Via Jl. Moh. Toha",
                 "time": "50-70 Menit",
                 "distance": "30 km",
                 "steps": [
-                    "Dari stasiun, menuju selatan ke Jl. Oto Iskandar Dinata.",
-                    "Lanjutkan ke Jl. Moh. Toha, lalu lurus ke Banjaran.",
-                    "Ikuti petunjuk arah ke Gunung Puntang/Bougenville di persimpangan Cimaung."
+                    "Dari stasiun utama, arahkan kendaraan ke selatan menuju akses Tol Moh. Toha.",
+                    "Anda dapat memilih jalur alternatif kota atau jalan tol menuju Soreang.",
+                    "Setibanya di persimpangan Cimaung, udara sejuk pegunungan akan mulai menyambut Anda."
                 ],
-                "note": "Rute melewati lalu lintas kota. Sebaiknya berangkat pagi atau sore hari."
+                "note": "Rute melintasi ritme kehidupan kota. Kami menyarankan menempuh perjalanan ini di luar jam sibuk untuk pengalaman berkendara yang lebih santai."
             },
             "jakarta": {
-                "from": "Jakarta (via Tol Soroja)",
-                "via": "Tol Cipularang → Tol Soroja",
+                "from": "Perjalanan dari Jakarta",
+                "via": "Via Tol Cipularang & Soroja",
                 "time": "2-2.5 Jam",
                 "distance": "160 km",
                 "steps": [
-                    "Ambil Tol Cipularang menuju Bandung.",
-                    "Masuk ke Tol Soroja (Soreang-Pasir Koja) di simpang susun Pasir Koja.",
-                    "Keluar Soreang (akhir tol), belok kanan ke Banjaran, lurus ke Cimaung."
+                    "Nikmati perjalanan via jalan bebas hambatan Tol Cipularang ke arah Bandung.",
+                    "Beralih mulus ke Tol Soroja di simpang susun Pasir Koja tanpa membelah kepadatan kota.",
+                    "Setelah keluar pintu Tol Soreang, resort eksklusif kami hanya berjarak 30 menit berkendara."
                 ],
-                "note": "Akses tol langsung membuat perjalanan lancar. Keluar Soreang hanya 30-40 menit dari resort."
+                "note": "Akses bebas hambatan ini memberikan efisiensi waktu perjalanan Anda dari ibu kota menuju kesejukan alam."
             },
             "city": {
                 "from": "Pusat Kota Bandung",
-                "via": "Jl. Moh. Toha → Dayeuhkolot",
+                "via": "Via Jalur Utama Selatan",
                 "time": "50-60 Menit",
                 "distance": "28 km",
                 "steps": [
-                    "Menuju selatan di Jl. Moh. Toha via area Dayeuhkolot.",
-                    "Lanjutkan lurus sampai persimpangan pasar Banjaran.",
-                    "Lanjutkan lurus ke arah Pangalengan, belok kiri ke Gunung Puntang."
+                    "Meluncur ke arah selatan melalui Jl. Moh Toha atau area Dayeuhkolot.",
+                    "Lanjutkan perjalanan melintasi keseharian alun-alun Banjaran.",
+                    "Arahkan kemudi ke rute Pangalengan, lalu belok kiri menuju pesona Gunung Puntang."
                 ],
-                "note": "Rute standar. Bisa padat saat jam sibuk di sekitar Dayeuhkolot."
+                "note": "Rute klasik bagi Anda yang ingin menikmati dinamika kota sebelum menepi ke keheningan pegunungan."
             }
         }
     },
