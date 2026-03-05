@@ -19,6 +19,7 @@ const GALLERY_IMAGES = {
         { url: '/images/villas/olinda/hero.jpg', title: { en: 'Olinda Villa', id: 'Olinda Villa', zh: '奥林达别墅', de: 'Olinda Villa' } },
     ],
     nature: [
+        { url: '/images/facilities/FH-Garden.webp', title: { en: 'Forest House Garden', id: 'Taman Forest House', zh: '森林小屋花园', de: 'Forest House Garten' } },
         { url: '/images/facilities/Waterfall Track.jpg', title: { en: 'Hidden Waterfall', id: 'Air Terjun Tersembunyi', zh: '隐藏瀑布', de: 'Versteckter Wasserfall' } },
         { url: '/images/facilities/Nature Discovery.jpg', title: { en: 'Nature Trail', id: 'Jalur Alam', zh: '自然小径', de: 'Naturpfad' } },
         { url: '/images/facilities/Canopy Skywalk.jpg', title: { en: 'Canopy Skywalk', id: 'Jembatan Gantung', zh: '树冠步道', de: 'Baumkronenpfad' } },
@@ -92,7 +93,7 @@ export function GalleryPage() {
             <PageHero
                 title={t('gallery.title')}
                 subtitle={t('gallery.subtitle')}
-                backgroundImage="/images/mlh-hero.webp"
+                backgroundImage="/images/facilities/FH-Garden.webp"
                 overlay="dark"
             />
 

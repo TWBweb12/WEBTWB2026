@@ -27,7 +27,7 @@
         },
         "seo": {
             "title": "Taman Wisata Bougenville | Resort Gunung Mewah di Bandung",
-            "description": "Nikmati kemewahan di alam Taman Wisata Bougenville. Vila pribadi eksklusif, kuliner organik farm-to-table, dan pengalaman alam murni di Gunung Puntang, Bandung.",
+            "description": "Nikmati kemewahan di alam Taman Wisata Bougenville. Vila pribadi eksklusif, kuliner Nusantara yang autentik, dan pengalaman alam murni di Gunung Puntang, Bandung.",
             "keywords": "vila bandung, resort gunung puntang, glamping mewah bandung, liburan keluarga bandung, vila bulan madu jawa barat"
         },
         "location": "Gunung Puntang, Bandung",
@@ -92,7 +92,7 @@
         "valueHeritageTitle": "Warisan",
         "valueHeritageDesc": "Menjaga semangat Kerajaan Nagara Puntang melalui arsitektur yang menghormati alam dan keramahtamahan Sunda yang tulus.",
         "valueSustainabilityTitle": "Keberlanjutan",
-        "valueSustainabilityDesc": "Konsep farm-to-table dengan bahan organik dari kebun sendiri. Kami berkomitmen pada praktik ramah lingkungan.",
+        "valueSustainabilityDesc": "Kami berkomitmen pada praktik ramah lingkungan yang bertanggung jawab — menjaga kelestarian alam Gunung Puntang sebagai warisan untuk generasi mendatang.",
         "valueAuthenticityTitle": "Autentisitas",
         "valueAuthenticityDesc": "Pengalaman yang tulus, tanpa pretensi. Dari sambutan hangat staf hingga detail interior kayu jati solid.",
         "valueCommunityTitle": "Komunitas",
@@ -183,28 +183,29 @@
         "bookOffer": "Pesan Penawaran Ini"
     },
     "resto": {
-        "title": "Resto & Function",
-        "subtitle": "Nikmati masakan Sunda otentik",
-        "menuTitle": "Menu Favorit",
+        "title": "Dining & Function",
+        "subtitle": "Cita rasa Nusantara di kaki Gunung Puntang",
+        "menuTitle": "Menu Andalan",
+        "menuDesc": "Tiga sajian paling dicari di Bale Puntang — masing-masing membawa cerita, kenangan, dan cita rasa yang tak mudah terlupakan.",
         "functionTitle": "Ruang Acara",
-        "heroLabel": "Pengalaman Farm to Table",
-        "heroTitle": "Resto & Function",
-        "heroSubtitle": "Bale Puntang — Di mana Pegunungan Bertemu Keunggulan Kuliner",
+        "heroLabel": "Kuliner Nusantara",
+        "heroTitle": "Bale Puntang Dining",
+        "heroSubtitle": "Sebuah pengalaman bersantap yang tak lekang oleh waktu — kaya cita rasa Nusantara, dibalut keheningan alam pegunungan Puntang",
         "story1Label": "Suasana",
-        "story1Title": "Di tepian Sungai Cigeureuh yang jernih",
-        "story1Desc": "Bale Puntang menghadirkan kehangatan interior kayu klasik dengan kesejukan alam Gunung Puntang. Pilih suasana hangat di dalam ruangan beratap vintage atau nikmati udara segar di area outdoor sambil mendengarkan gemericik aliran sungai.",
+        "story1Title": "Bersantap di Tepian Sungai Cigeureuh",
+        "story1Desc": "Bale Puntang menempatkan meja makan Anda tepat di antara gemericik Sungai Cigeureuh dan rindangnya pepohonan pinus Gunung Puntang. Pilih kehangatan interior kayu yang tenang, atau serahkan diri pada semilir angin gunung di teras terbuka kami. Di sini, alam bukan sekadar latar — ia adalah bagian dari sajian itu sendiri.",
         "story2Label": "Filosofi Rasa",
-        "story2Title": "Cita Rasa Autentik dengan Sentuhan Modern",
-        "story2Desc": "Setiap hidangan—mulai dari menu andalan hingga sambal khas yang pedas menggigit—dibuat dari bahan lokal pilihan. Kami menonjolkan cita rasa autentik dengan presentasi modern, menceritakan tradisi kuliner Sunda yang kaya di setiap piringnya.",
-        "story3Label": "Venue & Event",
-        "story3Title": "Lebih dari sekadar resto",
-        "story3Desc": "Bale Puntang siap menjadi venue gathering, meeting, arisan, atau pesta kecil dengan sentuhan eksklusif. Duduk santai di bangku kayu antik, rasakan ketenangan alam sambil berbincang dan menciptakan momen tak terlupakan.",
+        "story2Title": "Kejujuran dalam Setiap Sajian",
+        "story2Desc": "Kami tidak mengejar tren — kami menghormati warisan. Dari Soto Bandung yang bening dan menyegarkan jiwa, hingga Gurame Terbang yang renyah dan menggoda selera, setiap sajian di Bale Puntang adalah dedikasi terhadap kekayaan kuliner Nusantara — dimasak dengan ketulusan, disajikan dengan kebanggaan.",
+        "story3Label": "Venue & Gathering",
+        "story3Title": "Lebih dari Sekadar Restoran",
+        "story3Desc": "Bale Puntang adalah ruang pertemuan yang hangat dan bermakna. Dari perayaan keluarga, sesi rapat eksklusif, hingga momen intim yang tak terlupakan — semua menemukan tempatnya di sini. Biarkan langit pegunungan dan gemercik sungai menjadi saksi dari momen terbaik Anda.",
         "values": {
-            "organic": "Organik",
-            "artisan": "Artisan",
-            "local": "Lokal",
-            "title": "Segar dari Sumbernya",
-            "desc": "Kami percaya bahwa rasa terbaik berasal dari alam itu sendiri. Sayuran kami dipanen langsung dari kebun sendiri, dan rempah-rempah kami berasal dari petani lokal Puntang."
+            "organic": "Nusantara",
+            "artisan": "Artisanal",
+            "local": "Hangat & Tulus",
+            "title": "Warisan Rasa yang Tak Ternilai",
+            "desc": "Di Bale Puntang, kepuasan bersantap bukan tentang penampilan belaka. Ini tentang kejujuran cita rasa — masakan Nusantara yang diwariskan lintas generasi, dihadirkan dengan kerendahan hati dan kebanggaan yang mendalam, di tengah keindahan Gunung Puntang yang tak tertandingi."
         },
         "reservation": {
             "hoursTitle": "Jam Operasional",
@@ -213,11 +214,11 @@
             "locationTitle": "Lokasi"
         },
         "cta": {
-            "title": "Reservasi Meja Anda",
-            "subtitle": "Reservasi disarankan untuk makan malam saat matahari terbenam dan acara khusus",
-            "button": "Pesan Sekarang",
+            "title": "Izinkan Kami Menjamu Anda",
+            "subtitle": "Reservasi meja Anda dan nikmati pengalaman bersantap Nusantara yang sesungguhnya, di ketinggian Gunung Puntang",
+            "button": "Reservasi Meja",
             "viewMenu": "Lihat Menu Lengkap",
-            "discover": "Temukan keajaiban bersantap di pegunungan."
+            "discover": "Cita rasa Nusantara terbaik, tersaji di ketinggian Gunung Puntang."
         }
     },
     "facility": {
@@ -382,13 +383,35 @@
     },
     "seo": {
         "homeTitle": "Taman Wisata Bougenville | Pelarian Eksklusif di Pegunungan",
-        "homeDescription": "Rasakan ketenangan alam di Taman Wisata Bougenville. Villa mewah, kuliner Sunda autentik, dan petualangan outdoor di Gunung Puntang.",
+        "homeDescription": "Rasakan ketenangan alam di Taman Wisata Bougenville. Villa mewah, kuliner Nusantara autentik, dan petualangan outdoor di Gunung Puntang.",
         "villasTitle": "Villa Mewah - Taman Wisata Bougenville",
         "villasDescription": "Pilih dari koleksi villa eksklusif kami dengan kolam renang pribadi, pemandangan gunung, dan fasilitas premium.",
-        "restoTitle": "Resto & Ruang Fungsi - Taman Wisata Bougenville",
-        "restoDescription": "Nikmati kuliner Sunda autentik dan selenggarakan acara spesial Anda di ruang fungsi kami.",
+        "restoTitle": "Dining & Function - Taman Wisata Bougenville",
+        "restoDescription": "Nikmati cita rasa Nusantara yang autentik dan selenggarakan acara spesial Anda di venue premium kami.",
         "facilityTitle": "Fasilitas & Pengalaman - Taman Wisata Bougenville",
-        "facilityDescription": "Jelajahi berbagai aktivitas outdoor dan indoor untuk pengalaman liburan yang sempurna."
+        "facilityDescription": "Jelajahi berbagai aktivitas outdoor dan indoor untuk pengalaman liburan yang sempurna.",
+        "villasPage": {
+            "all": {
+                "title": "Villa di Bandung | Taman Wisata Bougenville - Sewa Villa Keluarga & Grup",
+                "description": "Sewa villa di Bandung untuk keluarga dan grup. Pilihan lengkap villa keluarga, villa mewah, dan villa pasangan di kaki Gunung Puntang.",
+                "keywords": "villa di bandung, villa keluarga bandung, villa grup bandung, sewa villa bandung, villa gathering bandung"
+            },
+            "luxury": {
+                "title": "Villa Mewah Bandung | Taman Wisata Bougenville - Koleksi Premium",
+                "description": "Villa mewah di Bandung dengan fasilitas premium. Sewa villa keluarga mewah untuk acara eksklusif di kaki Gunung Puntang.",
+                "keywords": "villa mewah bandung, villa keluarga mewah, sewa villa mewah, villa premium bandung, villa eksklusif bandung"
+            },
+            "log_home": {
+                "title": "Villa Keluarga Bandung | Taman Wisata Bougenville - Rumah Kayu & Alam",
+                "description": "Villa keluarga bergaya rumah kayu di Bandung. Hunian alam dengan atmosfer kayu autentik di Gunung Puntang. Sewa villa untuk gathering keluarga.",
+                "keywords": "villa keluarga bandung, penginapan bandung, sewa villa bandung, villa kayu bandung, rumah kayu bandung, villa alam"
+            },
+            "couple": {
+                "title": "Villa Pasangan Bandung | Taman Wisata Bougenville - Liburan Romantis",
+                "description": "Villa pasangan di Bandung untuk bulan madu yang romantis. Villa pribadi untuk pasangan di Gunung Puntang. Paket terbaik untuk bulan madu dan liburan romantis.",
+                "keywords": "villa pasangan bandung, villa bulan madu bandung, villa romantis bandung, villa pasangan eksklusif, liburan romantis"
+            }
+        }
     },
     "villa": {
         "categories": {

@@ -105,7 +105,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           zh: '法国乡村风格别墅（Gordes, Roussillon, Lourmarin）。',
           de: 'Villen im französischen Landhausstil (Gordes, Roussillon, Lourmarin).'
         },
-        image: '/images/villas/roussillon/DSC07004WEB.jpg',
+        image: '/images/villas/roussillon/DSC07418.WEB.jpg',
         type: 'group',
         filterFn: (v) => v.cluster === 'Provincial Villas'
       },
@@ -156,12 +156,12 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         id: 'nawa-bumi',
         name: 'Nawa Bumi',
         description: {
-          id: 'Kompleks Log Home (Campaka, Suren, Pinus, Puspa, Meranti).',
-          en: 'Log Home complex (Campaka, Suren, Pinus, Puspa, Meranti).',
-          zh: '原木家居综合体（Campaka, Suren, Pinus, Puspa, Meranti）。',
-          de: 'Blockhaus-Komplex (Campaka, Suren, Pinus, Puspa, Meranti).'
+          id: 'Kompleks Log Home (Campaka, Suren, Puspa).',
+          en: 'Log Home complex (Campaka, Suren, Puspa).',
+          zh: '原木家居综合体（Campaka, Suren, Puspa）。',
+          de: 'Blockhaus-Komplex (Campaka, Suren, Puspa).'
         },
-        image: '/images/villas/villa-pinus/pinus.1WEB.jpg',
+        image: '/images/optimized/villas/villa-puspa/puspa-12WEB.webp',
         type: 'group',
         filterFn: (v) => v.category === 'log_home'
       }
@@ -402,7 +402,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         zh: '体验入住与大自然融为一体的正宗木制别墅的温暖。非常适合大家庭。',
         de: 'Erleben Sie die Wärme eines Aufenthalts in einer authentischen Holzvilla, die mit der Natur verschmilzt. Perfekt für große Familien.'
       },
-      image: '/images/villas/villa-pinus/pinus-3(1)WEB.jpg',
+      image: '/images/optimized/villas/villa-puspa/puspa-8WEB.webp',
     },
     couple: {
       title: { id: 'Couples Retreat', en: 'Couples Retreat', zh: '情侣度假', de: 'Pärchenurlaub' },

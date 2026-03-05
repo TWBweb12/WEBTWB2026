@@ -210,16 +210,6 @@ export const VILLA_SEO_CONFIG: Record<string, {
         titleTemplate: 'Suren - Villa Kayu Bandung | Log Home | Taman Wisata Bougenville',
         descriptionTemplate: 'Suren, villa kayu di Bandung dari konstruksi log home asli. Suasana hangat, view pegunungan. Cocok untuk keluarga!'
     },
-    'pinus': {
-        primaryKeyword: 'Villa View Pinus Bandung',
-        secondaryKeywords: [
-            'villa hutan pinus bandung',
-            'villa sejuk bandung',
-            'penginapan dingin bandung'
-        ],
-        titleTemplate: 'Pinus - Villa View Pinus Bandung | Log Home | Taman Wisata Bougenville',
-        descriptionTemplate: 'Pinus, villa dengan view hutan pinus di Bandung. Udara sejuk, suasana alami. Sempurna untuk escape dari hiruk pikuk kota!'
-    },
     'puspa': {
         primaryKeyword: 'Villa Alam Bandung',
         secondaryKeywords: [
@@ -229,16 +219,6 @@ export const VILLA_SEO_CONFIG: Record<string, {
         ],
         titleTemplate: 'Puspa - Villa Alam Bandung | Log Home | Taman Wisata Bougenville',
         descriptionTemplate: 'Puspa, villa alam di Bandung di tengah kehijauan. Log cabin yang menyatu dengan alam. Ideal untuk nature lovers!'
-    },
-    'meranti': {
-        primaryKeyword: 'Villa Keluarga Besar Bandung',
-        secondaryKeywords: [
-            'villa kapasitas besar bandung',
-            'villa grup bandung',
-            'villa rombongan besar bandung'
-        ],
-        titleTemplate: 'Meranti - Villa Keluarga Besar Bandung | Log Home | Taman Wisata Bougenville',
-        descriptionTemplate: 'Meranti, villa keluarga besar di Bandung dengan kapasitas maksimal. Log home luas untuk gathering keluarga besar!'
     }
 };
 

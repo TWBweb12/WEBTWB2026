@@ -128,7 +128,7 @@ export const BLOG_POSTS: BlogPost[] = [
     content: {
       id: `
       <h2>Ruang untuk Semua Orang</h2>
-      <p>Salah satu tantangan terbesar dalam merencanakan gathering keluarga adalah menemukan tempat yang menampung semua orang dengan nyaman. Di Taman Wisata Bougenville, kami menawarkan <strong>villa penghubung</strong> seperti cluster Cemara dan Pinus, yang dapat menampung hingga 20 anggota keluarga bersama-sama.</p>
+      <p>Salah satu tantangan terbesar dalam merencanakan gathering keluarga adalah menemukan tempat yang menampung semua orang dengan nyaman. Di Taman Wisata Bougenville, kami menawarkan <strong>villa penghubung</strong> seperti cluster Cemara, yang dapat menampung anggota keluarga bersama-sama.</p>
       
       <h3>Aktivitas untuk Segala Usia</h3>
       <p>Kami memastikan tidak ada yang bosan, dari balita hingga kakek-nenek:</p>
@@ -143,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
       en: `
       <h2>Space for Everyone</h2>
-      <p>One of the biggest challenges of planning a family gathering is finding a venue that accommodates everyone comfortably. At Taman Wisata Bougenville, we offer <strong>connecting villas</strong> like the Cemara and Pinus cluster, which can host up to 20 family members together.</p>
+      <p>One of the biggest challenges of planning a family gathering is finding a venue that accommodates everyone comfortably. At Taman Wisata Bougenville, we offer <strong>connecting villas</strong> like the Cemara cluster, which can host family members together.</p>
       
       <h3>Activities for All Ages</h3>
       <p>We ensure that no one gets bored, from toddlers to grandparents:</p>
@@ -158,7 +158,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
       zh: `
       <h2>每个人的空间</h2>
-      <p>计划家庭聚会的最大挑战之一是找到一个能舒适容纳所有人的场地。 在 Taman Wisata Bougenville，我们提供 <strong>连通别墅</strong>，如 Cemara 和 Pinus 组团，可同时容纳多达 20 名家庭成员。</p>
+      <p>计划家庭聚会的最大挑战之一是找到一个能舒适容纳所有人的场地。 在 Taman Wisata Bougenville，我们提供 <strong>连通别墅</strong>，如 Cemara 组团，可同时容纳多名家庭成员。</p>
       
       <h3>适合所有年龄段的活动</h3>
       <p>我们确保没有人会感到无聊，从蹒跚学步的孩子到祖父母：</p>
@@ -173,7 +173,7 @@ export const BLOG_POSTS: BlogPost[] = [
     `,
       de: `
       <h2>Platz für alle</h2>
-      <p>Eine der größten Herausforderungen bei der Planung eines Familientreffens besteht darin, einen Veranstaltungsort zu finden, der alle bequem unterbringt. Im Taman Wisata Bougenville bieten wir <strong>Verbindungsvillen</strong> wie die Cluster Cemara und Pinus an, die bis zu 20 Familienmitglieder zusammen beherbergen können.</p>
+      <p>Eine der größten Herausforderungen bei der Planung eines Familientreffens besteht darin, einen Veranstaltungsort zu finden, der alle bequem unterbringt. Im Taman Wisata Bougenville bieten wir <strong>Verbindungsvillen</strong> wie die Cluster Cemara an, die Familienmitglieder zusammen beherbergen können.</p>
       
       <h3>Aktivitäten für alle Altersgruppen</h3>
       <p>Wir sorgen dafür, dass sich niemand langweilt, vom Kleinkind bis zu den Großeltern:</p>

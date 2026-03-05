@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Leaf, ChefHat, Clock, MapPin, Phone, ArrowRight } from 'lucide-react';
+import { Globe2, ChefHat, Clock, MapPin, Phone, ArrowRight, Heart } from 'lucide-react';
 import { Language } from '../types';
 import { RESTO_MENU } from '../constants';
 import { FadeIn, Stagger, ScaleIn } from './ui/animations';
@@ -171,20 +171,21 @@ const RestoPage: React.FC<RestoPageProps> = ({ lang, onNavigateToActivity, onNav
         </div>
       </section>
 
-      {/* Signature Dishes - Minimal Grid */}
+      {/* Menu Andalan */}
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-6 md:px-8">
           <div className="max-w-7xl mx-auto">
             <FadeIn className="text-center mb-20">
               <span className="text-forest text-xs font-medium tracking-[0.2em] uppercase mb-4 block">{t('resto.menuTitle')}</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-light text-gray-900 mb-8">Signature Dishes</h2>
-              <div className="w-24 h-px bg-gold/60 mx-auto"></div>
+              <h2 className="font-serif text-4xl md:text-5xl font-light text-gray-900 mb-6">{t('resto.heroLabel')}</h2>
+              <div className="w-24 h-px bg-gold/60 mx-auto mb-8"></div>
+              <p className="text-gray-500 text-base font-light max-w-xl mx-auto">{t('resto.menuDesc')}</p>
             </FadeIn>
 
             <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-              {RESTO_MENU.map((item, index) => (
+              {RESTO_MENU.filter(item => item.isSignature).map((item, index) => (
                 <div key={item.id} className="text-center group cursor-pointer" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <div className="mb-8 overflow-hidden rounded-sm shadow-lg">
+                  <div className="mb-8 overflow-hidden rounded-sm shadow-lg relative">
                     <img
                       src={optimizeImage(item.image, 600)}
                       alt={item.name}
@@ -193,45 +194,27 @@ const RestoPage: React.FC<RestoPageProps> = ({ lang, onNavigateToActivity, onNav
                       width="600"
                       height="320"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <h3 className="font-serif text-2xl font-light text-gray-900 mb-3 group-hover:text-forest transition-colors">{item.name}</h3>
-                  <p className="text-gray-500 text-sm mb-4 italic font-light px-4 min-h-[40px]">
+                  <p className="text-gray-500 text-sm italic font-light px-4 min-h-[40px]">
                     {getContent(item.description)}
-                  </p>
-                  <p className="text-gray-900 font-medium tracking-wide">
-                    Rp {item.price.toLocaleString('id-ID')}
                   </p>
                 </div>
               ))}
             </Stagger>
-
-            {/* CTA to full menu */}
-            <FadeIn className="text-center mt-20" delay={0.2}>
-              <p className="text-gray-600 text-base italic font-light mb-6">
-                {t('resto.cta.discover')}
-              </p>
-              <a
-                href="https://wa.me/628119102003?text=Halo, saya ingin melihat menu lengkap Bale Puntang"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 border-b border-gray-900 pb-1 text-gray-900 text-sm uppercase tracking-[0.2em] hover:text-forest hover:border-forest transition-colors group"
-              >
-                <span>{t('resto.cta.viewMenu')}</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Values - Farm to Table */}
+      {/* Our Philosophy */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 md:px-8">
           <FadeIn className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center gap-12 md:gap-24 mb-16">
               <div className="flex flex-col items-center gap-6 group">
                 <div className="w-20 h-20 flex items-center justify-center border border-gray-100 rounded-full group-hover:border-forest transition-colors duration-300">
-                  <Leaf size={32} className="text-gray-400 group-hover:text-forest transition-colors" />
+                  <Globe2 size={32} className="text-gray-400 group-hover:text-forest transition-colors" />
                 </div>
                 <span className="text-xs uppercase tracking-[0.2em] text-gray-500 group-hover:text-forest transition-colors">{t('resto.values.organic')}</span>
               </div>
@@ -243,7 +226,7 @@ const RestoPage: React.FC<RestoPageProps> = ({ lang, onNavigateToActivity, onNav
               </div>
               <div className="flex flex-col items-center gap-6 group">
                 <div className="w-20 h-20 flex items-center justify-center border border-gray-100 rounded-full group-hover:border-forest transition-colors duration-300">
-                  <MapPin size={32} className="text-gray-400 group-hover:text-forest transition-colors" />
+                  <Heart size={32} className="text-gray-400 group-hover:text-forest transition-colors" />
                 </div>
                 <span className="text-xs uppercase tracking-[0.2em] text-gray-500 group-hover:text-forest transition-colors">{t('resto.values.local')}</span>
               </div>

@@ -129,7 +129,7 @@ export interface MenuItem {
     };
     price: number;
     image: string;
-    category: 'mains' | 'beverages' | 'bites';
+    category: 'mains' | 'beverages' | 'bites' | 'sides' | 'starters' | 'desserts';
     isSignature?: boolean;
     isAvailable: boolean;
     createdAt: string;

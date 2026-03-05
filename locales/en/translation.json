@@ -27,7 +27,7 @@
         },
         "seo": {
             "title": "Taman Wisata Bougenville | Luxury Mountain Resort in Bandung",
-            "description": "Experience luxury in nature at Taman Wisata Bougenville. Exclusive private villas, organic farm-to-table dining, and pristine nature experiences in Mount Puntang, Bandung.",
+            "description": "Experience luxury in nature at Taman Wisata Bougenville. Exclusive private villas, authentic Nusantara cuisine, and pristine nature experiences in Mount Puntang, Bandung.",
             "keywords": "villa bandung, mountain resort puntang, luxury glamping bandung, family gathering bandung, honeymoon villa west java"
         },
         "location": "Mount Puntang, Bandung",
@@ -90,7 +90,7 @@
         "valueHeritageTitle": "Heritage",
         "valueHeritageDesc": "Preserving the spirit of the Nagara Puntang Kingdom through architecture that respects nature and sincere Sundanese hospitality.",
         "valueSustainabilityTitle": "Sustainability",
-        "valueSustainabilityDesc": "Farm-to-table concept with organic ingredients from our own garden. We are committed to eco-friendly practices.",
+        "valueSustainabilityDesc": "We are committed to responsible, eco-conscious practices — preserving the natural beauty of Gunung Puntang as a legacy for generations to come.",
         "valueAuthenticityTitle": "Authenticity",
         "valueAuthenticityDesc": "A sincere experience, without pretense. From the warm welcome of our staff to the details of solid teak interiors.",
         "valueCommunityTitle": "Community",
@@ -192,41 +192,42 @@
         "bookOffer": "Book This Offer"
     },
     "resto": {
-        "title": "Resto & Function",
-        "subtitle": "Enjoy authentic Sundanese cuisine",
+        "title": "Dining & Function",
+        "subtitle": "Nusantara flavors, elevated by the serenity of Mount Puntang",
         "menuTitle": "Signature Dishes",
+        "menuDesc": "Three dishes most beloved at Bale Puntang — each one carrying a story, a memory, and a flavor that lingers long after the meal.",
         "functionTitle": "Function Rooms",
-        "heroLabel": "Farm to Table Experience",
-        "heroTitle": "Resto & Function",
-        "heroSubtitle": "Bale Puntang — Where Mountain Meets Culinary Excellence",
-        "story1Label": "Ambience",
-        "story1Title": "By the clear waters of Cigeureuh River",
-        "story1Desc": "Bale Puntang brings the warmth of classic wooden interiors with the cool nature of Mount Puntang. Choose a cozy atmosphere indoors with vintage roofing or enjoy the fresh air in the outdoor area while listening to the gurgling river.",
-        "story2Label": "Flavor Philosophy",
-        "story2Title": "Authentic Taste with a Modern Twist",
-        "story2Desc": "Every dish—from signature menus to biting spicy sambal—is made from selected local ingredients. We highlight authentic flavors with modern presentation, telling the rich Sundanese culinary tradition in every plate.",
-        "story3Label": "Venue & Event",
-        "story3Title": "More than just a resto",
-        "story3Desc": "Bale Puntang is ready to be a venue for gatherings, meetings, social gathering, or small parties with an exclusive touch. Sit back on antique wooden benches, feel the serenity of nature while chatting and creating unforgettable moments.",
+        "heroLabel": "Nusantara Cuisine",
+        "heroTitle": "Bale Puntang Dining",
+        "heroSubtitle": "A dining experience that transcends the ordinary — the depth of Nusantara's culinary soul, set against the quiet majesty of Mount Puntang",
+        "story1Label": "The Setting",
+        "story1Title": "A Table Set by the Cigeureuh River",
+        "story1Desc": "Bale Puntang places your table at the heart of nature itself — beside the gentle whisper of the Cigeureuh River, beneath a canopy of Puntang pines. Choose the warmth of our intimate wooden interior, or surrender to the open terrace where the mountain breeze becomes part of the experience. Here, the setting is not the backdrop — it is the dining itself.",
+        "story2Label": "Our Philosophy",
+        "story2Title": "Honest in Every Dish",
+        "story2Desc": "We do not follow trends — we honour legacy. From the clear, soul-soothing Soto Bandung to the gloriously crispy Gurame Terbang, every plate at Bale Puntang is an act of devotion to Indonesia's culinary wealth — cooked with sincerity, served with quiet pride.",
+        "story3Label": "Venue & Gathering",
+        "story3Title": "A Space for Meaningful Gatherings",
+        "story3Desc": "Bale Puntang is where celebrations find their setting. Family milestones, exclusive corporate retreats, intimate occasions — all belong here. Let the mountain sky and the sound of flowing water bear witness to your finest moments.",
         "values": {
-            "organic": "Organic",
-            "artisan": "Artisan",
-            "local": "Local",
-            "title": "Fresh from the Source",
-            "desc": "We believe that the best flavors come from nature itself. Our vegetables are harvested directly from our own gardens, and our spices are sourced from local Puntang farmers."
+            "organic": "Nusantara",
+            "artisan": "Artisanal",
+            "local": "Heartfelt",
+            "title": "A Heritage of Taste, Unsurpassed",
+            "desc": "At Bale Puntang, great dining is not about spectacle. It is about honesty — the Nusantara culinary tradition carried across generations, brought to your table with quiet pride and deep reverence, amidst the unrivalled beauty of Gunung Puntang."
         },
         "reservation": {
             "hoursTitle": "Operating Hours",
-            "day": "Monday - Sunday",
+            "day": "Monday – Sunday",
             "reservationTitle": "Reservation",
             "locationTitle": "Location"
         },
         "cta": {
-            "title": "Reserve Your Table",
-            "subtitle": "Reservations recommended for sunset dining and special occasions",
-            "button": "Book Now",
+            "title": "Allow Us to Welcome You",
+            "subtitle": "Reserve your table and experience the true depth of Nusantara cuisine, high above the valleys of Puntang",
+            "button": "Reserve a Table",
             "viewMenu": "View Full Menu",
-            "discover": "Discover the magic of mountain dining."
+            "discover": "The finest Nusantara cuisine, elevated."
         }
     },
     "facility": {
@@ -391,13 +392,35 @@
     },
     "seo": {
         "homeTitle": "Taman Wisata Bougenville | Exclusive Mountain Escape",
-        "homeDescription": "Experience the serenity of nature at Taman Wisata Bougenville. Luxury villas, authentic Sundanese cuisine, and outdoor adventures in Mount Puntang.",
+        "homeDescription": "Experience nature's tranquility at Taman Wisata Bougenville. Luxury villas, authentic Nusantara cuisine, and outdoor adventures at Mount Puntang.",
         "villasTitle": "Luxury Villas - Taman Wisata Bougenville",
-        "villasDescription": "Choose from our collection of exclusive villas with private pools, mountain views, and premium amenities.",
-        "restoTitle": "Dining & Events - Taman Wisata Bougenville",
-        "restoDescription": "Enjoy authentic Sundanese cuisine and host your special events in our function rooms.",
+        "villasDescription": "Choose from our collection of exclusive villas with private pools, mountain views, and premium facilities.",
+        "restoTitle": "Dining & Function - Taman Wisata Bougenville",
+        "restoDescription": "Savour authentic Nusantara flavors and host your special events at our premium venue.",
         "facilityTitle": "Facilities & Experiences - Taman Wisata Bougenville",
-        "facilityDescription": "Explore a variety of outdoor and indoor activities for the perfect holiday experience."
+        "facilityDescription": "Explore various outdoor and indoor activities for the perfect holiday experience.",
+        "villasPage": {
+            "all": {
+                "title": "Villas in Bandung | Taman Wisata Bougenville - Family & Group Villa Rental",
+                "description": "Rent villas in Bandung for families and groups. Complete selection of family villas, luxury villas, and couple villas at Mount Puntang.",
+                "keywords": "villa in bandung, family villa bandung, group villa bandung, rent villa bandung, villa gathering bandung"
+            },
+            "luxury": {
+                "title": "Luxury Villas Bandung | Taman Wisata Bougenville - Premium Collection",
+                "description": "Luxury villas in Bandung with premium facilities. Rent luxury family villas for exclusive gatherings at Mount Puntang.",
+                "keywords": "luxury villa bandung, luxury family villa, rent luxury villa, premium villa bandung, exclusive villa bandung"
+            },
+            "log_home": {
+                "title": "Family Villas Bandung | Taman Wisata Bougenville - Log Home & Nature Cabin",
+                "description": "Log home style family villas in Bandung. Nature cabin with authentic wood atmosphere at Mount Puntang. Rent villa for family gatherings.",
+                "keywords": "family villa bandung, accommodation bandung, rent villa bandung, wooden villa bandung, log cabin bandung, nature villa"
+            },
+            "couple": {
+                "title": "Couple Villas Bandung | Taman Wisata Bougenville - Romantic Cabin Getaway",
+                "description": "Couple villas in Bandung for romantic honeymoons. Private cabin villas for couples at Mount Puntang. Best packages for honeymoon and romantic escapes.",
+                "keywords": "cabin villa bandung, couple villa bandung, romantic villa bandung, honeymoon villa bandung, couple getaway"
+            }
+        }
     },
     "villa": {
         "categories": {

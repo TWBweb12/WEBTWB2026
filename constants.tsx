@@ -123,10 +123,10 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
     ],
     bedConfiguration: [
       { room: 1, beds: '1 king bed (180x200 cm)' },
-      { room: 2, beds: '1 king bed (180x200 cm)' },
-      { room: 3, beds: '1 queen bed (160x200 cm)' },
-      { room: 4, beds: '1 queen bed (160x200 cm)' },
-      { room: 5, beds: '1 queen bed (160x200 cm) + 1 trundle bed (2 orang)' }
+      { room: 2, beds: '1 king bed (180x200 cm) + 1 trundle bed (2 orang)' },
+      { room: 3, beds: '1 queen bed (160x200 cm) + 1 trundle bed (2 orang)' },
+      { room: 4, beds: '1 queen bed (160x200 cm) + 1 trundle bed (2 orang)' },
+      { room: 5, beds: '1 queen bed (160x200 cm)' }
     ],
     facilities: {
       room: [
@@ -144,9 +144,9 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '早餐', de: 'Frühstück' },
-        { id: 'Makan siang', en: 'Lunch', zh: '午餐', de: 'Mittagessen' },
         { id: 'Makan malam', en: 'Dinner', zh: '晚餐', de: 'Abendessen' },
-        { id: 'Snacks premium', en: 'Premium snacks', zh: '优质小吃', de: 'Premium-Snacks' }
+        { id: 'Snacks premium', en: 'Premium snacks', zh: '优质小吃', de: 'Premium-Snacks' },
+        { id: 'Kopi, teh, dan gula', en: 'Coffee, tea, and sugar', zh: '咖啡、茶和糖', de: 'Kaffee, Tee und Zucker' }
       ],
       natural: [
         { id: 'Air terjun & taman privat', en: 'Private waterfall & garden', zh: '私人瀑布和花园', de: 'Privater Wasserfall & Garten' },
@@ -176,10 +176,10 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
       de: 'Super luxuriöse Privatvilla mit direktem Waldblick. Kapazität für 13-16 Personen mit privatem Wasserfall & Gartenanlagen.'
     },
     longDescription: {
-      id: 'Forest House Puntang, villa privat super mewah dengan pemandangan hutan langsung yang berada di dalam kawasan Taman Wisata Bougenville. Luas villa 450 m2. Termasuk sarapan, makan siang & malam, snacks premium.',
-      en: 'Forest House Puntang, a super luxurious private villa with direct forest views located within the Taman Wisata Bougenville area. Villa area 450 m2. Includes breakfast, lunch & dinner, premium snacks.',
-      zh: 'Forest House Puntang，位于 Taman Wisata Bougenville 区域内的超豪华私人别墅，可直接欣赏森林美景。 别墅面积450平方米。 包括早餐、午餐和晚餐、优质小吃。',
-      de: 'Forest House Puntang, eine super luxuriöse Privatvilla mit direktem Waldblick im Gebiet Taman Wisata Bougenville. Villengröße 450 m2. Inklusive Frühstück, Mittag- & Abendessen, Premium-Snacks.'
+      id: 'Forest House Puntang, villa privat super mewah dengan pemandangan hutan langsung yang berada di dalam kawasan Taman Wisata Bougenville. Luas villa 450 m2. Termasuk sarapan, makan malam, snacks premium, kopi, teh, dan gula.',
+      en: 'Forest House Puntang, a super luxurious private villa with direct forest views located within the Taman Wisata Bougenville area. Villa area 450 m2. Includes breakfast, dinner, premium snacks, coffee, tea, and sugar.',
+      zh: 'Forest House Puntang，位于 Taman Wisata Bougenville 区域内的超豪华私人别墅，可直接欣赏森林美景。 别墅面积450平方米。 包括早餐、晚餐、优质小吃、咖啡、茶和糖。',
+      de: 'Forest House Puntang, eine super luxuriöse Privatvilla mit direktem Waldblick im Gebiet Taman Wisata Bougenville. Villengröße 450 m2. Inklusive Frühstück, Abendessen, Premium-Snacks, Kaffee, Tee und Zucker.'
     }
   }
 ];
@@ -214,8 +214,8 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
     ],
     bedConfiguration: [
       { room: 1, beds: '1 Master bedroom (king bed)' },
-      { room: 2, beds: 'Kids bedroom 1 (3 single bed)' },
-      { room: 3, beds: 'Kids bedroom 2 (4 single bed)' }
+      { room: 2, beds: 'Kids bedroom 1 (3 single bed) + trundle bed' },
+      { room: 3, beds: 'Kids bedroom 2 (4 single bed) + trundle bed' }
     ],
     facilities: {
       room: [
@@ -228,7 +228,7 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '??', de: 'Fr�hst�ck' },
-        { id: 'Makan siang', en: 'Lunch', zh: '午餐', de: 'Mittagessen' },
+
         { id: 'Makan malam', en: 'Dinner', zh: '晚餐', de: 'Abendessen' },
         { id: 'Cemilan premium', en: 'Premium snacks', zh: '优质小吃', de: 'Premium-Snacks' }
       ],
@@ -260,8 +260,8 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
       de: 'Luxuri�se Privatvilla mit direktem Seeblick. Kapazit�t f�r 9 Personen, inklusive kompletter Aufenthaltsm�glichkeiten.'
     },
     longDescription: {
-      id: 'Villa mewah privat dengan pemandangan danau langsung, berada di dalam kawasan Taman Wisata Bougenville. Kapasitas untuk 9 orang, sudah termasuk fasilitas menginap lengkap diantaranya sarapan, makan siang dan makan malam plus cemilan premium.',
-      en: 'Luxurious private villa with direct lake views, located within the Taman Wisata Bougenville area. Capacity for 9 people, includes complete stay facilities including breakfast, lunch and dinner plus premium snacks.',
+      id: 'Villa mewah privat dengan pemandangan danau langsung, berada di dalam kawasan Taman Wisata Bougenville. Kapasitas untuk 9 orang, sudah termasuk fasilitas menginap lengkap diantaranya sarapan dan makan malam plus cemilan premium.',
+      en: 'Luxurious private villa with direct lake views, located within the Taman Wisata Bougenville area. Capacity for 9 people, includes complete stay facilities including breakfast and dinner plus premium snacks.',
       zh: '??????,???????,?? Taman Wisata Bougenville ???? ???9?,?????????,?????????????????',
       de: 'Luxuri�se Privatvilla mit direktem Seeblick im Gebiet Taman Wisata Bougenville. Kapazit�t f�r 9 Personen, inklusive kompletter Aufenthaltsm�glichkeiten wie Fr�hst�ck, Mittag- und Abendessen sowie Premium-Snacks.'
     }
@@ -447,7 +447,7 @@ export const DANDENONG_VILLAS: Villa[] = [
       '/images/villas/olinda/DSC00629WEB.jpg',
       '/images/villas/olinda/DSC00630WEB.jpg',
       '/images/villas/olinda/DSC00789WEB.jpg',
-      '/images/villas/olinda/DSC00931WEB.jpg',
+      '/images/villas/olinda/DSC00931WEB.jpg'
     ],
     bedConfiguration: [
       { room: 1, beds: '1 king bed (180 x 200)' },
@@ -1150,8 +1150,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
       ]
     },
     description: {
-      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable.',
-      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom.',
+      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable. Villa kabin baris pertama dengan balkon yang memiliki pemandangan taman langsung.',
+      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom. First row cabin villa with front garden view from balcony.',
       zh: '????????,??????? ?????????????',
       de: 'Executive-Kabinen-Villa mit nat�rlicher Atmosph�re. Ausgestattet mit instagram-tauglichem halb-offenem Badezimmer.'
     }
@@ -1220,8 +1220,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
       ]
     },
     description: {
-      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable.',
-      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom.',
+      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable. Villa kabin baris pertama dengan balkon yang memiliki pemandangan taman langsung.',
+      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom. First row cabin villa with front garden view from balcony.',
       zh: '????????,??????? ?????????????',
       de: 'Executive-Kabinen-Villa mit nat�rlicher Atmosph�re. Ausgestattet mit instagram-tauglichem halb-offenem Badezimmer.'
     }
@@ -1291,8 +1291,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
       ]
     },
     description: {
-      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable.',
-      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom.',
+      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable. Villa kabin baris pertama dengan balkon yang memiliki pemandangan taman langsung.',
+      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom. First row cabin villa with front garden view from balcony.',
       zh: '????????,??????? ?????????????',
       de: 'Executive-Kabinen-Villa mit nat�rlicher Atmosph�re. Ausgestattet mit instagram-tauglichem halb-offenem Badezimmer.'
     }
@@ -1361,8 +1361,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
       ]
     },
     description: {
-      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable.',
-      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom.',
+      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable. Villa kabin baris pertama dengan balkon yang memiliki pemandangan taman langsung.',
+      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom. First row cabin villa with front garden view from balcony.',
       zh: '????????,??????? ?????????????',
       de: 'Executive-Kabinen-Villa mit nat�rlicher Atmosph�re. Ausgestattet mit instagram-tauglichem halb-offenem Badezimmer.'
     }
@@ -1431,8 +1431,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
       ]
     },
     description: {
-      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable.',
-      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom.',
+      id: 'Villa kabin tipe Executive dengan nuansa alami. Dilengkapi kamar mandi semi-outdoor yang instagramable. Villa kabin baris pertama dengan balkon yang memiliki pemandangan taman langsung.',
+      en: 'Executive type cabin villa with natural atmosphere. Equipped with instagramable semi-outdoor bathroom. First row cabin villa with front garden view from balcony.',
       zh: '????????,??????? ?????????????',
       de: 'Executive-Kabinen-Villa mit nat�rlicher Atmosph�re. Ausgestattet mit instagram-tauglichem halb-offenem Badezimmer.'
     }
@@ -2101,7 +2101,7 @@ export const LOG_HOME_VILLAS: Villa[] = [
     priceWeekend: 3250000,
     priceHighSeason: 3900000,
     features: ['Lapangan Luas', 'Api Unggun', 'Family Friendly'],
-    image: '/images/optimized/villas/villa-suren/suren-9.WEB.webp',
+    image: '/images/optimized/villas/villa-suren/5.-Terraceweb.webp',
     images: [
       '/images/optimized/villas/villa-suren/5.-Terraceweb.webp',
       '/images/optimized/villas/villa-suren/7.-Bedroomweb.webp',
@@ -2161,79 +2161,7 @@ export const LOG_HOME_VILLAS: Villa[] = [
       de: 'Villa mit 2 Schlafzimmern und ger�umigem offenem Feld. Lagerfeuerplatz vorhanden.'
     }
   },
-  {
-    id: 'villa-pinus',
-    name: 'Villa Pinus',
-    cluster: 'Nawa Bumi Villas',
-    capacity: '12 Pax',
-    bedrooms: 2,
-    area: 88.92,
-    toilets: 1,
-    price: 4250000,
-    priceWeekday: 4250000,
-    priceWeekend: 4750000,
-    priceHighSeason: 5750000,
-    features: ['Lapangan Luas', 'Api Unggun', 'Dekat Mushola'],
-    image: '/images/optimized/villas/villa-pinus/pinus-3(1)WEB.webp',
-    images: [
-      '/images/optimized/villas/villa-pinus/RISBANG_pinus-5KOMPRESWEB.webp',
-      '/images/optimized/villas/villa-pinus/RISBANG_pinus-6KOMPRESWEB.webp',
-      '/images/optimized/villas/villa-pinus/RISBANG_pinus-11KOMPRESWEB.webp',
-      '/images/optimized/villas/villa-pinus/RISBANG_pinus-12KOMPRES.WEB.webp',
-      '/images/optimized/villas/villa-pinus/RISBANG_pinus-16KOMPRESWEB.webp',
-      '/images/optimized/villas/villa-pinus/pinus-3(1)WEB.webp',
-      '/images/optimized/villas/villa-pinus/pinus-5kompresWEB.webp',
-      '/images/optimized/villas/villa-pinus/pinus.1WEB.webp'
-    ],
-    category: 'log_home',
-    bedConfiguration: [
-      { room: 1, beds: 'Total 12 single bed di 2 ruangan' }
-    ],
-    facilities: {
-      room: [
-        { id: 'Balkon/ teras', en: 'Balcony/Terrace', zh: '??/??', de: 'Balkon/Terrasse' },
-        { id: 'Spot api unggun & 1 ikat kayu bakar', en: 'Bonfire spot & 1 bundle of firewood', zh: '????1???', de: 'Lagerfeuerplatz & 1 B�ndel Brennholz' }
-      ],
-      amenities: [
-        { id: 'Water heater', en: 'Water heater', zh: '???', de: 'Wasserkocher' },
-        { id: 'TV', en: 'TV', zh: '??', de: 'Fernseher' },
-        { id: 'Wifi', en: 'Wifi', zh: '????', de: 'W-lan' },
-        { id: 'Water dispenser', en: 'Water dispenser', zh: '???', de: 'Wasserspender' },
-        { id: 'Sabun', en: 'Soap', zh: '??', de: 'Seife' },
-        { id: 'Shampoo', en: 'Shampoo', zh: '???', de: 'Shampoo' }
-      ],
-      meals: [
-        { id: 'Sarapan', en: 'Breakfast', zh: '??', de: 'Fr�hst�ck' }
-      ],
-      natural: [
-        { id: '2 kolam renang air dingin', en: '2 cold water pools', zh: '2????', de: '2 Kaltwasserpools' },
-        { id: 'Water playing', en: 'Water playing', zh: '??', de: 'Wasserspiele' },
-        { id: 'Sungai Cigeureuh', en: 'Cigeureuh River', zh: 'Cigeureuh?', de: 'Cigeureuh Fluss' },
-        { id: 'Skywalk', en: 'Skywalk', zh: '????', de: 'Skywalk' },
-        { id: 'Jembatan sangkar burung', en: 'Bird cage bridge', zh: '???', de: 'Vogelk�figbr�cke' },
-        { id: 'Gazebo', en: 'Gazebo', zh: '??', de: 'Pavillon' },
-        { id: 'Dermaga', en: 'Pier', zh: '??', de: 'Pier' },
-        { id: 'Spot alam untuk berfoto', en: 'Nature photo spots', zh: '?????', de: 'Natur-Fotospots' }
-      ]
-    },
-    policies: {
-      checkIn: '15.00 WIB',
-      checkOut: '12.00 WIB',
-      smokeFree: true,
-      specialNotes: [
-        { id: 'Tidak diperkenankan membawa hewan, alat pengeras suara, alat musik, dll.', en: 'Pets, loudspeakers, musical instruments, etc. are not allowed.', zh: '????????????????', de: 'Haustiere, Lautsprecher, Musikinstrumente usw. sind nicht erlaubt.' },
-        { id: 'Tidak diperkenankan membawa makanan dari luar.', en: 'Outside food is not allowed.', zh: '????????', de: 'Das Mitbringen von Speisen von au�erhalb ist nicht gestattet.' },
-        { id: 'Jalan naik turun tangga.', en: 'Path involves going up and down stairs.', zh: '?????????', de: 'Der Weg beinhaltet Treppensteigen.' },
-        { id: 'Harga belum termasuk pajak 10%', en: 'Price excludes 10% tax', zh: '????10%??', de: 'Preis exklusive 10% Steuer' }
-      ]
-    },
-    description: {
-      id: 'Villa dengan 2 kamar tidur dan lapangan terbuka. Dekat dengan mushola umum.',
-      en: 'Villa with 2 bedrooms and open field. Close to public prayer room.',
-      zh: '??2???????????? ????????',
-      de: 'Villa mit 2 Schlafzimmern und offenem Feld. In der N�he des �ffentlichen Gebetsraums.'
-    }
-  },
+
   {
     id: 'villa-puspa',
     name: 'Villa Puspa',
@@ -2247,7 +2175,7 @@ export const LOG_HOME_VILLAS: Villa[] = [
     priceWeekend: 6500000,
     priceHighSeason: 7950000,
     features: ['Dapur Lengkap', 'Lapangan Luas', 'Dekat Skywalk'],
-    image: '/images/optimized/villas/villa-puspa/Puspa-7(1)WEB.webp',
+    image: '/images/optimized/villas/villa-puspa/puspa-7WEB.webp',
     images: [
       '/images/optimized/villas/villa-puspa/Puspa-7(1)WEB.webp',
       '/images/optimized/villas/villa-puspa/Puspa-13WEB.webp',
@@ -2308,76 +2236,6 @@ export const LOG_HOME_VILLAS: Villa[] = [
       zh: '??3???????????? ??Skywalk?,??????????',
       de: 'Villa mit 3 Schlafzimmern und kompletter K�che. In der N�he des Skywalk-Bereichs mit ger�umigem Freifeldbereich.'
     }
-  },
-  {
-    id: 'villa-meranti',
-    name: 'Villa Meranti',
-    cluster: 'Nawa Bumi Villas',
-    capacity: '5 Pax',
-    bedrooms: 1,
-    area: 36,
-    toilets: 1,
-    price: 2500000,
-    priceWeekday: 2500000,
-    priceWeekend: 3000000,
-    priceHighSeason: 3500000,
-    features: ['Dekat Cafe Warung Linggih', 'Dekat Parkir', 'Compact'],
-    image: '/images/optimized/villas/villa-meranti/DSC03170WEB.webp',
-    images: [
-      '/images/optimized/villas/villa-meranti/1.webp',
-      '/images/optimized/villas/villa-meranti/2.webp',
-      '/images/optimized/villas/villa-meranti/3.webp',
-      '/images/optimized/villas/villa-meranti/4.webp',
-      '/images/optimized/villas/villa-meranti/5.webp',
-      '/images/optimized/villas/villa-meranti/6.webp'
-    ],
-    category: 'log_home',
-    bedConfiguration: [
-      { room: 1, beds: '5 single bed di 1 ruangan' }
-    ],
-    facilities: {
-      room: [
-        { id: 'Balkon/ teras', en: 'Balcony/Terrace', zh: '??/??', de: 'Balkon/Terrasse' }
-      ],
-      amenities: [
-        { id: 'Water heater', en: 'Water heater', zh: '???', de: 'Wasserkocher' },
-        { id: 'TV', en: 'TV', zh: '??', de: 'Fernseher' },
-        { id: 'Wifi', en: 'Wifi', zh: '????', de: 'W-lan' },
-        { id: 'Water dispenser', en: 'Water dispenser', zh: '???', de: 'Wasserspender' },
-        { id: 'Sabun', en: 'Soap', zh: '??', de: 'Seife' },
-        { id: 'Shampoo', en: 'Shampoo', zh: '???', de: 'Shampoo' }
-      ],
-      meals: [
-        { id: 'Sarapan', en: 'Breakfast', zh: '??', de: 'Fr�hst�ck' }
-      ],
-      natural: [
-        { id: '2 kolam renang air dingin', en: '2 cold water pools', zh: '2????', de: '2 Kaltwasserpools' },
-        { id: 'Water playing', en: 'Water playing', zh: '??', de: 'Wasserspiele' },
-        { id: 'Sungai Cigeureuh', en: 'Cigeureuh River', zh: 'Cigeureuh?', de: 'Cigeureuh Fluss' },
-        { id: 'Skywalk', en: 'Skywalk', zh: '????', de: 'Skywalk' },
-        { id: 'Jembatan sangkar burung', en: 'Bird cage bridge', zh: '???', de: 'Vogelk�figbr�cke' },
-        { id: 'Gazebo', en: 'Gazebo', zh: '??', de: 'Pavillon' },
-        { id: 'Dermaga', en: 'Pier', zh: '??', de: 'Pier' },
-        { id: 'Spot alam untuk berfoto', en: 'Nature photo spots', zh: '?????', de: 'Natur-Fotospots' }
-      ]
-    },
-    policies: {
-      checkIn: '15.00 WIB',
-      checkOut: '12.00 WIB',
-      smokeFree: true,
-      specialNotes: [
-        { id: 'Tidak diperkenankan membawa hewan, alat pengeras suara, alat musik, dll.', en: 'Pets, loudspeakers, musical instruments, etc. are not allowed.', zh: '????????????????', de: 'Haustiere, Lautsprecher, Musikinstrumente usw. sind nicht erlaubt.' },
-        { id: 'Tidak diperkenankan membawa makanan dari luar.', en: 'Outside food is not allowed.', zh: '????????', de: 'Das Mitbringen von Speisen von au�erhalb ist nicht gestattet.' },
-        { id: 'Jalan naik turun tangga.', en: 'Path involves going up and down stairs.', zh: '?????????', de: 'Der Weg beinhaltet Treppensteigen.' },
-        { id: 'Harga belum termasuk pajak 10%', en: 'Price excludes 10% tax', zh: '????10%??', de: 'Preis exklusive 10% Steuer' }
-      ]
-    },
-    description: {
-      id: 'Villa dengan 1 kamar tidur bersama (5 single bed). Dekat area parkir dan kolam renang atas. Hanya termasuk sarapan.',
-      en: 'Villa with 1 shared bedroom (5 single beds). Near parking area and upper swimming pool. Breakfast only included.',
-      zh: '??1?????(5????)???? ???????????? ?????',
-      de: 'Villa mit 1 gemeinsamen Schlafzimmer (5 Einzelbetten). In der N�he des Parkplatzes und des oberen Pools. Nur Fr�hst�ck inbegriffen.'
-    }
   }
 ];
 
@@ -2389,7 +2247,7 @@ export const VILLAS: Villa[] = [
   ...PROVINCIAL_VILLAS,
   ...RIVERSIDE_VILLAS,
   ...KAMPUH_BECIK_VILLAS,
-  ...LOG_HOME_VILLAS,
+  ...LOG_HOME_VILLAS
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -2515,6 +2373,35 @@ export const REVIEWS: Review[] = [
 ];
 
 export const RESTO_MENU: MenuItem[] = [
+  // SIGNATURE DISHES
+  {
+    id: 'soto-bandung',
+    name: 'Soto Bandung',
+    description: {
+      id: 'Soto daging sapi bening khas Bandung, disajikan segar dengan lobak, kedelai goreng, dan kuah kaldu sapi kaya rasa.',
+      en: 'Clear beef soup originating from Bandung, served fresh with radish, fried soybeans, and rich beef broth.',
+      zh: '清炖万隆牛肉汤，配以萝卜、炸大豆和浓郁的牛肉清汤，味道鲜美。',
+      de: 'Klare Rindfleischsuppe aus Bandung, frisch serviert mit Rettich, gebratenen Sojabohnen und reichhaltiger Rinderbrühe.'
+    },
+    price: 45000,
+    category: 'mains',
+    image: '/images/resto/Soto Bandung.webp',
+    isSignature: true
+  },
+  {
+    id: 'gurame-terbang',
+    name: 'Gurame Terbang',
+    description: {
+      id: 'Ikan Gurame goreng krispi yang dibelah menyerupai sayap terbang, renyah di luar dan lembut di dalam.',
+      en: 'Crispy fried Gourami fish split to resemble flying wings, crunchy on the outside and soft inside.',
+      zh: '香脆炸飞鱼（古拉美鱼），劈开呈飞翼状，外酥里嫩。',
+      de: 'Knusprig gebratener Gourami-Fisch, gespalten wie fliegende Flügel, außen knusprig und innen weich.'
+    },
+    price: 85000,
+    category: 'mains',
+    image: '/images/resto/Gurame Terbang.webp',
+    isSignature: true
+  },
   {
     id: 'ayam-woku',
     name: 'Ayam Woku',
@@ -2529,19 +2416,20 @@ export const RESTO_MENU: MenuItem[] = [
     image: '/images/resto/woku.webp',
     isSignature: true
   },
+  // MENU RESTO REGULAR
   {
-    id: 'batagor',
-    name: 'Batagor Bandung',
+    id: 'gurame-goreng-500',
+    name: 'Gurame Goreng Terbang 500 gr',
     description: {
-      id: 'Bakso Tahu Goreng premium dengan ikan tenggiri asli. Disajikan dengan bumbu kacang kental dan kecap manis.',
-      en: 'Premium Fried Tofu Meatballs with authentic mackerel. Served with thick peanut sauce and sweet soy sauce.',
-      zh: '正宗鲭鱼制成的优质炸豆腐肉丸。配以浓郁的花生酱和甜酱油。',
-      de: 'Premium Gebratene Tofu-Fleischbällchen mit echter Makrele. Serviert mit dicker Erdnusssauce und süßer Sojasauce.'
+      id: 'Ikan Gurame segar ukuran 500 gr digoreng kering dan renyah. Sangat cocok dinikmati bersama sambal dan nasi hangat.',
+      en: 'Fresh 500gr Gourami fish deep-fried until dry and crispy. Perfect with sambal and warm rice.',
+      zh: '500克新鲜古拉美鱼，炸至干脆。搭配参巴酱和热米饭，味道极佳。',
+      de: 'Frischer 500g Gourami-Fisch, trocken und knusprig frittiert. Perfekt mit Sambal und warmem Reis.'
     },
-    price: 45000,
+    price: 90000,
     category: 'mains',
-    image: '/images/resto/Batagor.jpeg',
-    isSignature: true
+    image: '/images/resto/gurame.webp',
+    isSignature: false
   },
   {
     id: 'sayur-asem',
@@ -2555,7 +2443,147 @@ export const RESTO_MENU: MenuItem[] = [
     price: 35000,
     category: 'mains',
     image: '/images/resto/Sayurasem.webp',
-    isSignature: true
+    isSignature: false
+  },
+  {
+    id: 'ayam-bakar',
+    name: 'Ayam Bakar',
+    description: {
+      id: 'Ayam bakar dengan bumbu kecap manis rempah meresap sempurna, diolah dengan gaya tradisional Sunda.',
+      en: 'Grilled chicken perfectly marinated in sweet soy sauce and spices, prepared in traditional Sundanese style.',
+      zh: '烤鸡完美腌制在甜酱油和香料中，以传统巽他风格烹制。',
+      de: 'Gegrilltes Hähnchen, perfekt mariniert in süßer Sojasauce und Gewürzen, zubereitet auf traditionelle sundanesische Art.'
+    },
+    price: 45000,
+    category: 'mains',
+    image: '/images/resto/ayam-bakar.webp',
+    isSignature: false
+  },
+  {
+    id: 'nasi-timbel-komplit',
+    name: 'Nasi Timbel Komplit Ayam Goreng',
+    description: {
+      id: 'Paket lengkap nasi bungkus daun pisang, ayam goreng, tahu, tempe, lalapan segar, dan sambal terasi khas.',
+      en: 'Complete package of rice wrapped in banana leaf, fried chicken, tofu, tempeh, fresh vegetables, and signature shrimp paste sambal.',
+      zh: '全套香蕉叶包饭、炸鸡、豆腐、丹贝、新鲜蔬菜和招牌虾酱参巴。',
+      de: 'Komplettpaket mit in Bananenblatt gewickeltem Reis, gebratenem Hähnchen, Tofu, Tempeh, frischem Gemüse und typischem Garnelenpasten-Sambal.'
+    },
+    price: 60000,
+    category: 'mains',
+    image: '/images/resto/timbel.webp',
+    isSignature: false
+  },
+  {
+    id: 'sop-buntut',
+    name: 'Sop Buntut',
+    description: {
+      id: 'Sup buntut sapi empuk berkuah kaldu gurih yang dimasak perlahan bersama wortel, kentang, dan taburan bawang goreng.',
+      en: 'Tender oxtail soup in savory broth slow-cooked with carrots, potatoes, and sprinkled with fried shallots.',
+      zh: '嫩滑的牛尾汤，在鲜美的肉汤中与胡萝卜、土豆慢炖，并撒上炸红葱头。',
+      de: 'Zarte Ochsenschwanzsuppe in herzhafter Brühe, langsam gekocht mit Karotten, Kartoffeln und bestreut mit Röstzwiebeln.'
+    },
+    price: 95000,
+    category: 'mains',
+    image: '/images/resto/sop-buntut.webp',
+    isSignature: false
+  },
+  {
+    id: 'sambel-dadak',
+    name: 'Sambel Dadak',
+    description: {
+      id: 'Sambal terasi segar yang dibuat langsung saat dipesan, pedas dan menggugah selera.',
+      en: 'Fresh shrimp paste chili sauce made to order, spicy and appetizing.',
+      zh: '现点现做的新鲜虾酱辣椒酱，辛辣开胃。',
+      de: 'Frische, auf Bestellung zubereitete Garnelenpasten-Chilisauce, scharf und appetitanregend.'
+    },
+    price: 15000,
+    category: 'sides',
+    image: '/images/resto/sambal.webp',
+    isSignature: false
+  },
+  {
+    id: 'mie-tektek',
+    name: 'Mie Tektek',
+    description: {
+      id: 'Mie goreng atau rebus gaya kampung dengan sayuran, telur, dan suwiran ayam. Rasanya sangat nostalgik.',
+      en: 'Village-style fried or boiled noodles with vegetables, egg, and shredded chicken. Tastes very nostalgic.',
+      zh: '乡村风味的炒面或汤面，配以蔬菜、鸡蛋和鸡肉丝。非常有怀旧感。',
+      de: 'Gebratene oder gekochte Nudeln nach Art des Dorfes mit Gemüse, Ei und zerkleinertem Hähnchen. Schmeckt sehr nostalgisch.'
+    },
+    price: 40000,
+    category: 'mains',
+    image: '/images/resto/mie-tektek.webp',
+    isSignature: false
+  },
+  {
+    id: 'mie-baso',
+    name: 'Mie Baso',
+    description: {
+      id: 'Mie kuning lezat disajikan dengan bakso sapi asli yang kenyal, tahu kaldu, dan sayuran segar.',
+      en: 'Delicious yellow noodles served with chewy authentic beef meatballs, tofu broth, and fresh vegetables.',
+      zh: '美味的黄面条，配以劲道的正宗牛肉丸、豆腐汤和新鲜蔬菜。',
+      de: 'Köstliche gelbe Nudeln, serviert mit zähen, authentischen Rindfleischbällchen, Tofubrühe und frischem Gemüse.'
+    },
+    price: 40000,
+    category: 'mains',
+    image: '/images/resto/mie-baso.webp',
+    isSignature: false
+  },
+  {
+    id: 'bala-bala',
+    name: 'Bala-bala',
+    description: {
+      id: 'Bakwan sayur renyah khas Sunda, disajikan panas dengan cocolan sambal atau cabe rawit.',
+      en: 'Crispy Sundanese vegetable fritters, served hot with chili dip or whole bird\'s eye chilies.',
+      zh: '香脆的巽他风格蔬菜杂烩煎饼，热腾腾地配以辣椒酱或朝天椒。',
+      de: 'Knusprige sundanesische Gemüsepuffer, heiß serviert mit Chili-Dip oder ganzen kleinen Chilis.'
+    },
+    price: 25000,
+    category: 'starters',
+    image: '/images/resto/bala-bala.webp',
+    isSignature: false
+  },
+  {
+    id: 'pisang-goreng',
+    name: 'Pisang Goreng',
+    description: {
+      id: 'Pisang manis pilihan digoreng tepung renyah. Cocok untuk hidangan penutup yang hangat menemani waktu sore.',
+      en: 'Selected sweet bananas deep-fried in crispy batter. Perfect for a warm afternoon dessert.',
+      zh: '精选甜香蕉裹上脆浆炸制。非常适合作为温暖的下午甜点。',
+      de: 'Ausgewählte süße Bananen, in knusprigem Teig frittiert. Perfekt als warmes Dessert am Nachmittag.'
+    },
+    price: 25000,
+    category: 'desserts',
+    image: '/images/resto/pisang-goreng.webp',
+    isSignature: false
+  },
+  {
+    id: 'bebek-goreng',
+    name: 'Bebek Goreng',
+    description: {
+      id: 'Bebek muda yang diungkep sempurna lalu digoreng gurih sampai tulang lunak, disajikan dengan sambal khas pencok pedas.',
+      en: 'Perfectly braised young duck deep-fried to savory perfection until bones are soft, served with signature spicy pencok sambal.',
+      zh: '完美焖炖的嫩鸭，炸至骨酥肉烂，配以招牌辛辣参巴酱。',
+      de: 'Perfekt geschmorte junge Ente, herzhaft frittiert, bis die Knochen weich sind, serviert mit typisch scharfem Pencok-Sambal.'
+    },
+    price: 75000,
+    category: 'mains',
+    image: '/images/resto/bebek.webp',
+    isSignature: false
+  },
+  {
+    id: 'nasi-goreng-pete-teri',
+    name: 'Nasi Goreng Pete Teri',
+    description: {
+      id: 'Nasi goreng harum dengan pete segar dan ikan teri Medan renyah, perpaduan rasa umami yang hakiki.',
+      en: 'Fragrant fried rice with fresh stinky beans and crispy Medan anchovies, the ultimate umami blend.',
+      zh: '香喷喷的炒饭，配以新鲜臭豆和香脆的棉兰凤尾鱼，极致的鲜味融合。',
+      de: 'Duftender gebratener Reis mit frischen Stinkbohnen und knusprigen Medan-Sardellen, die ultimative Umami-Mischung.'
+    },
+    price: 50000,
+    category: 'mains',
+    image: '/images/resto/nasgor-pete.webp',
+    isSignature: false
   }
 ];
 

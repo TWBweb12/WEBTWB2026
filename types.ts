@@ -126,7 +126,7 @@ export interface MenuItem {
   description: LocalizedString;
   price: number;
   image: string;
-  category: 'mains' | 'beverages' | 'bites';
+  category: 'mains' | 'beverages' | 'bites' | 'sides' | 'starters' | 'desserts';
   isSignature?: boolean;
 }
 
