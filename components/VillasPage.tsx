@@ -393,7 +393,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         zh: '探索我们旨在提供难忘住宿体验的高级别墅完整系列。',
         de: 'Entdecken Sie unsere komplette Kollektion von Premium-Villen, die für ein unvergessliches Aufenthaltserlebnis konzipiert sind.'
       },
-      image: '/images/villas/forest-house/DSC00370WEB.jpg',
+      image: '/images/landscape/Landscape_FH.webp',
     },
     luxury: {
       title: { id: 'Luxury Collection', en: 'Luxury Collection', zh: '豪华系列', de: 'Luxuskollektion' },

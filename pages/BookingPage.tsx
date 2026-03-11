@@ -76,7 +76,7 @@ export function BookingPage() {
             <PageHero
                 title={t('bookingPage.heroTitle')}
                 subtitle={t('bookingPage.heroSubtitle')}
-                backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070"
+                backgroundImage="/images/facilities/FH-Garden.webp"
                 overlay="dark"
             />
 

@@ -243,15 +243,15 @@ const RestoPage: React.FC<RestoPageProps> = ({ lang, onNavigateToActivity, onNav
       <section className="py-24 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-              <div className="group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center max-w-3xl mx-auto">
+              {/* <div className="group">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:-translate-y-1 transition-transform duration-300">
                   <Clock size={24} className="text-gray-400 group-hover:text-forest transition-colors" />
                 </div>
                 <h4 className="font-serif text-xl text-gray-900 mb-3">{t('resto.reservation.hoursTitle')}</h4>
                 <p className="text-gray-600 text-sm mb-1">{t('resto.reservation.day')}</p>
                 <p className="text-gray-900 font-medium">08:00 - 22:00</p>
-              </div>
+              </div> */}
               <div className="group">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:-translate-y-1 transition-transform duration-300">
                   <Phone size={24} className="text-gray-400 group-hover:text-forest transition-colors" />
