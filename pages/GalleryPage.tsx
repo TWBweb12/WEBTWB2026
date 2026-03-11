@@ -93,7 +93,7 @@ export function GalleryPage() {
             <PageHero
                 title={t('gallery.title')}
                 subtitle={t('gallery.subtitle')}
-                backgroundImage="/images/facilities/FH-Garden.webp"
+                backgroundImage="/images/gallery/TWB-95.webp"
                 overlay="dark"
             />
 
