@@ -22,6 +22,7 @@ interface Cluster {
   type: 'direct' | 'group';
   villaId?: string; // For direct type
   filterFn?: (villa: any) => boolean; // For group type
+  customBadge?: string; // Optional override for the badge label
 }
 
 // Helper to parse capacity string to number
@@ -68,7 +69,8 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         },
         image: '/images/fh-hero.webp',
         type: 'direct',
-        villaId: 'forest-house'
+        villaId: 'forest-house',
+        customBadge: 'Signature Villa'
       },
       {
         id: 'mooi-lake',
@@ -81,7 +83,8 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         },
         image: '/images/mlh-hero.webp',
         type: 'direct',
-        villaId: 'mooi-lake'
+        villaId: 'mooi-lake',
+        customBadge: 'Secluded Villa'
       },
       {
         id: 'dandenong',
@@ -107,7 +110,8 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         },
         image: '/images/emerald-atas-hero.webp',
         type: 'group',
-        filterFn: (v) => v.cluster === 'Emerald Villas'
+        filterFn: (v) => v.cluster === 'Emerald Villas',
+        customBadge: 'Stand Alone'
       },
       {
         id: 'provincial',
@@ -345,8 +349,13 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 
                   {/* Type Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 text-xs font-medium tracking-wider uppercase rounded-sm shadow-sm backdrop-blur-md ${cluster.type === 'direct' ? 'bg-gold text-white' : 'bg-white/90 text-forest-dark'}`}>
-                      {cluster.type === 'direct' ? t('villas.singleUnit', 'Single Unit') : t('villas.cluster', 'Cluster')}
+                    <span className={`px-3 py-1 text-xs font-medium tracking-wider uppercase rounded-sm shadow-sm backdrop-blur-md ${cluster.type === 'direct' || cluster.customBadge ? 'bg-gold text-white' : 'bg-white/90 text-forest-dark'}`}>
+                      {cluster.customBadge
+                        ? cluster.customBadge
+                        : cluster.type === 'direct'
+                        ? t('villas.singleUnit', 'Single Unit')
+                        : t('villas.cluster', 'Cluster')
+                      }
                     </span>
                   </div>
 
