@@ -54,6 +54,7 @@ export default {
         'fade-up': 'fadeUp 0.8s ease-out forwards',
         'scale-slow': 'scaleSlow 20s ease-in-out infinite alternate',
         'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+        'slow-push': 'slowPush 20s ease-out forwards',
       },
       keyframes: {
         fadeUp: {
@@ -67,6 +68,10 @@ export default {
         pulseSubtle: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.8' },
+        },
+        slowPush: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.15)' },
         },
       },
       spacing: {

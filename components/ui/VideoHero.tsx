@@ -62,7 +62,7 @@ export const VideoHero: React.FC<VideoHeroProps> = ({
             src={fallbackImage}
             alt={headline || "Taman Wisata Bougenville"}
             fetchPriority="high"
-            className="w-full h-full object-cover animate-slow-zoom"
+            className="w-full h-full object-cover animate-slow-push"
           />
         )}
         {/* Refined gradient - darker for more sophistication */}

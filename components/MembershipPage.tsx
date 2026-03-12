@@ -42,7 +42,7 @@ export function MembershipPage() {
                     <img
                         src={optimizeImage("/images/membership/membership-hero.jpg", 2560)}
                         alt="Mist over mountains"
-                        className="w-full h-full object-cover scale-105 animate-slow-zoom"
+                        className="w-full h-full object-cover scale-105 animate-slow-push"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-[#FDFBF7]"></div>
                 </div>
