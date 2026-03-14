@@ -44,8 +44,8 @@ export function MembershipPage() {
                         alt="Mist over mountains"
                         className="w-full h-full object-cover"
                     />
-                    {/* Gradient overlay to seamlessly blend the image into the paper background below */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-[#FDFBF7]"></div>
+                    {/* Gradient overlay for text readability without the white fadeout */}
+                    <div className="absolute inset-0 bg-black/20"></div>
                 </div>
 
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">

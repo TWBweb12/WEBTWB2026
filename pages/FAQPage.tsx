@@ -328,7 +328,7 @@ export function FAQPage() {
             <PageHero
                 title={t('faq.title')}
                 subtitle={t('faq.subtitle')}
-                backgroundImage="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069"
+                backgroundImage="/images/optimized/FAQbanner.webp"
                 overlay="dark"
             />
 

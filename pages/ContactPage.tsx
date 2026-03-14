@@ -60,7 +60,7 @@ export function ContactPage() {
             <PageHero
                 title={t('contact.title')}
                 subtitle={t('contact.subtitle')}
-                backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074"
+                backgroundImage="/images/optimized/Lobby.webp"
                 overlay="dark"
             />
 

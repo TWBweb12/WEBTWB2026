@@ -178,7 +178,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           zh: '原木家居综合体（Campaka, Suren, Puspa）。',
           de: 'Blockhaus-Komplex (Campaka, Suren, Puspa).'
         },
-        image: '/images/optimized/villas/villa-puspa/puspa-12WEB.webp',
+        image: '/images/villas/hero-campaka.webp',
         type: 'group',
         filterFn: (v) => v.category === 'log_home'
       }
@@ -435,7 +435,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         zh: '体验入住与大自然融为一体的正宗木制别墅的温暖。非常适合大家庭。',
         de: 'Erleben Sie die Wärme eines Aufenthalts in einer authentischen Holzvilla, die mit der Natur verschmilzt. Perfekt für große Familien.'
       },
-      image: '/images/optimized/villas/villa-puspa/puspa-8WEB.webp',
+      image: '/images/villas/hero-campaka.webp',
     },
     couple: {
       title: { id: 'Couples Retreat', en: 'Couples Retreat', zh: '情侣度假', de: 'Pärchenurlaub' },
@@ -446,7 +446,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         zh: '专为情侣设计的私密别墅。豪华型和行政型可供选择。',
         de: 'Intime Villen, die speziell für Paare entworfen wurden. Auswahl an Deluxe- und Executive-Typen.'
       },
-      image: '/images/villas/abutilon/AWB_4760WEB.jpg',
+      image: '/images/villas/kb-couple.webp',
     }
   };
 

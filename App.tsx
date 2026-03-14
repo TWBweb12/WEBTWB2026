@@ -179,7 +179,7 @@ function App() {
               { id: 'facility', key: 'nav.facility' },
               { id: 'gallery', key: 'nav.gallery' },
 
-              { id: 'membership', key: 'nav.membership' },
+              // { id: 'membership', key: 'nav.membership' },
               { id: 'about', key: 'nav.about' }
             ].map((item) => (
               <button
@@ -281,7 +281,7 @@ function App() {
           <button onClick={() => handleNavClick('facility')} className="text-left hover:text-gold transition-colors py-2">{t('nav.facility')}</button>
           <button onClick={() => handleNavClick('gallery')} className="text-left hover:text-gold transition-colors py-2">{t('nav.gallery')}</button>
 
-          <button onClick={() => handleNavClick('membership')} className="text-left hover:text-gold transition-colors py-2">{t('nav.membership')}</button>
+          {/* <button onClick={() => handleNavClick('membership')} className="text-left hover:text-gold transition-colors py-2">{t('nav.membership')}</button> */}
           <button onClick={() => { navigate('about'); setIsMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-left hover:text-gold transition-colors py-2">{t('nav.about')}</button>
         </nav>
 
