@@ -135,20 +135,7 @@ export function Footer({ navigate, isHomePage = false }: FooterProps) {
                         </ul>
                     </div>
 
-                    {/* Legal / Extra (Optional) */}
-                    <div className="hidden lg:block">
-                        <h4 className="text-gold text-xs font-bold uppercase tracking-[0.2em] mb-8">{t('footer.resources', 'Resources')}</h4>
-                        <ul className="space-y-4">
-                            <li>
-                                <button
-                                    onClick={() => navigate('sustainability')}
-                                    className="text-white/60 hover:text-gold transition-colors text-sm tracking-wide"
-                                >
-                                    {t('footer.sustainability', 'Sustainability')}
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
+
 
                 </div>
 
