@@ -26,7 +26,7 @@ export function PrivacyPage() {
             <PageHero
                 title={t('privacy.title')}
                 subtitle={t('privacy.subtitle')}
-                backgroundImage="/images/membership/membership-hero.jpg"
+                backgroundImage="/images/privacy/PAKIS.webp"
                 overlay="dark"
             />
 
