@@ -83,6 +83,7 @@ export function HomePage() {
                 onPrimaryCTA={() => {
                     // Open WhatsApp with booking inquiry
                     const message = encodeURIComponent(t('home.whatsapp.inquiry', 'Halo, saya tertarik untuk reservasi di Taman Wisata Bougenville. Bisa dibantu?'));
+                    trackWhatsAppBooking('Hero Reserve Button - Desktop');
                     window.open(`https://wa.me/628119102003?text=${message}`, '_blank');
                 }}
                 onSecondaryCTA={() => {
