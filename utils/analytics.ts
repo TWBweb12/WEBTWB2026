@@ -14,6 +14,18 @@
  * ============================================================
  */
 
+import Clarity from '@microsoft/clarity';
+
+// ── Initialize Clarity ────────────────────────────────────────
+const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_ID || "vwz2siod64";
+if (typeof window !== 'undefined') {
+  try {
+    Clarity.init(CLARITY_PROJECT_ID);
+  } catch (e) {
+    console.warn("Clarity init warning:", e);
+  }
+}
+
 // ── Type Definitions ──────────────────────────────────────────
 
 export interface AnalyticsEvent {
@@ -29,7 +41,6 @@ const isGA4Loaded    = (): boolean => typeof (window as any).gtag === 'function'
 const isGTMLoaded    = (): boolean => Array.isArray((window as any).dataLayer);
 const isFBLoaded     = (): boolean => typeof (window as any).fbq === 'function';
 const isTTKLoaded    = (): boolean => typeof (window as any).ttq?.track === 'function';
-const isClarityLoaded = (): boolean => typeof (window as any).clarity === 'function';
 
 // ── Internal GA4 Helper ───────────────────────────────────────
 
@@ -62,7 +73,17 @@ const ttk = (event: string, data?: Record<string, any>) => {
 // ── Internal Clarity Helper ───────────────────────────────────
 
 const clarity = (method: string, ...args: any[]) => {
-  if (isClarityLoaded()) (window as any).clarity(method, ...args);
+  try {
+    if (method === 'set' && args.length >= 2) {
+      Clarity.setTag(args[0], args[1]);
+    } else if (method === 'identify' && args.length >= 1) {
+      Clarity.identify(args[0], args[1]);
+    } else if (method === 'event' && args.length >= 1) {
+      Clarity.event(args[0]);
+    }
+  } catch (e) {
+    console.warn("Clarity method failed", method, e);
+  }
 };
 
 // ════════════════════════════════════════════════════════════
