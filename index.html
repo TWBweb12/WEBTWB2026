@@ -190,34 +190,26 @@
     window.gtag = gtag;
 
     // GA4 Initialization
-    const ga4Id = '%VITE_GA4_ID%';
-    if (ga4Id && ga4Id !== '' && !ga4Id.startsWith('%')) {
-      gtag('js', new Date());
-      gtag('config', ga4Id, {
-        'send_page_view': true,
-        'anonymize_ip': true
-      });
-      const ga4Script = document.createElement('script');
-      ga4Script.async = true;
-      ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4Id;
-      document.head.appendChild(ga4Script);
-    }
+    // GA4
+    gtag('js', new Date());
+    gtag('config', 'G-1M7C7PPNP3', { 'send_page_view': true, 'anonymize_ip': true });
+    const ga4Script = document.createElement('script');
+    ga4Script.async = true;
+    ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1M7C7PPNP3';
+    document.head.appendChild(ga4Script);
 
-    // Google Tag Manager Initialization
-    const gtmId = '%VITE_GTM_ID%';
-    if (gtmId && gtmId !== '' && !gtmId.startsWith('%')) {
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer',gtmId);
-    }
+    // Google Tag Manager
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5SC3RPZ3');
   </script>
 </head>
 
 <body class="bg-cream text-forest-dark antialiased">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=%VITE_GTM_ID%"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SC3RPZ3"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="root"></div>
