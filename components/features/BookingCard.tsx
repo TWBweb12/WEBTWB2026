@@ -154,7 +154,7 @@ export function BookingCard({
     villaName,
 }: BookingCardProps) {
     const { t } = useTranslation();
-    const { format } = useCurrency();
+    const { format, currency } = useCurrency();
     const [checkIn, setCheckIn] = useState('');
     const [checkOut, setCheckOut] = useState('');
     const [guests, setGuests] = useState(2);
@@ -236,6 +236,7 @@ export function BookingCard({
             {/* Price Header */}
             <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-2xl font-bold text-gray-900">{format(effectiveWeekday)}</span>
+                <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
                 <span className="text-gray-500 text-sm">{t('common.perNight', '/ night')}</span>
             </div>
 

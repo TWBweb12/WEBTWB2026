@@ -5,6 +5,8 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     size?: 'sm' | 'md' | 'lg';
     children: React.ReactNode;
     className?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    id?: string;
 }
 
 export function Button({
