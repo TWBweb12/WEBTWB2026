@@ -12,9 +12,10 @@ export const HeroBookingWidget: React.FC<HeroBookingWidgetProps> = ({ lang = 'id
     const [checkOut, setCheckOut] = useState('');
     const [guests, setGuests] = useState(2);
 
-    // Get selected villa details
+    // Get selected villa details — parse capacity string to a safe number
     const selectedVilla = VILLAS.find(v => v.id === villa);
-    const maxGuests = selectedVilla?.capacity || 20;
+    const rawCapacity = selectedVilla?.capacity ?? '';
+    const maxGuests: number = parseInt(String(rawCapacity).match(/\d+/)?.[0] ?? '20', 10) || 20;
 
     // Reset guests if exceeds villa capacity
     React.useEffect(() => {

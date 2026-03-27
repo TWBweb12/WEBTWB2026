@@ -160,7 +160,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
         : [currentVilla.image];
 
     // Use currency hook for automatic conversion based on language
-    const { format: formatPrice } = useCurrency();
+    const { format: formatPrice, currency } = useCurrency();
 
     const handleImageClick = (index: number) => {
         setGalleryStartIndex(index);
@@ -414,17 +414,26 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                     <div>
                                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.weekday', 'Weekday')}</p>
                                         <p className="text-xs text-gray-400 mb-1">{t('villa.weekdayDays', 'Mon - Thu')}</p>
-                                        <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekday)}</p>
+                                        <div className="flex items-baseline gap-1.5">
+                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekday)}</p>
+                                            <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.weekend', 'Weekend')}</p>
                                         <p className="text-xs text-gray-400 mb-1">{t('villa.weekendDays', 'Fri - Sat')}</p>
-                                        <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekend)}</p>
+                                        <div className="flex items-baseline gap-1.5">
+                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceWeekend)}</p>
+                                            <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                        </div>
                                     </div>
                                     <div>
                                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">{t('villa.highSeason', 'High Season')}</p>
                                         <p className="text-xs text-gray-400 mb-1">{t('villa.highSeasonDays', 'Holidays')}</p>
-                                        <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceHighSeason)}</p>
+                                        <div className="flex items-baseline gap-1.5">
+                                            <p className="font-serif text-xl text-forest-dark">{formatPrice(currentVilla.priceHighSeason)}</p>
+                                            <span className="text-[10px] font-bold tracking-widest text-white bg-forest-dark/70 px-1.5 py-0.5 rounded-sm">{currency.code}</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500 flex items-start gap-2">

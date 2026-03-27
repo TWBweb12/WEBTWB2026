@@ -1,3 +1,5 @@
+import React from 'react';
+
 export type AnimationDirection = 'up' | 'down' | 'left' | 'right' | 'none';
 
 export interface BaseAnimationProps {

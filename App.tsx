@@ -13,6 +13,8 @@ import { Language } from './types';
 import { TRANSLATIONS, VILLAS, REVIEWS, EXPERIENCES } from './constants';
 import BookingForm from './components/BookingForm';
 import { LanguageSwitcher } from './components/ui/LanguageSwitcher';
+import { CurrencySwitcher } from './components/ui/CurrencySwitcher';
+import { CurrencyProvider, useCurrency } from './context/CurrencyContext';
 import { Logo } from './components/ui/Logo';
 import { Loading } from './components/ui/Loading';
 import { HomePage } from './pages/HomePage';
@@ -163,6 +165,7 @@ function App() {
   };
 
   return (
+    <CurrencyProvider>
     <div className="font-sans text-forest-dark bg-white overflow-x-hidden selection:bg-forest-green selection:text-white">
 
       {/* --- HEADER --- */}
@@ -200,8 +203,9 @@ function App() {
           </nav>
 
           {/* Right Actions */}
-          <div className="hidden lg:flex items-center gap-6">
-            <LanguageSwitcher
+          <div className="hidden lg:flex items-center gap-3">
+            <CurrencySwitcherWithSync isScrolled={isScrolled} isHomePage={view === 'home'} />
+            <LanguageSwitcherWithSync
               isScrolled={isScrolled} isHomePage={view === 'home'}
             />
             <button
@@ -215,13 +219,16 @@ function App() {
             </button>
           </div>
 
-          {/* Mobile Toggle */}
-          <button
-            className={`lg:hidden p-2 ${isScrolled || view !== 'home' ? 'text-forest-dark' : 'text-white'}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </button>
+          {/* Mobile Right Controls */}
+          <div className="lg:hidden flex items-center gap-2">
+            <CurrencySwitcherWithSync isScrolled={isScrolled} isHomePage={view === 'home'} />
+            <button
+              className={`p-2 ${isScrolled || view !== 'home' ? 'text-forest-dark' : 'text-white'}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -256,28 +263,25 @@ function App() {
               const currentLang = i18n.language?.split('-')[0] || 'id';
               const isActive = currentLang === langCode;
               return (
-                <button
+                <MobileLanguageButton
                   key={langCode}
-                  onClick={() => {
+                  langCode={langCode}
+                  label={labels[langCode]}
+                  isActive={isActive}
+                  onSelect={() => {
                     i18n.changeLanguage(langCode);
                     setIsMobileMenuOpen(false);
-                    // Keep language menu open or close it? User implied "click first then select", so closing main menu is fine.
                   }}
-                  className={`flex items-center justify-between px-4 py-3 rounded-md transition-all border ${isActive
-                    ? 'bg-gold/10 border-gold'
-                    : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
-                    }`}
-                >
-                  <span className={`text-sm font-bold tracking-wide ${isActive ? 'text-gold' : 'text-white'}`}>
-                    {labels[langCode].code}
-                  </span>
-                  <span className={`text-xs ${isActive ? 'text-gold/80' : 'text-white/40'}`}>
-                    {labels[langCode].name}
-                  </span>
-                </button>
+                />
               );
             })}
           </div>
+        </div>
+
+        {/* Mobile Currency Switcher */}
+        <div className="px-6 pb-6 border-b border-white/10 mb-6">
+          <p className="text-white/60 text-[10px] uppercase tracking-[0.2em] font-medium mb-3">Select Currency</p>
+          <MobileCurrencyGrid onSelect={() => setIsMobileMenuOpen(false)} />
         </div>
 
         <nav className="flex flex-col gap-4 text-2xl font-serif font-bold px-6">
@@ -327,6 +331,95 @@ function App() {
         </a>
       )}
 
+    </div>
+    </CurrencyProvider>
+  );
+}
+
+// ----------------------------------------------------------------
+// Helper sub-components (defined outside App to avoid re-renders)
+// ----------------------------------------------------------------
+
+function CurrencySwitcherWithSync(props: { isScrolled: boolean; isHomePage: boolean }) {
+  return <CurrencySwitcher isScrolled={props.isScrolled} isHomePage={props.isHomePage} />;
+}
+
+function LanguageSwitcherWithSync(props: { isScrolled: boolean; isHomePage: boolean }) {
+  const { setCurrencyFromLanguage } = useCurrency();
+  // We wrap LanguageSwitcher so that any language change from it triggers currency sync.
+  // Since LanguageSwitcher calls i18n.changeLanguage internally, we listen via i18n.
+  const { i18n } = useTranslation();
+  useEffect(() => {
+    const handler = (lang: string) => setCurrencyFromLanguage(lang);
+    i18n.on('languageChanged', handler);
+    return () => i18n.off('languageChanged', handler);
+  }, [i18n, setCurrencyFromLanguage]);
+  return <LanguageSwitcher isScrolled={props.isScrolled} isHomePage={props.isHomePage} />;
+}
+
+function MobileLanguageButton({
+  langCode,
+  label,
+  isActive,
+  onSelect,
+}: {
+  key?: React.Key;
+  langCode: string;
+  label: { code: string; name: string };
+  isActive: boolean;
+  onSelect: () => void;
+}) {
+  const { setCurrencyFromLanguage } = useCurrency();
+  return (
+    <button
+      onClick={() => {
+        setCurrencyFromLanguage(langCode);
+        onSelect();
+      }}
+      className={`flex items-center justify-between px-4 py-3 rounded-md transition-all border ${
+        isActive
+          ? 'bg-gold/10 border-gold'
+          : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
+      }`}
+    >
+      <span className={`text-sm font-bold tracking-wide ${isActive ? 'text-gold' : 'text-white'}`}>
+        {label.code}
+      </span>
+      <span className={`text-xs ${isActive ? 'text-gold/80' : 'text-white/40'}`}>
+        {label.name}
+      </span>
+    </button>
+  );
+}
+
+function MobileCurrencyGrid({ onSelect }: { onSelect: () => void }) {
+  const { currency, setCurrencyCode } = useCurrency();
+  const currencies = [
+    { code: 'IDR', symbol: 'Rp' },
+    { code: 'USD', symbol: '$'  },
+    { code: 'EUR', symbol: '€'  },
+    { code: 'SGD', symbol: 'S$' },
+    { code: 'CNY', symbol: '¥'  },
+  ];
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      {currencies.map((c) => {
+        const isActive = currency.code === c.code;
+        return (
+          <button
+            key={c.code}
+            onClick={() => { setCurrencyCode(c.code); onSelect(); }}
+            className={`flex flex-col items-center py-2 px-3 rounded-md text-xs font-bold border transition-all ${
+              isActive
+                ? 'bg-gold/20 border-gold text-gold'
+                : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:border-white/20'
+            }`}
+          >
+            <span className="text-base leading-none mb-0.5">{c.symbol}</span>
+            <span className="tracking-wider">{c.code}</span>
+          </button>
+        );
+      })}
     </div>
   );
 }
