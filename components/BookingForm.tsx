@@ -6,7 +6,8 @@ import {
 } from 'lucide-react';
 import { BookingState, Villa, Package } from '../types';
 import { VILLAS, PACKAGES } from '../constants';
-import { trackEvent, trackBookingStart, trackBookingStep, trackDateSelected, trackBookingSubmit } from '../utils/analytics';
+import { trackEvent, trackBookingStart, trackBookingStep, trackDateSelected, trackBookingSubmit, trackDateRange } from '../utils/analytics';
+import { useFormAbandonment } from '../hooks/useFormAbandonment';
 
 interface BookingFormProps {
   initialVilla?: string;
@@ -30,6 +31,16 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
 
   const [isSuccess, setIsSuccess] = useState(false);
   const [bookingRefId, setBookingRefId] = useState('');
+  // Tracks if user has started filling the form (for abandonment detection)
+  const [isDirty, setIsDirty] = useState(false);
+
+  // Form abandonment: fires if user leaves mid-booking without submitting
+  useFormAbandonment({
+    step: state.step,
+    villaId: state.itemId,
+    isDirty,
+    isSubmitted: isSuccess,
+  });
 
   useEffect(() => {
     if (initialVilla) {
@@ -212,7 +223,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
                 <div className="relative">
                   <select
                     value={state.itemId}
-                    onChange={(e) => setState(s => ({ ...s, itemId: e.target.value }))}
+                    onChange={(e) => { setIsDirty(true); setState(s => ({ ...s, itemId: e.target.value })); }}
                     className="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-0 text-forest-dark appearance-none cursor-pointer text-lg font-serif"
                   >
                     <option value="">-- View Options --</option>
@@ -270,8 +281,20 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
                     type="date"
                     value={state.checkIn}
                     onChange={(e) => {
-                      setState(s => ({ ...s, checkIn: e.target.value }));
-                      if (e.target.value) trackDateSelected('check_in', e.target.value, state.itemId);
+                      const newCheckIn = e.target.value;
+                      setIsDirty(true);
+                      setState(s => {
+                        const newState = { ...s, checkIn: newCheckIn };
+                        // Track date range when both dates are filled
+                        if (newCheckIn && s.checkOut) {
+                          const nights = Math.ceil(
+                            (new Date(s.checkOut).getTime() - new Date(newCheckIn).getTime()) / (1000 * 60 * 60 * 24)
+                          );
+                          if (nights > 0) trackDateRange(newCheckIn, s.checkOut, s.itemId, nights);
+                        }
+                        return newState;
+                      });
+                      if (newCheckIn) trackDateSelected('check_in', newCheckIn, state.itemId);
                     }}
                     className="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-0 text-forest-dark uppercase tracking-wider"
                   />
@@ -282,8 +305,20 @@ const BookingForm: React.FC<BookingFormProps> = ({ initialVilla, initialPackage 
                     type="date"
                     value={state.checkOut}
                     onChange={(e) => {
-                      setState(s => ({ ...s, checkOut: e.target.value }));
-                      if (e.target.value) trackDateSelected('check_out', e.target.value, state.itemId);
+                      const newCheckOut = e.target.value;
+                      setIsDirty(true);
+                      setState(s => {
+                        const newState = { ...s, checkOut: newCheckOut };
+                        // Track date range when both dates are filled
+                        if (s.checkIn && newCheckOut) {
+                          const nights = Math.ceil(
+                            (new Date(newCheckOut).getTime() - new Date(s.checkIn).getTime()) / (1000 * 60 * 60 * 24)
+                          );
+                          if (nights > 0) trackDateRange(s.checkIn, newCheckOut, s.itemId, nights);
+                        }
+                        return newState;
+                      });
+                      if (newCheckOut) trackDateSelected('check_out', newCheckOut, state.itemId);
                     }}
                     className="w-full p-4 bg-white border border-gray-200 focus:border-gold focus:ring-0 text-forest-dark uppercase tracking-wider"
                   />

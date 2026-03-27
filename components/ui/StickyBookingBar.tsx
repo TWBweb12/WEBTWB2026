@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { trackWhatsAppBooking, trackDateSelected, trackDateRange, trackEvent } from '../../utils/analytics';
 
 interface StickyBookingBarProps {
     lang?: 'id' | 'en';
@@ -70,6 +71,10 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
         const villaInfo = villaName ? `. Saya tertarik dengan ${villaName}` : '';
 
         const message = encodeURIComponent(baseMessage + dateInfo + guestInfo + villaInfo);
+        
+        // Track the WhatsApp click
+        trackWhatsAppBooking(`Sticky Bar${isExpanded ? ' - Mobile' : ' - Desktop'}${villaName ? ` - ${villaName}` : ''}`);
+        
         window.open(`https://wa.me/628119102003?text=${message}`, '_blank');
     };
 
@@ -97,7 +102,17 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                 <input
                                     type="date"
                                     value={checkIn}
-                                    onChange={(e) => setCheckIn(e.target.value)}
+                                    onChange={(e) => {
+                                        const date = e.target.value;
+                                        setCheckIn(date);
+                                        if (date) trackDateSelected('check_in', date, villaName || 'sticky-bar');
+                                        if (date && checkOut) {
+                                            const start = new Date(date);
+                                            const end = new Date(checkOut);
+                                            const diff = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+                                            if (diff > 0) trackDateRange(date, checkOut, villaName || 'sticky-bar', diff);
+                                        }
+                                    }}
                                     min={getMinDate()}
                                     className="w-full px-3 py-2 bg-transparent border-b border-gray-200 text-sm font-light focus:outline-none focus:border-gray-400 transition-colors cursor-pointer"
                                 />
@@ -111,7 +126,17 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                 <input
                                     type="date"
                                     value={checkOut}
-                                    onChange={(e) => setCheckOut(e.target.value)}
+                                    onChange={(e) => {
+                                        const date = e.target.value;
+                                        setCheckOut(date);
+                                        if (date) trackDateSelected('check_out', date, villaName || 'sticky-bar');
+                                        if (checkIn && date) {
+                                            const start = new Date(checkIn);
+                                            const end = new Date(date);
+                                            const diff = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+                                            if (diff > 0) trackDateRange(checkIn, date, villaName || 'sticky-bar', diff);
+                                        }
+                                    }}
                                     min={checkIn || getMinDate()}
                                     className="w-full px-3 py-2 bg-transparent border-b border-gray-200 text-sm font-light focus:border-gray-400 transition-colors cursor-pointer"
                                 />
@@ -173,7 +198,11 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                 <span className="text-sm font-serif text-gray-900">From Rp 2.000.000/night</span>
                             </div>
                             <button
-                                onClick={(e) => { e.stopPropagation(); setIsExpanded(true); }}
+                                onClick={(e) => { 
+                                    e.stopPropagation(); 
+                                    setIsExpanded(true); 
+                                    trackEvent({ action: 'mobile_sticky_bar_expand', category: 'engagement', label: villaName || 'general' });
+                                }}
                                 className="bg-forest-dark text-white px-6 py-3 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-black transition-colors"
                             >
                                 {lang === 'id' ? 'Book' : 'Book'}
@@ -203,7 +232,17 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                         <input
                                             type="date"
                                             value={checkIn}
-                                            onChange={(e) => setCheckIn(e.target.value)}
+                                            onChange={(e) => {
+                                                const date = e.target.value;
+                                                setCheckIn(date);
+                                                if (date) trackDateSelected('check_in', date, villaName || 'sticky-bar-mobile');
+                                                if (date && checkOut) {
+                                                    const start = new Date(date);
+                                                    const end = new Date(checkOut);
+                                                    const diff = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+                                                    if (diff > 0) trackDateRange(date, checkOut, villaName || 'sticky-bar-mobile', diff);
+                                                }
+                                            }}
                                             min={getMinDate()}
                                             className="w-full px-0 py-2 bg-transparent border-b border-gray-200 text-sm focus:border-forest-dark focus:outline-none"
                                         />
@@ -213,7 +252,17 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
                                         <input
                                             type="date"
                                             value={checkOut}
-                                            onChange={(e) => setCheckOut(e.target.value)}
+                                            onChange={(e) => {
+                                                const date = e.target.value;
+                                                setCheckOut(date);
+                                                if (date) trackDateSelected('check_out', date, villaName || 'sticky-bar-mobile');
+                                                if (checkIn && date) {
+                                                    const start = new Date(checkIn);
+                                                    const end = new Date(date);
+                                                    const diff = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+                                                    if (diff > 0) trackDateRange(checkIn, date, villaName || 'sticky-bar-mobile', diff);
+                                                }
+                                            }}
                                             min={checkIn || getMinDate()}
                                             className="w-full px-0 py-2 bg-transparent border-b border-gray-200 text-sm focus:border-forest-dark focus:outline-none"
                                         />

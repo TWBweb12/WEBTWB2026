@@ -14,7 +14,7 @@ import { FadeIn, Stagger, ScaleIn } from '../components/ui/animations';
 
 import { SEOHead } from '../components/ui/SEOHead';
 import { OrganizationSchema, LocalBusinessSchema } from '../components/ui/StructuredData';
-import { trackPageView, trackBookingStart } from '../utils/analytics';
+import { trackPageView, trackBookingStart, trackWhatsAppBooking } from '../utils/analytics';
 import { optimizeImage } from '../utils/imageOptimizer';
 import { useCurrency } from '../hooks/useCurrency';
 
@@ -83,6 +83,7 @@ export function HomePage() {
                 onPrimaryCTA={() => {
                     // Open WhatsApp with booking inquiry
                     const message = encodeURIComponent(t('home.whatsapp.inquiry', 'Halo, saya tertarik untuk reservasi di Taman Wisata Bougenville. Bisa dibantu?'));
+                    trackWhatsAppBooking('Hero Reserve Button - Desktop');
                     window.open(`https://wa.me/628119102003?text=${message}`, '_blank');
                 }}
                 onSecondaryCTA={() => {
@@ -98,6 +99,7 @@ export function HomePage() {
                     <button
                         onClick={() => {
                             const message = encodeURIComponent(t('home.whatsapp.inquiry', 'Halo, saya tertarik untuk reservasi di Taman Wisata Bougenville. Bisa dibantu?'));
+                            trackWhatsAppBooking('Hero Reserve Button - Mobile');
                             window.open(`https://wa.me/628119102003?text=${message}`, '_blank');
                         }}
                         className="bg-gold text-forest-dark px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-all duration-300 rounded-sm flex items-center gap-2"

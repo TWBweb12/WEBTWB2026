@@ -2,13 +2,7 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5SC3RPZ3');</script>
-  <!-- End Google Tag Manager -->
+
   <!-- Basic Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -33,7 +27,7 @@
       https://analytics.google.com
       https://region1.google-analytics.com
       https://www.googletagmanager.com
-      https://region1.analytics.google.com
+
       https://api.frankfurter.app
       https://analytics.tiktok.com
       https://www.clarity.ms
@@ -188,6 +182,29 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/logo192.png">
   <link rel="apple-touch-icon" href="/logo192.png">
   <link rel="shortcut icon" href="/logo192.png">
+
+  <!-- Tag Manager and Analytics Initialization -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
+
+    // GA4 Initialization
+    // GA4
+    gtag('js', new Date());
+    gtag('config', 'G-1M7C7PPNP3', { 'send_page_view': true, 'anonymize_ip': true });
+    const ga4Script = document.createElement('script');
+    ga4Script.async = true;
+    ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1M7C7PPNP3';
+    document.head.appendChild(ga4Script);
+
+    // Google Tag Manager
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5SC3RPZ3');
+  </script>
 </head>
 
 <body class="bg-cream text-forest-dark antialiased">
@@ -195,36 +212,12 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SC3RPZ3"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 
-  <!-- Google Analytics 4 (GA4) - Property 1: G-8N2D2R2MF8 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8N2D2R2MF8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8N2D2R2MF8', {
-      'send_page_view': true
-    });
-  </script>
+  <!-- Third-Party Scripts (Deferred - Non-blocking) -->
 
-  <!-- Google Analytics 4 (GA4) - Property 2: G-1M7C7PPNP3 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1M7C7PPNP3"></script>
-  <script>
-    gtag('config', 'G-1M7C7PPNP3');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vwz2siod64");
-  </script>
-
+  <!-- Microsoft Clarity loaded via NPM in analytics.ts -->
   <!-- Facebook Pixel (Deferred) -->
   <script>
     window.addEventListener('load', function () {

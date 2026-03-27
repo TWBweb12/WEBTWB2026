@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { trackWhatsAppBooking } from './utils/analytics';
 import { useRoute } from './hooks/useRouter';
+import { useScrollDepth } from './hooks/useScrollDepth';
+import { useErrorTracking } from './hooks/useErrorTracking';
 import {
   Menu, X, MapPin, Star,
   ArrowRight, Mountain, Globe,
@@ -43,6 +45,10 @@ function App() {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [selectedBookingVilla, setSelectedBookingVilla] = useState('');
   const [selectedBookingPackage, setSelectedBookingPackage] = useState('');
+
+  // Global tracking hooks
+  useScrollDepth(view);   // Re-tracks milestones on every page change
+  useErrorTracking();     // Captures JS errors & unhandled promise rejections
 
   // Scroll effect for sticky header
   useEffect(() => {

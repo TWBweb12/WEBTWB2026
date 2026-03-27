@@ -14,6 +14,18 @@
  * ============================================================
  */
 
+import Clarity from '@microsoft/clarity';
+
+// ── Initialize Clarity ────────────────────────────────────────
+const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_ID || "vwz2siod64";
+if (typeof window !== 'undefined') {
+  try {
+    Clarity.init(CLARITY_PROJECT_ID);
+  } catch (e) {
+    console.warn("Clarity init warning:", e);
+  }
+}
+
 // ── Type Definitions ──────────────────────────────────────────
 
 export interface AnalyticsEvent {
@@ -29,7 +41,6 @@ const isGA4Loaded    = (): boolean => typeof (window as any).gtag === 'function'
 const isGTMLoaded    = (): boolean => Array.isArray((window as any).dataLayer);
 const isFBLoaded     = (): boolean => typeof (window as any).fbq === 'function';
 const isTTKLoaded    = (): boolean => typeof (window as any).ttq?.track === 'function';
-const isClarityLoaded = (): boolean => typeof (window as any).clarity === 'function';
 
 // ── Internal GA4 Helper ───────────────────────────────────────
 
@@ -62,7 +73,17 @@ const ttk = (event: string, data?: Record<string, any>) => {
 // ── Internal Clarity Helper ───────────────────────────────────
 
 const clarity = (method: string, ...args: any[]) => {
-  if (isClarityLoaded()) (window as any).clarity(method, ...args);
+  try {
+    if (method === 'set' && args.length >= 2) {
+      Clarity.setTag(args[0], args[1]);
+    } else if (method === 'identify' && args.length >= 1) {
+      Clarity.identify(args[0], args[1]);
+    } else if (method === 'event' && args.length >= 1) {
+      Clarity.event(args[0]);
+    }
+  } catch (e) {
+    console.warn("Clarity method failed", method, e);
+  }
 };
 
 // ════════════════════════════════════════════════════════════
@@ -284,6 +305,143 @@ export const trackShare = (villaName: string) => {
   ga4('share', { content_type: 'villa', item_id: villaName });
   gtm({ event: 'share', villa_name: villaName });
   fbCustom('Share', { villa_name: villaName });
+};
+
+// ════════════════════════════════════════════════════════════
+// SCROLL DEPTH
+// ════════════════════════════════════════════════════════════
+
+/**
+ * Track scroll depth milestones (25 / 50 / 75 / 100%).
+ * Called from useScrollDepth hook — fires once per milestone per page mount.
+ */
+export const trackScrollDepth = (depth: 25 | 50 | 75 | 100, page: string) => {
+  // GA4
+  ga4('scroll', { percent_scrolled: depth, page_location: page });
+
+  // GTM
+  gtm({ event: 'scroll_depth', depth_percent: depth, page_location: page });
+
+  // Clarity
+  clarity('set', 'scroll_depth', `${depth}%`);
+};
+
+// ════════════════════════════════════════════════════════════
+// FORM ABANDONMENT
+// ════════════════════════════════════════════════════════════
+
+/**
+ * Track when user leaves the booking form mid-way.
+ * Called from useFormAbandonment hook on tab switch / visibility hidden.
+ */
+export const trackFormAbandonment = (step: number, villaId: string) => {
+  // GA4
+  ga4('form_abandonment', {
+    event_category: 'engagement',
+    event_label: `Step ${step} — ${villaId || 'no selection'}`,
+    form_step: step,
+    villa_id: villaId,
+  });
+
+  // GTM
+  gtm({ event: 'form_abandonment', form_step: step, villa_id: villaId });
+
+  // Meta Pixel
+  fbCustom('FormAbandonment', { step, villa_id: villaId });
+
+  // Clarity — tag session for funnel analysis
+  clarity('set', 'form_abandoned_at_step', String(step));
+};
+
+// ════════════════════════════════════════════════════════════
+// ERROR TRACKING
+// ════════════════════════════════════════════════════════════
+
+/**
+ * Track JavaScript errors & unhandled promise rejections.
+ * Called from useErrorTracking hook mounted once at App root.
+ */
+export const trackErrorEvent = (
+  type: 'js_error' | 'promise_rejection' | '404',
+  message: string,
+  page: string
+) => {
+  // GA4
+  ga4('exception', {
+    description: `[${type}] ${message}`,
+    fatal: false,
+    page_location: page,
+  });
+
+  // GTM
+  gtm({ event: type, error_message: message, page_location: page });
+
+  // Clarity — tag for playback filtering
+  clarity('set', 'error_type', type);
+};
+
+// ════════════════════════════════════════════════════════════
+// DATE RANGE ANALYTICS
+// ════════════════════════════════════════════════════════════
+
+/**
+ * Track complete date range after both check-in and check-out are filled.
+ * Sends: villa ID, number of nights, check-in month name (e.g. "April"),
+ * and whether it falls on a weekend.
+ */
+export const trackDateRange = (
+  checkIn: string,
+  checkOut: string,
+  villaId: string,
+  nights: number
+) => {
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  const checkInDate = new Date(checkIn);
+  const checkInMonth = monthNames[checkInDate.getMonth()];
+  const checkInDayOfWeek = checkInDate.getDay(); // 0=Sun, 6=Sat
+  const isWeekend = checkInDayOfWeek === 5 || checkInDayOfWeek === 6; // Fri/Sat
+
+  // Label for quick reading in GA4
+  const label = `${checkInMonth} — ${nights} night${nights !== 1 ? 's' : ''} — ${isWeekend ? 'Weekend' : 'Weekday'}`;
+
+  // GA4
+  ga4('date_range_selected', {
+    event_category: 'booking',
+    event_label: label,
+    check_in: checkIn,
+    check_out: checkOut,
+    villa_id: villaId,
+    nights,
+    check_in_month: checkInMonth,
+    is_weekend: isWeekend,
+  });
+
+  // GTM (full data for Tag Manager rules)
+  gtm({
+    event: 'date_range_selected',
+    check_in: checkIn,
+    check_out: checkOut,
+    villa_id: villaId,
+    nights,
+    check_in_month: checkInMonth,
+    is_weekend: isWeekend,
+  });
+
+  // Meta Pixel — as a custom event
+  fbCustom('DateRangeSelected', {
+    check_in: checkIn,
+    check_out: checkOut,
+    villa_id: villaId,
+    nights,
+  });
+
+  // Clarity — visible in session recording filters
+  clarity('set', 'booking_month', checkInMonth);
+  clarity('set', 'booking_nights', String(nights));
 };
 
 // ════════════════════════════════════════════════════════════
