@@ -37,6 +37,7 @@ export interface Villa {
   // Detailed room configuration
   bedConfiguration?: {
     room: number;
+    label?: string; // e.g., "Master Bedroom" – overrides the generic "Room N" display
     beds: string; // e.g., "1 king bed (180x200 cm)"
   }[];
   toilets?: number;
