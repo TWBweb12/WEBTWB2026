@@ -453,7 +453,9 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {currentVilla.bedConfiguration.map((config, idx) => (
                                         <div key={idx} className="border border-gray-100 p-4 rounded-lg">
-                                            <p className="font-medium text-forest-dark mb-1">{t('villa.room', 'Room')} {config.room}</p>
+                                            <p className="font-medium text-forest-dark mb-1">
+                                                {config.label || `${t('villa.room', 'Room')} ${config.room}`}
+                                            </p>
                                             <p className="text-sm text-gray-600 font-light">{config.beds}</p>
                                         </div>
                                     ))}

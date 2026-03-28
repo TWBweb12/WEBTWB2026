@@ -100,7 +100,7 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
     cluster: 'Forest House Puntang',
     capacity: '13-16 orang',
     bedrooms: 5,
-    area: 436.00,
+    area: 450,
     toilets: 4,
     price: 25000000,
     priceWeekday: 25000000,
@@ -122,7 +122,7 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
       '/images/villas/forest-house/DSC09977.WEB.jpg'
     ],
     bedConfiguration: [
-      { room: 1, beds: '1 king bed (180x200 cm)' },
+      { room: 1, label: 'Master Bedroom', beds: '1 king bed (180x200 cm)' },
       { room: 2, beds: '1 king bed (180x200 cm) + 1 trundle bed (2 orang)' },
       { room: 3, beds: '1 queen bed (160x200 cm) + 1 trundle bed (2 orang)' },
       { room: 4, beds: '1 queen bed (160x200 cm) + 1 trundle bed (2 orang)' },
@@ -130,17 +130,23 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
     ],
     facilities: {
       room: [
-        { id: '1 Ruang keluarga', en: '1 Family room', zh: '1间家庭房', de: '1 Familienzimmer' },
-        { id: '1 Ruang tamu', en: '1 Living room', zh: '1间客厅', de: '1 Wohnzimmer' },
-        { id: '2 Ruang makan (indoor & outdoor)', en: '2 Dining areas (indoor & outdoor)', zh: '2个用餐区（室内和室外）', de: '2 Essbereiche (innen & außen)' },
-        { id: '1 Dapur bersih', en: '1 Clean kitchen', zh: '1间干净厨房', de: '1 Saubere Küche' },
+        { id: '1 Ruang keluarga', en: '1 Family living room', zh: '1间家庭客厅', de: '1 Familienwohnzimmer' },
+        { id: '1 Ruang tamu formal', en: '1 Formal living room', zh: '1间正式客厅', de: '1 Formales Wohnzimmer' },
+        { id: '1 Ruang makan formal', en: '1 Formal dining room', zh: '1间正式餐厅', de: '1 Formales Esszimmer' },
+        { id: '1 Ruang makan outdoor', en: '1 Outdoor dining room', zh: '1个户外用餐区', de: '1 Außen-Esszimmer' },
+        { id: '1 Dapur bersih', en: '1 Kitchen', zh: '1间厨房', de: '1 Küche' },
         { id: '1 Teras luar di kamar utama', en: '1 Outdoor terrace in master bedroom', zh: '主卧1个户外露台', de: '1 Außenterrasse im Hauptschlafzimmer' },
         { id: '1 Teras luar sisi sungai', en: '1 Riverside outdoor terrace', zh: '1个河畔户外露台', de: '1 Außenterrasse am Flussufer' },
+        { id: '1 Kolam ikan', en: '1 Fish pond', zh: '1个鱼塘', de: '1 Fischteich' },
+        { id: '1 Air terjun & taman', en: '1 Waterfall & garden', zh: '1个瀑布和花园', de: '1 Wasserfall & Garten' },
         { id: '1 Gazebo', en: '1 Gazebo', zh: '1个凉亭', de: '1 Gazebo' }
       ],
       amenities: [
-        { id: '1 Air terjun & taman', en: '1 Waterfall & garden', zh: '1个瀑布和花园', de: '1 Wasserfall & Garten' },
-        { id: '1 Kolam ikan', en: '1 Fish pond', zh: '1个鱼塘', de: '1 Fischteich' }
+        { id: 'Perlengkapan & alat mandi', en: 'Toiletries & bath supplies', zh: '洗浴用品', de: 'Toilettenartikel & Badezubehör' },
+        { id: 'Kulkas', en: 'Refrigerator', zh: '冰箱', de: 'Kühlschrank' },
+        { id: 'Microwave', en: 'Microwave', zh: '微波炉', de: 'Mikrowelle' },
+        { id: 'Dispenser', en: 'Water dispenser', zh: '饮水机', de: 'Wasserspender' },
+        { id: 'Oven', en: 'Oven', zh: '烤箱', de: 'Ofen' }
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '早餐', de: 'Frühstück' },
@@ -149,11 +155,11 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
         { id: 'Kopi, teh, dan gula', en: 'Coffee, tea, and sugar', zh: '咖啡、茶和糖', de: 'Kaffee, Tee und Zucker' }
       ],
       natural: [
-        { id: 'Air terjun & taman privat', en: 'Private waterfall & garden', zh: '私人瀑布和花园', de: 'Privater Wasserfall & Garten' },
+        { id: 'Air terjun & taman privat', en: 'Private Waterfall & Garden', zh: '私人瀑布和花园', de: 'Privater Wasserfall & Garten' },
+        { id: 'Taman indah & kolam alam', en: 'Beautiful Garden & Nature Pool', zh: '美丽花园和自然水池', de: 'Schöner Garten & Naturbecken' },
         { id: 'Gazebo', en: 'Gazebo', zh: '凉亭', de: 'Gazebo' },
-        { id: 'Children playground', en: 'Children playground', zh: '儿童游乐场', de: 'Kinderspielplatz' },
+        { id: 'Kids playground', en: 'Kids playground', zh: '儿童游乐场', de: 'Kinderspielplatz' },
         { id: 'Trekking/ hiking', en: 'Trekking/ hiking', zh: '徒步旅行', de: 'Trekking / Wandern' },
-        { id: '2 kolam renang air dingin (umum)', en: '2 Cold water swimming pools (public)', zh: '2个冷水游泳池（公共）', de: '2 Kaltwasser-Schwimmbäder (öffentlich)' },
         { id: 'Sungai Cigeureuh', en: 'Cigeureuh River', zh: 'Cigeureuh河', de: 'Cigeureuh Fluss' },
         { id: 'Skywalk', en: 'Skywalk', zh: '空中漫步桥', de: 'Skywalk' },
         { id: 'Jembatan sangkar burung', en: 'Bird cage bridge', zh: '鸟笼桥', de: 'Vogelkäfigbrücke' }
@@ -191,7 +197,7 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
     cluster: 'Mooi Lake House Puntang',
     capacity: '9 orang',
     bedrooms: 3,
-    area: 130,
+    area: 116.8,
     toilets: 2,
     price: 12500000,
     priceWeekday: 12500000,
@@ -214,17 +220,23 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
     ],
     bedConfiguration: [
       { room: 1, beds: '1 Master bedroom (king bed)' },
-      { room: 2, beds: 'Kids bedroom 1 (3 single bed) + trundle bed' },
-      { room: 3, beds: 'Kids bedroom 2 (4 single bed) + trundle bed' }
+      { room: 2, beds: 'Kids bedroom 1 (3 single bed)' },
+      { room: 3, beds: 'Kids bedroom 2 (4 single bed)' }
     ],
     facilities: {
       room: [
         { id: '1 Ruang keluarga', en: '1 Living room', zh: '1间客厅', de: '1 Wohnzimmer' },
-        { id: '1 Dapur bersih', en: '1 Clean kitchen', zh: '1?????', de: '1 Saubere K�che' },
+        { id: '1 Dapur bersih', en: '1 Clean kitchen', zh: '1间厨房', de: '1 Saubere Küche' },
+        { id: 'Meja makan', en: 'Dining table', zh: '餐桌', de: 'Esstisch' },
         { id: 'Teras', en: 'Terrace', zh: '露台', de: 'Terrasse' }
       ],
       amenities: [
-        { id: '2 Kamar mandi & toilet', en: '2 Bathrooms & toilets', zh: '2个浴室和卫生间', de: '2 Badezimmer & Toiletten' }
+        { id: '2 Kamar mandi & toilet', en: '2 Bathrooms & toilets', zh: '2个浴室和卫生间', de: '2 Badezimmer & Toiletten' },
+        { id: 'Perlengkapan & alat mandi', en: 'Toiletries & bath supplies', zh: '洗浴用品', de: 'Toilettenartikel & Badezubehör' },
+        { id: 'Kulkas', en: 'Refrigerator', zh: '冰箱', de: 'Kühlschrank' },
+        { id: 'Microwave', en: 'Microwave', zh: '微波炉', de: 'Mikrowelle' },
+        { id: 'Dispenser', en: 'Water dispenser', zh: '饮水机', de: 'Wasserspender' },
+        { id: 'Oven', en: 'Oven', zh: '烤箱', de: 'Ofen' }
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '早餐', de: 'Frühstück' },
@@ -233,10 +245,10 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
         { id: 'Cemilan premium', en: 'Premium snacks', zh: '优质小吃', de: 'Premium-Snacks' }
       ],
       natural: [
-        { id: 'Danau & perahu privat', en: 'Private lake & boat', zh: '私人湖泊和船', de: 'Privater See & Boot' },
-        { id: 'Children playground', en: 'Children playground', zh: '儿童游乐场', de: 'Kinderspielplatz' },
+        { id: 'Danau & kano privat', en: 'Private lake & canoe', zh: '私人湖泊和独木舟', de: 'Privater See & Kanu' },
+        { id: 'Kids playground', en: 'Kids playground', zh: '儿童游乐场', de: 'Kinderspielplatz' },
         { id: 'Trekking/ hiking', en: 'Trekking/hiking', zh: '徒步/远足', de: 'Trekking / Wandern' },
-        { id: '2 kolam renang air dingin (umum)', en: '2 Cold water swimming pools (public)', zh: '2??????(??)', de: '2 Kaltwasser-Schwimmb�der (�ffentlich)' },
+        { id: 'Taman indah & kolam alam', en: 'Beautiful Garden & Nature Pool', zh: '美丽花园和自然水池', de: 'Schöner Garten & Naturbecken' },
         { id: 'Sungai Cigeureuh', en: 'Cigeureuh River', zh: 'Cigeureuh河', de: 'Cigeureuh Fluss' },
         { id: 'Skywalk', en: 'Skywalk', zh: '空中漫步桥', de: 'Skywalk' },
         { id: 'Jembatan sangkar burung', en: 'Bird cage bridge', zh: '鸟笼桥', de: 'Vogelkäfigbrücke' },
