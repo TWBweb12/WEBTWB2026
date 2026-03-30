@@ -96,7 +96,7 @@ export const TRANSLATIONS: Translation = {
 export const FOREST_HOUSE_VILLAS: Villa[] = [
   {
     id: 'forest-house',
-    name: 'Forest House',
+    name: 'Forest House Puntang',
     cluster: 'Forest House Puntang',
     capacity: '13-16 orang',
     bedrooms: 5,
@@ -193,7 +193,7 @@ export const FOREST_HOUSE_VILLAS: Villa[] = [
 export const MOOI_LAKE_VILLAS: Villa[] = [
   {
     id: 'mooi-lake',
-    name: 'Mooi Lake House',
+    name: 'Mooi Lake House Puntang',
     cluster: 'Mooi Lake House Puntang',
     capacity: '9 orang',
     bedrooms: 3,
@@ -277,14 +277,14 @@ export const MOOI_LAKE_VILLAS: Villa[] = [
 export const EMERALD_VILLAS: Villa[] = [
   {
     id: 'emerald-01',
-    name: 'Emerald 01 (Unit Bawah)',
+    name: 'Emerald Villa 01 (Unit Bawah)',
     localizedName: {
-      id: 'Emerald 01 (Unit Bawah)',
-      en: 'Emerald 01 (Lower Unit)',
-      zh: 'Emerald 01 (下层单元)',
-      de: 'Emerald 01 (Untere Einheit)'
+      id: 'Emerald Villa 01 (Unit Bawah)',
+      en: 'Emerald Villa 01 (Lower Unit)',
+      zh: 'Emerald Villa 01 (下层单元)',
+      de: 'Emerald Villa 01 (Untere Einheit)'
     },
-    cluster: 'Emerald Villas',
+    cluster: 'Dandenong Villas Puntang',
     capacity: '7 orang',
     bedrooms: 2,
     area: 135.33,
@@ -355,14 +355,14 @@ export const EMERALD_VILLAS: Villa[] = [
   },
   {
     id: 'emerald-02',
-    name: 'Emerald 02 (Unit Atas)',
+    name: 'Emerald Villa 02 (Unit Atas)',
     localizedName: {
-      id: 'Emerald 02 (Unit Atas)',
-      en: 'Emerald 02 (Upper Unit)',
-      zh: 'Emerald 02 (上层单元)',
-      de: 'Emerald 02 (Obere Einheit)'
+      id: 'Emerald Villa 02 (Unit Atas)',
+      en: 'Emerald Villa 02 (Upper Unit)',
+      zh: 'Emerald Villa 02 (上层单元)',
+      de: 'Emerald Villa 02 (Obere Einheit)'
     },
-    cluster: 'Emerald Villas',
+    cluster: 'Dandenong Villas Puntang',
     capacity: '7 orang',
     bedrooms: 2,
     area: 134.67,
@@ -440,7 +440,7 @@ export const DANDENONG_VILLAS: Villa[] = [
   {
     id: 'olinda',
     name: 'Olinda Villa',
-    cluster: 'Dandenong Villas',
+    cluster: 'Dandenong Villas Puntang',
     capacity: '12 orang',
     bedrooms: 3,
     area: 145.40,
@@ -493,7 +493,6 @@ export const DANDENONG_VILLAS: Villa[] = [
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '早餐', de: 'Frühstück' },
-        { id: 'Makan siang', en: 'Lunch', zh: '午餐', de: 'Mittagessen' },
         { id: 'Makan malam', en: 'Dinner', zh: '晚餐', de: 'Abendessen' },
         { id: 'Kopi, teh, gula, creamer', en: 'Coffee, tea, sugar, creamer', zh: '??,?,?,??', de: 'Kaffee, Tee, Zucker, Sahne' },
         { id: 'Air mineral', en: 'Mineral water', zh: '矿泉水', de: 'Mineralwasser' }
@@ -522,7 +521,7 @@ export const DANDENONG_VILLAS: Villa[] = [
   {
     id: 'selby',
     name: 'Selby Villa',
-    cluster: 'Dandenong Villas',
+    cluster: 'Dandenong Villas Puntang',
     capacity: '4 orang',
     bedrooms: 2,
     area: 76.45,
@@ -570,7 +569,6 @@ export const DANDENONG_VILLAS: Villa[] = [
       ],
       meals: [
         { id: 'Sarapan', en: 'Breakfast', zh: '早餐', de: 'Frühstück' },
-        { id: 'Makan siang', en: 'Lunch', zh: '午餐', de: 'Mittagessen' },
         { id: 'Makan malam', en: 'Dinner', zh: '晚餐', de: 'Abendessen' },
         { id: 'Kopi, gula, teh, creamer', en: 'Coffee, sugar, tea, creamer', zh: '咖啡、糖、茶、奶精', de: 'Kaffee, Zucker, Tee, Sahne' },
         { id: 'Air mineral', en: 'Mineral water', zh: '矿泉水', de: 'Mineralwasser' }
@@ -604,8 +602,8 @@ export const DANDENONG_VILLAS: Villa[] = [
 export const PROVINCIAL_VILLAS: Villa[] = [
   {
     id: 'villa-gordes',
-    name: 'Villa Gordes (Hijau)',
-    cluster: 'Provincial Villas',
+    name: 'Gordes Villa',
+    cluster: 'Provincial Villas Puntang',
     capacity: '4 orang',
     bedrooms: 2,
     area: 76.96,
@@ -681,8 +679,8 @@ export const PROVINCIAL_VILLAS: Villa[] = [
   },
   {
     id: 'villa-roussillon',
-    name: 'Villa Roussillon (Abu-abu)',
-    cluster: 'Provincial Villas',
+    name: 'Roussillon Villa',
+    cluster: 'Provincial Villas Puntang',
     capacity: '5 orang',
     bedrooms: 2,
     area: 102.09,
@@ -757,8 +755,8 @@ export const PROVINCIAL_VILLAS: Villa[] = [
   },
   {
     id: 'villa-lourmarin',
-    name: 'Villa Lourmarin (Coklat)',
-    cluster: 'Provincial Villas',
+    name: 'Lourmarin Villa',
+    cluster: 'Provincial Villas Puntang',
     capacity: '6 orang',
     bedrooms: 2,
     area: 106.24,
@@ -838,8 +836,8 @@ export const PROVINCIAL_VILLAS: Villa[] = [
 export const RIVERSIDE_VILLAS: Villa[] = [
   {
     id: 'riverside-hana',
-    name: 'Villa Hana',
-    cluster: 'Riverside Villas',
+    name: 'Hana Villa',
+    cluster: 'Riverside Villas Puntang',
     capacity: '6 Pax',
     bedrooms: 3,
     area: 129.5,
@@ -911,8 +909,8 @@ export const RIVERSIDE_VILLAS: Villa[] = [
   },
   {
     id: 'riverside-fiore',
-    name: 'Villa Fiore',
-    cluster: 'Riverside Villas',
+    name: 'Fiore Villa',
+    cluster: 'Riverside Villas Puntang',
     capacity: '6 Pax',
     bedrooms: 3,
     area: 129.5,
@@ -989,8 +987,8 @@ export const RIVERSIDE_VILLAS: Villa[] = [
   },
   {
     id: 'riverside-blomst',
-    name: 'Villa Blomst',
-    cluster: 'Riverside Villas',
+    name: 'Blomst Villa',
+    cluster: 'Riverside Villas Puntang',
     capacity: '6 Pax',
     bedrooms: 3,
     area: 240.4,
@@ -1997,8 +1995,8 @@ export const KAMPUH_BECIK_VILLAS: Villa[] = [
 export const LOG_HOME_VILLAS: Villa[] = [
   {
     id: 'villa-campaka',
-    name: 'Villa Campaka',
-    cluster: 'Nawa Bumi Villas',
+    name: 'Campaka Villa',
+    cluster: 'Nawa Bumi Villas Puntang',
     capacity: '12 Pax',
     bedrooms: 4,
     area: 146.40,
@@ -2073,8 +2071,8 @@ export const LOG_HOME_VILLAS: Villa[] = [
   },
   {
     id: 'villa-suren',
-    name: 'Villa Suren',
-    cluster: 'Nawa Bumi Villas',
+    name: 'Suren Villa',
+    cluster: 'Nawa Bumi Villas Puntang',
     capacity: '8 Pax',
     bedrooms: 2,
     area: 61.28,
@@ -2147,8 +2145,8 @@ export const LOG_HOME_VILLAS: Villa[] = [
 
   {
     id: 'villa-puspa',
-    name: 'Villa Puspa',
-    cluster: 'Nawa Bumi Villas',
+    name: 'Puspa Villa',
+    cluster: 'Nawa Bumi Villas Puntang',
     capacity: '15 Pax',
     bedrooms: 3,
     area: 152.61,

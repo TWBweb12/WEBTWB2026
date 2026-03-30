@@ -60,7 +60,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
     luxury: [
       {
         id: 'forest-house',
-        name: 'Forest House',
+        name: 'Forest House Puntang',
         description: {
           id: 'Villa termewah dengan pemandangan hutan pinus.',
           en: 'Most luxurious villa with pine forest views.',
@@ -74,7 +74,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
       },
       {
         id: 'mooi-lake',
-        name: 'Mooi Lake House',
+        name: 'Mooi Lake House Puntang',
         description: {
           id: 'Villa tepi danau dengan perahu privat.',
           en: 'Lakeside villa with private boat.',
@@ -87,35 +87,21 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         customBadge: 'Secluded Villa'
       },
       {
-        id: 'emerald',
-        name: 'Emerald Villas',
-        description: {
-          id: 'Villa American Farmhouse 2 unit (Atas & Bawah), cocok untuk gathering.',
-          en: 'American Farmhouse villas in 2 units (Upper & Lower), great for gatherings.',
-          zh: '美式农舍两套单元（上层与下层），适合聚会。',
-          de: 'Amerikanische Farmhouse-Villen in 2 Einheiten (Oben & Unten), ideal für Veranstaltungen.'
-        },
-        image: '/images/optimized/villas/emerald-01/hero.webp',
-        type: 'group',
-        filterFn: (v) => v.cluster === 'Emerald Villas',
-        customBadge: 'Stand Alone'
-      },
-      {
         id: 'dandenong',
-        name: 'Dandenong Villas',
+        name: 'Dandenong Villas Puntang',
         description: {
-          id: 'Koleksi villa American Farmhouse (Olinda, Selby).',
-          en: 'American Farmhouse collection (Olinda, Selby).',
-          zh: '美式农舍系列（Olinda, Selby）。',
-          de: 'Amerikanische Farmhouse-Kollektion (Olinda, Selby).'
+          id: 'Koleksi villa American Farmhouse (Olinda, Selby, Emerald Villa 01 & 02).',
+          en: 'American Farmhouse collection (Olinda, Selby, Emerald Villa 01 & 02).',
+          zh: '美式农舍系列（Olinda, Selby, Emerald Villa 01 & 02）。',
+          de: 'Amerikanische Farmhouse-Kollektion (Olinda, Selby, Emerald Villa 01 & 02).'
         },
         image: '/images/villas/dandenong/facade-dpv.webp',
         type: 'group',
-        filterFn: (v) => v.cluster === 'Dandenong Villas'
+        filterFn: (v) => v.cluster === 'Dandenong Villas Puntang'
       },
       {
         id: 'provincial',
-        name: 'Provincial Villas',
+        name: 'Provincial Villas Puntang',
         description: {
           id: 'Villa gaya pedesaan Prancis (Gordes, Roussillon, Lourmarin).',
           en: 'French countryside style villas (Gordes, Roussillon, Lourmarin).',
@@ -124,26 +110,26 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
         },
         image: '/images/optimized/membership/membership-hero.webp',
         type: 'group',
-        filterFn: (v) => v.cluster === 'Provincial Villas'
+        filterFn: (v) => v.cluster === 'Provincial Villas Puntang'
       },
       {
         id: 'riverside',
-        name: 'Riverside Villas',
+        name: 'Riverside Villas Puntang',
         description: {
-          id: 'Villa tepi sungai (Hana, Blomst, Fiore).',
-          en: 'Riverside villas (Hana, Blomst, Fiore).',
-          zh: '河畔别墅（Hana, Blomst, Fiore）。',
-          de: 'Villen am Flussufer (Hana, Blomst, Fiore).'
+          id: 'Villa tepi sungai (Blomst, Fiore, Hana).',
+          en: 'Riverside villas (Blomst, Fiore, Hana).',
+          zh: '河畔别墅（Blomst, Fiore, Hana）。',
+          de: 'Villen am Flussufer (Blomst, Fiore, Hana).'
         },
         image: '/images/villas/riverside-hana/Rsv-11kompres.WEB.jpg',
         type: 'group',
-        filterFn: (v) => v.cluster === 'Riverside Villas'
+        filterFn: (v) => v.cluster === 'Riverside Villas Puntang'
       }
     ],
     couple: [
       {
         id: 'kampuh-becik-deluxe',
-        name: 'Kampuh Becik Deluxe',
+        name: 'Kampuh Becik Villas (Deluxe)',
         description: {
           id: 'Kabin romantis tipe Deluxe.',
           en: 'Romantic Deluxe type cabins.',
@@ -156,7 +142,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
       },
       {
         id: 'kampuh-becik-executive',
-        name: 'Kampuh Becik Executive',
+        name: 'Kampuh Becik Villas (Executive)',
         description: {
           id: 'Kabin romantis tipe Executive dengan akses sungai.',
           en: 'Romantic Executive cabins with river access.',
@@ -171,12 +157,12 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
     log_home: [
       {
         id: 'nawa-bumi',
-        name: 'Nawa Bumi',
+        name: 'Nawa Bumi Villas Puntang',
         description: {
-          id: 'Kompleks Log Home (Campaka, Suren, Puspa).',
-          en: 'Log Home complex (Campaka, Suren, Puspa).',
-          zh: '原木家居综合体（Campaka, Suren, Puspa）。',
-          de: 'Blockhaus-Komplex (Campaka, Suren, Puspa).'
+          id: 'Kompleks Log Home (Campaka, Puspa, Suren).',
+          en: 'Log Home complex (Campaka, Puspa, Suren).',
+          zh: '原木家居综合体（Campaka, Puspa, Suren）。',
+          de: 'Blockhaus-Komplex (Campaka, Puspa, Suren).'
         },
         image: '/images/villas/hero-campaka.webp',
         type: 'group',

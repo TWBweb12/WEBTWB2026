@@ -191,12 +191,12 @@ export function MembershipPage() {
                                     >
                                         <option value="Forest House Puntang">Forest House Puntang</option>
                                         <option value="Mooi Lake House Puntang">Mooi Lake House Puntang</option>
-                                        <option value="Emerald Villas">Emerald Villas</option>
-                                        <option value="Dandenong Villas">Dandenong Villas</option>
-                                        <option value="Provincial Villas">Provincial Villas</option>
-                                        <option value="Riverside Villas">Riverside Villas</option>
-                                        <option value="Nawabumi">Nawabumi</option>
-                                        <option value="Kampuh Becik">Kampuh Becik</option>
+                                        <option value="Dandenong Villas Puntang">Dandenong Villas Puntang</option>
+                                        <option value="Provincial Villas Puntang">Provincial Villas Puntang</option>
+                                        <option value="Riverside Villas Puntang">Riverside Villas Puntang</option>
+                                        <option value="Nawa Bumi Villas Puntang">Nawa Bumi Villas Puntang</option>
+                                        <option value="Kampuh Becik Villas (Deluxe)">Kampuh Becik Villas (Deluxe)</option>
+                                        <option value="Kampuh Becik Villas (Executive)">Kampuh Becik Villas (Executive)</option>
                                     </select>
                                 </div>
                                 <div className="space-y-1">
