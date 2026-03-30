@@ -101,7 +101,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa instagramable bandung',
             'villa farmhouse gunung puntang'
         ],
-        titleTemplate: 'Olinda - Villa American Farmhouse Bandung | Dandenong Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Olinda - Villa American Farmhouse Bandung | Dandenong Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Olinda, villa American Farmhouse di Bandung. Desain unik Western style, fasilitas lengkap. Cocok untuk liburan keluarga atau gathering. Booking sekarang!'
     },
     'emerald': {
@@ -122,7 +122,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa terjangkau gunung puntang',
             'villa hemat bandung selatan'
         ],
-        titleTemplate: 'Selby - Villa Murah Bandung | Dandenong Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Selby - Villa Murah Bandung | Dandenong Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Selby Villa, villa murah di Bandung dengan kualitas premium. Harga terjangkau, fasilitas lengkap. Cocok untuk liburan hemat bersama keluarga!'
     },
 
@@ -134,7 +134,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa french style bandung',
             'villa romantis eropa bandung'
         ],
-        titleTemplate: 'Gordes - Villa Provence Bandung | French Countryside Style | Taman Wisata Bougenville',
+        titleTemplate: 'Gordes - Villa Provence Bandung | Provincial Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Gordes Villa, villa bergaya Provence di Bandung. Arsitektur French countryside yang elegan. Pengalaman menginap seperti di Eropa!'
     },
     'roussillon': {
@@ -144,7 +144,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa unik bandung',
             'penginapan instagramable bandung'
         ],
-        titleTemplate: 'Roussillon - Villa Eropa Bandung | Provincial Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Roussillon - Villa Eropa Bandung | Provincial Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Roussillon Villa, villa bergaya Eropa di Bandung. Desain elegan French countryside, view pegunungan menawan. Booking langsung!'
     },
     'lourmarin': {
@@ -153,7 +153,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa prancis bandung',
             'villa provence style bandung'
         ],
-        titleTemplate: 'Lourmarin - Villa French Style Bandung | Provincial Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Lourmarin - Villa French Style Bandung | Provincial Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Lourmarin Villa, villa French style di Bandung dengan nuansa Provence yang autentik. Sempurna untuk liburan romantis!'
     },
 
@@ -165,7 +165,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa view sungai bandung',
             'penginapan tepi sungai gunung puntang'
         ],
-        titleTemplate: 'Hana - Villa Tepi Sungai Bandung | Riverside Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Hana Villa - Villa Tepi Sungai Bandung | Riverside Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Hana Villa, villa tepi sungai di Bandung dengan suara air mengalir. Suasana tenang, cocok untuk healing. Booking sekarang!'
     },
     'blomst': {
@@ -175,7 +175,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa tenang bandung',
             'retreat villa bandung'
         ],
-        titleTemplate: 'Blomst - Villa Healing Bandung | Riverside Retreat | Taman Wisata Bougenville',
+        titleTemplate: 'Blomst Villa - Villa Healing Bandung | Riverside Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Blomst Villa, villa healing di Bandung tepi sungai. Suasana tenang untuk relaksasi maksimal. Sempurna untuk staycation!'
     },
     'fiore': {
@@ -185,7 +185,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa liburan bandung',
             'penginapan weekend bandung'
         ],
-        titleTemplate: 'Fiore - Villa Staycation Bandung | Riverside Villas | Taman Wisata Bougenville',
+        titleTemplate: 'Fiore Villa - Villa Staycation Bandung | Riverside Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Fiore Villa, villa staycation di Bandung dengan suasana riverside yang menenangkan. Pilihan tepat untuk weekend getaway!'
     },
 
@@ -197,7 +197,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'wooden cabin gunung puntang',
             'penginapan kayu bandung'
         ],
-        titleTemplate: 'Campaka - Log Cabin Bandung | Nawa Bumi | Taman Wisata Bougenville',
+        titleTemplate: 'Campaka Villa - Log Cabin Bandung | Nawa Bumi Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Campaka, log cabin di Bandung dengan konstruksi kayu autentik. Pengalaman menginap di cabin kayu di tengah alam!'
     },
     'suren': {
@@ -207,7 +207,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa rustic bandung',
             'penginapan unik bandung'
         ],
-        titleTemplate: 'Suren - Villa Kayu Bandung | Log Home | Taman Wisata Bougenville',
+        titleTemplate: 'Suren Villa - Villa Kayu Bandung | Nawa Bumi Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Suren, villa kayu di Bandung dari konstruksi log home asli. Suasana hangat, view pegunungan. Cocok untuk keluarga!'
     },
     'puspa': {
@@ -217,7 +217,7 @@ export const VILLA_SEO_CONFIG: Record<string, {
             'villa pegunungan bandung',
             'eco villa bandung'
         ],
-        titleTemplate: 'Puspa - Villa Alam Bandung | Log Home | Taman Wisata Bougenville',
+        titleTemplate: 'Puspa Villa - Villa Alam Bandung | Nawa Bumi Villas Puntang | Taman Wisata Bougenville',
         descriptionTemplate: 'Puspa, villa alam di Bandung di tengah kehijauan. Log cabin yang menyatu dengan alam. Ideal untuk nature lovers!'
     }
 };
