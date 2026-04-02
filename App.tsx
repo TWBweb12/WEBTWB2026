@@ -252,13 +252,16 @@ function App() {
             </div>
           </button>
 
-          <div className={`grid grid-cols-2 gap-3 overflow-hidden transition-all duration-300 ease-in-out ${isLangMenuOpen ? 'max-h-48 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-            {['id', 'en', 'zh', 'de'].map((langCode) => {
+          <div className={`grid grid-cols-2 gap-3 overflow-hidden transition-all duration-300 ease-in-out ${isLangMenuOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+            {['id', 'en', 'zh', 'de', 'ja', 'ko', 'fr'].map((langCode) => {
               const labels: Record<string, { code: string; name: string }> = {
                 id: { code: 'ID', name: 'Bahasa' },
                 en: { code: 'EN', name: 'English' },
                 zh: { code: 'ZH', name: '中文' },
-                de: { code: 'DE', name: 'Deutsch' }
+                de: { code: 'DE', name: 'Deutsch' },
+                ja: { code: 'JA', name: '日本語' },
+                ko: { code: 'KO', name: '한국어' },
+                fr: { code: 'FR', name: 'Français' },
               };
               const currentLang = i18n.language?.split('-')[0] || 'id';
               const isActive = currentLang === langCode;
@@ -400,6 +403,7 @@ function MobileCurrencyGrid({ onSelect }: { onSelect: () => void }) {
     { code: 'EUR', symbol: '€'  },
     { code: 'SGD', symbol: 'S$' },
     { code: 'CNY', symbol: '¥'  },
+    { code: 'WON', symbol: '₩'  },
   ];
   return (
     <div className="grid grid-cols-3 gap-2">

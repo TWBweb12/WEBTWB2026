@@ -343,8 +343,8 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
                         {cluster.customBadge
                           ? cluster.customBadge
                           : cluster.type === 'direct'
-                          ? t('villas.singleUnit', 'Single Unit')
-                          : t('villas.cluster', 'Cluster')
+                            ? t('villas.singleUnit', 'Single Unit')
+                            : t('villas.cluster', 'Cluster')
                         }
                       </span>
                       {/* Shine effect */}
