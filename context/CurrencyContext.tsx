@@ -15,6 +15,8 @@ export const CURRENCIES: CurrencyInfo[] = [
     { code: 'EUR', symbol: '€', name: 'Euro', rate: 0.000057, locale: 'de-DE' },
     { code: 'SGD', symbol: 'S$', name: 'Singapore Dollar', rate: 0.000082, locale: 'en-SG' },
     { code: 'CNY', symbol: '¥', name: 'Chinese Yuan', rate: 0.00044, locale: 'zh-CN' },
+    { code: 'JPY', symbol: '¥', name: 'Japanese Yen', rate: 0.0093, locale: 'ja-JP' },
+    { code: 'WON', symbol: '₩', name: 'Korean Won', rate: 0.083, locale: 'ko-KR' },
 ];
 
 // Map language code to default currency code
@@ -23,6 +25,9 @@ export const LANG_TO_CURRENCY: Record<string, string> = {
     en: 'USD',
     zh: 'CNY',
     de: 'EUR',
+    ja: 'JPY',
+    ko: 'WON',
+    fr: 'EUR',
 };
 
 interface CurrencyContextValue {
