@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { optimizeImage } from '../../utils/imageOptimizer';
@@ -11,7 +11,7 @@ export interface BlogPostCardProps {
 
 export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post, onReadMore }) => {
     const { i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
     const getContent = (content: any) => {
         if (typeof content === 'string') return content;

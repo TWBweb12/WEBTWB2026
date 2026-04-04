@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, MapPin, Compass } from 'lucide-react';
 import { ACTIVITY_CATEGORIES } from '../constants';
@@ -13,7 +13,7 @@ interface FacilityPageProps {
 
 const FacilityPage: React.FC<FacilityPageProps> = ({ onNavigateToGallery }) => {
   const { t, i18n } = useTranslation();
-  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   const getContent = (content: any) => {
     if (typeof content === 'string') return content;

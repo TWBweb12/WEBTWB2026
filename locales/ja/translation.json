@@ -514,6 +514,11 @@
         "selectDates": "料金概算を表示するには日程を選択してください",
         "whatsappMessageVilla": "こんにちは、{{villaName}}を予約したいと思っています。%0A%0Aチェックイン: {{checkIn}}%0Aチェックアウト: {{checkOut}}%0Aゲスト数: {{guests}}%0A%0A{{nights}}泊の概算: {{price}}%0A%0A空き状況をご確認ください。"
     },
+    "villas": {
+        "exploreCluster": "クラスターを探索",
+        "cluster": "クラスター",
+        "singleUnit": "シングルユニット"
+    },
     "common": {
         "learnMore": "詳しく見る",
         "close": "閉じる",
@@ -529,7 +534,9 @@
         "share": "共有",
         "copied": "リンクをコピーしました！",
         "perNight": "/ 泊",
-        "reviews": "レビュー"
+        "reviews": "レビュー",
+        "backTo": "戻る",
+        "noVillas": "ヴィラはありません"
     },
     "sustainability": {
         "seo": {

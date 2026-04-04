@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ImageGalleryModal } from '../components/features/ImageGalleryModal';
 import { PageHero } from '../components/ui/PageHero';
@@ -41,7 +41,7 @@ type Category = keyof typeof GALLERY_IMAGES;
 
 export function GalleryPage() {
     const { t, i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
     const getContent = (content: any) => {
         if (typeof content === 'string') return content;

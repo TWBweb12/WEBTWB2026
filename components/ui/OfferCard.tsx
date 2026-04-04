@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Calendar, Tag, ArrowRight, Share2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Offer } from '../../types';
@@ -10,7 +10,7 @@ export interface OfferCardProps {
 
 export const OfferCard: React.FC<OfferCardProps> = ({ offer, onBookClick }) => {
     const { i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
     const getContent = (content: any) => {
         if (typeof content === 'string') return content;

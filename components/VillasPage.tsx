@@ -17,7 +17,7 @@ interface VillasPageProps {
 interface Cluster {
   id: string;
   name: string;
-  description: { id: string; en: string; zh: string; de: string };
+  description: { id: string; en: string; zh: string; de: string; fr?: string; ja?: string; ko?: string };
   image: string;
   type: 'direct' | 'group';
   villaId?: string; // For direct type
@@ -35,7 +35,7 @@ const parseCapacity = (capacityStr: string): number => {
 
 const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavigateToActivity, onNavigateToGallery }) => {
   const { t, i18n } = useTranslation();
-  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   // Track page view on mount
   useEffect(() => {
@@ -65,7 +65,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Villa termewah dengan pemandangan hutan pinus.',
           en: 'Most luxurious villa with pine forest views.',
           zh: '拥有松林景观的最豪华别墅。',
-          de: 'Luxuriöseste Villa mit Blick auf den Kiefernwald.'
+          de: 'Luxuriöseste Villa mit Blick auf den Kiefernwald.',
+          fr: 'Villa la plus luxueuse avec vue sur la forêt de pins.',
+          ja: '松の森の景色を望む最も豪華なヴィラ。',
+          ko: '소나무 숲 전망의 가장 고급스러운 빌라.'
         },
         image: '/images/fh-hero.webp',
         type: 'direct',
@@ -79,7 +82,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Villa tepi danau dengan perahu privat.',
           en: 'Lakeside villa with private boat.',
           zh: '带私人船只的湖畔别墅。',
-          de: 'Villa am See mit privatem Boot.'
+          de: 'Villa am See mit privatem Boot.',
+          fr: 'Villa au bord du lac avec bateau privé.',
+          ja: 'プライベートボート付きの湖畔ヴィラ。',
+          ko: '전용 보트가 있는 호수 전망 빌라.'
         },
         image: '/images/mlh-hero.webp',
         type: 'direct',
@@ -93,7 +99,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Koleksi villa American Farmhouse (Olinda, Selby, Emerald Villa 01 & 02).',
           en: 'American Farmhouse collection (Olinda, Selby, Emerald Villa 01 & 02).',
           zh: '美式农舍系列（Olinda, Selby, Emerald Villa 01 & 02）。',
-          de: 'Amerikanische Farmhouse-Kollektion (Olinda, Selby, Emerald Villa 01 & 02).'
+          de: 'Amerikanische Farmhouse-Kollektion (Olinda, Selby, Emerald Villa 01 & 02).',
+          fr: 'Collection American Farmhouse (Olinda, Selby, Emerald Villa 01 & 02).',
+          ja: 'アメリカンファームハウスコレクション（Olinda, Selby, Emerald Villa 01 & 02）。',
+          ko: '아메리칸 팜하우스 컬렉션 (Olinda, Selby, Emerald Villa 01 & 02).'
         },
         image: '/images/villas/dandenong/facade-dpv.webp',
         type: 'group',
@@ -106,7 +115,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Villa gaya pedesaan Prancis (Gordes, Roussillon, Lourmarin).',
           en: 'French countryside style villas (Gordes, Roussillon, Lourmarin).',
           zh: '法国乡村风格别墅（Gordes, Roussillon, Lourmarin）。',
-          de: 'Villen im französischen Landhausstil (Gordes, Roussillon, Lourmarin).'
+          de: 'Villen im französischen Landhausstil (Gordes, Roussillon, Lourmarin).',
+          fr: 'Villas de style campagne française (Gordes, Roussillon, Lourmarin).',
+          ja: 'フランスの田舎風ヴィラ（Gordes, Roussillon, Lourmarin）。',
+          ko: '프랑스 시골 스타일 빌라 (Gordes, Roussillon, Lourmarin).'
         },
         image: '/images/optimized/membership/membership-hero.webp',
         type: 'group',
@@ -119,7 +131,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Villa tepi sungai (Blomst, Fiore, Hana).',
           en: 'Riverside villas (Blomst, Fiore, Hana).',
           zh: '河畔别墅（Blomst, Fiore, Hana）。',
-          de: 'Villen am Flussufer (Blomst, Fiore, Hana).'
+          de: 'Villen am Flussufer (Blomst, Fiore, Hana).',
+          fr: 'Villas en bord de rivière (Blomst, Fiore, Hana).',
+          ja: '川沿いのヴィラ（Blomst, Fiore, Hana）。',
+          ko: '강변 빌라 (Blomst, Fiore, Hana).'
         },
         image: '/images/villas/riverside-hana/Rsv-11kompres.WEB.jpg',
         type: 'group',
@@ -134,7 +149,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Kabin romantis tipe Deluxe.',
           en: 'Romantic Deluxe type cabins.',
           zh: '浪漫豪华型小屋。',
-          de: 'Romantische Deluxe-Hütten.'
+          de: 'Romantische Deluxe-Hütten.',
+          fr: 'Cabines romantiques de type Deluxe.',
+          ja: 'ロマンチックなデラックスタイプのキャビン。',
+          ko: '로맨틱 디럭스 타입 캐빈.'
         },
         image: '/images/villas/jacaranda/AWB_4595WEB.jpg',
         type: 'group',
@@ -147,7 +165,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Kabin romantis tipe Executive dengan akses sungai.',
           en: 'Romantic Executive cabins with river access.',
           zh: '带河流通道的浪漫行政小屋。',
-          de: 'Romantische Executive-Hütten mit Flusszugang.'
+          de: 'Romantische Executive-Hütten mit Flusszugang.',
+          fr: 'Cabines romantiques Executive avec accès à la rivière.',
+          ja: '川へのアクセス付きのロマンチックなエグゼクティブキャビン。',
+          ko: '강 접근이 가능한 로맨틱 이그제큐티브 캐빈.'
         },
         image: '/images/villas/agaphantus/agaphantuss.jpgWEB.jpg',
         type: 'group',
@@ -162,7 +183,10 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
           id: 'Kompleks Log Home (Campaka, Puspa, Suren).',
           en: 'Log Home complex (Campaka, Puspa, Suren).',
           zh: '原木家居综合体（Campaka, Puspa, Suren）。',
-          de: 'Blockhaus-Komplex (Campaka, Puspa, Suren).'
+          de: 'Blockhaus-Komplex (Campaka, Puspa, Suren).',
+          fr: 'Complexe Log Home (Campaka, Puspa, Suren).',
+          ja: 'ログホームコンプレックス（Campaka, Puspa, Suren）。',
+          ko: '로그 홈 단지 (Campaka, Puspa, Suren).'
         },
         image: '/images/villas/hero-campaka.webp',
         type: 'group',
@@ -391,46 +415,58 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 
   const categoryContent = {
     all: {
-      title: { id: 'Koleksi Villa Kami', en: 'Our Villas Collection', zh: '我们的别墅系列', de: 'Unsere Villenkollektion' },
-      subtitle: { id: 'Temukan Akomodasi Sempurna Anda', en: 'Discover Your Perfect Accommodation', zh: '发现您的完美住宿', de: 'Entdecken Sie Ihre perfekte Unterkunft' },
+      title: { id: 'Koleksi Villa Kami', en: 'Our Villas Collection', zh: '我们的别墅系列', de: 'Unsere Villenkollektion', fr: 'Notre Collection de Villas', ja: '私たちのヴィラコレクション', ko: '빌라 컬렉션' },
+      subtitle: { id: 'Temukan Akomodasi Sempurna Anda', en: 'Discover Your Perfect Accommodation', zh: '发现您的完美住宿', de: 'Entdecken Sie Ihre perfekte Unterkunft', fr: 'Découvrez Votre Hébergement Parfait', ja: '理想の宿泊施設を見つけましょう', ko: '완벽한 숙소를 찾아보세요' },
       description: {
         id: 'Jelajahi koleksi lengkap villa premium kami yang dirancang untuk memberikan pengalaman menginap tak terlupakan.',
         en: 'Explore our complete collection of premium villas designed to provide an unforgettable stay experience.',
         zh: '探索我们旨在提供难忘住宿体验的高级别墅完整系列。',
-        de: 'Entdecken Sie unsere komplette Kollektion von Premium-Villen, die für ein unvergessliches Aufenthaltserlebnis konzipiert sind.'
+        de: 'Entdecken Sie unsere komplette Kollektion von Premium-Villen, die für ein unvergessliches Aufenthaltserlebnis konzipiert sind.',
+        fr: 'Explorez notre collection complète de villas premium conçues pour offrir une expérience de séjour inoubliable.',
+        ja: '忘れられない滞在体験を提供するために設計されたプレミアムヴィラの完全なコレクションをご覧ください。',
+        ko: '잊을 수 없는 숙박 경험을 제공하기 위해 설계된 프리미엄 빌라의 전체 컬렉션을 탐색하세요.'
       },
       image: '/images/landscape/Landscape_FH.webp',
     },
     luxury: {
-      title: { id: 'Luxury Collection', en: 'Luxury Collection', zh: '豪华系列', de: 'Luxuskollektion' },
-      subtitle: { id: 'Kemewahan & Kenyamanan', en: 'Luxury & Comfort', zh: '豪华与舒适', de: 'Luxus & Komfort' },
+      title: { id: 'Luxury Collection', en: 'Luxury Collection', zh: '豪华系列', de: 'Luxuskollektion', fr: 'Collection Luxe', ja: 'ラグジュアリーコレクション', ko: '럭셔리 컬렉션' },
+      subtitle: { id: 'Kemewahan & Kenyamanan', en: 'Luxury & Comfort', zh: '豪华与舒适', de: 'Luxus & Komfort', fr: 'Luxe & Confort', ja: '贅沢と快適さ', ko: '럭셔리 & 컴포트' },
       description: {
         id: 'Koleksi villa termewah kami dengan fasilitas premium. Termasuk Forest House, Mooi Lake, Emerald, Dandenong, Provincial, dan Riverside.',
         en: 'Our most luxurious villa collection with premium facilities. Includes Forest House, Mooi Lake, Emerald, Dandenong, Provincial, and Riverside.',
         zh: '我们最豪华的别墅系列，配备一流的设施。包括森林别墅、莫伊湖、翡翠、丹德农、普罗旺斯和河畔。',
-        de: 'Unsere luxuriöseste Villenkollektion mit erstklassigen Einrichtungen. Beinhaltet Forest House, Mooi Lake, Emerald, Dandenong, Provincial und Riverside.'
+        de: 'Unsere luxuriöseste Villenkollektion mit erstklassigen Einrichtungen. Beinhaltet Forest House, Mooi Lake, Emerald, Dandenong, Provincial und Riverside.',
+        fr: 'Notre collection de villas la plus luxueuse avec des installations premium. Comprend Forest House, Mooi Lake, Emerald, Dandenong, Provincial et Riverside.',
+        ja: 'プレミアム施設を備えた最も豪華なヴィラコレクション。Forest House、Mooi Lake、Emerald、Dandenong、Provincial、Riversideが含まれます。',
+        ko: '프리미엄 시설을 갖춘 가장 고급스러운 빌라 컬렉션. Forest House, Mooi Lake, Emerald, Dandenong, Provincial, Riverside가 포함됩니다.'
       },
       image: '/images/fh-hero.webp',
     },
     log_home: {
-      title: { id: 'Log Cabin', en: 'Log Cabin', zh: '原木小屋', de: 'Blockhütte' },
-      subtitle: { id: 'Nuansa Kayu Alami', en: 'Natural Wooden Vibes', zh: '天然木质氛围', de: 'Natürliche Holzatmosphäre' },
+      title: { id: 'Log Cabin', en: 'Log Cabin', zh: '原木小屋', de: 'Blockhütte', fr: 'Chalet en Rondin', ja: 'ログキャビン', ko: '로그 캐빈' },
+      subtitle: { id: 'Nuansa Kayu Alami', en: 'Natural Wooden Vibes', zh: '天然木质氛围', de: 'Natürliche Holzatmosphäre', fr: 'Ambiance Bois Naturel', ja: '自然な木の雰囲気', ko: '자연스러운 나무 분위기' },
       description: {
         id: 'Rasakan kehangatan menginap di villa kayu autentik yang menyatu dengan alam. Cocok untuk keluarga besar.',
         en: 'Experience the warmth of staying in an authentic wooden villa that blends with nature. Perfect for large families.',
         zh: '体验入住与大自然融为一体的正宗木制别墅的温暖。非常适合大家庭。',
-        de: 'Erleben Sie die Wärme eines Aufenthalts in einer authentischen Holzvilla, die mit der Natur verschmilzt. Perfekt für große Familien.'
+        de: 'Erleben Sie die Wärme eines Aufenthalts in einer authentischen Holzvilla, die mit der Natur verschmilzt. Perfekt für große Familien.',
+        fr: 'Vivez la chaleur d\'un séjour dans une villa en bois authentique qui se fond dans la nature. Parfait pour les grandes familles.',
+        ja: '自然と調和した本格的な木のヴィラに滞在する暖かさを体験してください。大家族に最適です。',
+        ko: '자연과 어우러지는 정통 나무 빌라에서 숙박하는 따뜻함을 경험하세요. 대가족에게 딱입니다.'
       },
       image: '/images/villas/hero-campaka.webp',
     },
     couple: {
-      title: { id: 'Couples Retreat', en: 'Couples Retreat', zh: '情侣度假', de: 'Pärchenurlaub' },
-      subtitle: { id: 'Romantis & Privat', en: 'Romantic & Private', zh: '浪漫与私密', de: 'Romantisch & Privat' },
+      title: { id: 'Couples Retreat', en: 'Couples Retreat', zh: '情侣度假', de: 'Pärchenurlaub', fr: 'Retraite en Couple', ja: 'カップルリトリート', ko: '커플 리트리트' },
+      subtitle: { id: 'Romantis & Privat', en: 'Romantic & Private', zh: '浪漫与私密', de: 'Romantisch & Privat', fr: 'Romantique & Privé', ja: 'ロマンチックでプライベート', ko: '로맨틱 & 프라이빗' },
       description: {
         id: 'Villa intim yang dirancang khusus untuk pasangan. Pilihan tipe Deluxe dan Executive.',
         en: 'Intimate villas designed specifically for couples. Choice of Deluxe and Executive types.',
         zh: '专为情侣设计的私密别墅。豪华型和行政型可供选择。',
-        de: 'Intime Villen, die speziell für Paare entworfen wurden. Auswahl an Deluxe- und Executive-Typen.'
+        de: 'Intime Villen, die speziell für Paare entworfen wurden. Auswahl an Deluxe- und Executive-Typen.',
+        fr: 'Villas intimes conçues spécifiquement pour les couples. Choix des types Deluxe et Executive.',
+        ja: 'カップルのために特別に設計された親密なヴィラ。デラックスタイプとエグゼクティブタイプからお選びいただけます。',
+        ko: '커플을 위해 특별히 설계된 아늑한 빌라. 디럭스 및 이그제큐티브 타입 선택 가능.'
       },
       image: '/images/villas/kb-couple.webp',
     }
@@ -539,7 +575,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
 // Helper Component for Villa Card (Reused)
 const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
   const { t, i18n } = useTranslation();
-  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+  const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   // Get localized villa name if available, else fallback to plain name
   const getVillaName = () => {
@@ -551,9 +587,9 @@ const VillaCard: React.FC<{ villa: any }> = ({ villa }) => {
 
   // Helper to format capacity display
   const getCapacityDisplay = (capacity: string) => {
-    // If capacity string already contains "Pax" or "orang", just use it but maybe replace "orang" with "Pax" for consistency
+    // If capacity string already contains "Pax" or "orang", just use it but maybe replace "orang" with localized term for consistency
     if (capacity.toLowerCase().includes('pax')) return capacity;
-    return capacity.replace(/orang/i, 'Pax');
+    return capacity.replace(/orang/i, t('villa.pax', 'Pax'));
   };
 
   return (

@@ -1,4 +1,4 @@
-
+﻿
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe2, ChefHat, Clock, MapPin, Phone, ArrowRight, Heart } from 'lucide-react';
@@ -16,7 +16,7 @@ interface RestoPageProps {
 
 const RestoPage: React.FC<RestoPageProps> = ({ lang, onNavigateToActivity, onNavigateToGallery }) => {
   const { t, i18n } = useTranslation();
-  const currentLang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+  const currentLang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
   const getContent = (content: any) => {
     if (typeof content === 'string') return content;
