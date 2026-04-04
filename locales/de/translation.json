@@ -507,6 +507,11 @@
         "facilityTitle": "Einrichtungen & Erlebnisse - Taman Wisata Bougenville",
         "facilityDescription": "Erkunden Sie eine Vielzahl von Outdoor- und Indoor-Aktivitäten für das perfekte Urlaubserlebnis."
     },
+    "villas": {
+        "exploreCluster": "Cluster Erkunden",
+        "cluster": "Cluster",
+        "singleUnit": "Einzelne Einheit"
+    },
     "common": {
         "learnMore": "Mehr erfahren",
         "close": "Schließen",
