@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { BLOG_POSTS } from '../data/blogPosts';
@@ -13,7 +13,7 @@ interface BlogPostProps {
 
 export function BlogPost({ postId, onBack }: BlogPostProps) {
     const { i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
     const post = BLOG_POSTS.find(p => p.id === postId);
 
     const getContent = (content: any) => {

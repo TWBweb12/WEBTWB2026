@@ -514,6 +514,11 @@
         "selectDates": "요금 견적을 보려면 날짜를 선택하세요",
         "whatsappMessageVilla": "안녕하세요, {{villaName}}을 예약하고 싶습니다.%0A%0A체크인: {{checkIn}}%0A체크아웃: {{checkOut}}%0A게스트 수: {{guests}}%0A%0A{{nights}}박 예상 금액: {{price}}%0A%0A가용성을 확인해 주세요."
     },
+    "villas": {
+        "exploreCluster": "클러스터 탐색",
+        "cluster": "클러스터",
+        "singleUnit": "단일 유닛"
+    },
     "common": {
         "learnMore": "자세히 알아보기",
         "close": "닫기",
@@ -529,7 +534,9 @@
         "share": "공유",
         "copied": "링크가 복사되었습니다!",
         "perNight": "/ 박",
-        "reviews": "리뷰"
+        "reviews": "리뷰",
+        "backTo": "돌아가기",
+        "noVillas": "이용 가능한 빌라 없음"
     },
     "sustainability": {
         "seo": {

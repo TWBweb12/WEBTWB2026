@@ -514,6 +514,11 @@
         "selectDates": "Sélectionnez des dates pour voir l'estimation du prix",
         "whatsappMessageVilla": "Bonjour, je souhaiterais réserver {{villaName}}.%0A%0AArrivée : {{checkIn}}%0ADépart : {{checkOut}}%0AHôtes : {{guests}}%0A%0AEstimation {{nights}} nuit(s) : {{price}}%0A%0APouvez-vous confirmer la disponibilité ?"
     },
+    "villas": {
+        "exploreCluster": "Explorer le Cluster",
+        "cluster": "Cluster",
+        "singleUnit": "Unité Individuelle"
+    },
     "common": {
         "learnMore": "En Savoir Plus",
         "close": "Fermer",
@@ -529,7 +534,9 @@
         "share": "Partager",
         "copied": "Lien copié !",
         "perNight": "/ nuit",
-        "reviews": "avis"
+        "reviews": "avis",
+        "backTo": "Retour à",
+        "noVillas": "Aucune villa disponible"
     },
     "sustainability": {
         "seo": {

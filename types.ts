@@ -1,13 +1,16 @@
 
 import React from 'react';
 
-export type Language = 'id' | 'en' | 'zh' | 'de';
+export type Language = 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
 export interface LocalizedString {
   id: string;
   en: string;
   zh: string;
   de: string;
+  fr?: string;
+  ja?: string;
+  ko?: string;
 }
 
 export interface Translation {
@@ -37,7 +40,7 @@ export interface Villa {
   // Detailed room configuration
   bedConfiguration?: {
     room: number;
-    label?: string; // e.g., "Master Bedroom" – overrides the generic "Room N" display
+    label?: string | { id?: string; en?: string; zh?: string; de?: string; fr?: string; ja?: string; ko?: string }; // e.g., "Master Bedroom" – overrides the generic "Room N" display
     beds: string; // e.g., "1 king bed (180x200 cm)"
   }[];
   toilets?: number;

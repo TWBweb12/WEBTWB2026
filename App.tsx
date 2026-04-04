@@ -205,7 +205,7 @@ function App() {
           {/* Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <CurrencySwitcherWithSync isScrolled={isScrolled} isHomePage={view === 'home'} />
-            <LanguageSwitcherWithSync
+            <LanguageSwitcher
               isScrolled={isScrolled} isHomePage={view === 'home'}
             />
             <button
@@ -347,18 +347,7 @@ function CurrencySwitcherWithSync(props: { isScrolled: boolean; isHomePage: bool
   return <CurrencySwitcher isScrolled={props.isScrolled} isHomePage={props.isHomePage} />;
 }
 
-function LanguageSwitcherWithSync(props: { isScrolled: boolean; isHomePage: boolean }) {
-  const { setCurrencyFromLanguage } = useCurrency();
-  // We wrap LanguageSwitcher so that any language change from it triggers currency sync.
-  // Since LanguageSwitcher calls i18n.changeLanguage internally, we listen via i18n.
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    const handler = (lang: string) => setCurrencyFromLanguage(lang);
-    i18n.on('languageChanged', handler);
-    return () => i18n.off('languageChanged', handler);
-  }, [i18n, setCurrencyFromLanguage]);
-  return <LanguageSwitcher isScrolled={props.isScrolled} isHomePage={props.isHomePage} />;
-}
+
 
 function MobileLanguageButton({
   langCode,
@@ -372,11 +361,9 @@ function MobileLanguageButton({
   isActive: boolean;
   onSelect: () => void;
 }) {
-  const { setCurrencyFromLanguage } = useCurrency();
   return (
     <button
       onClick={() => {
-        setCurrencyFromLanguage(langCode);
         onSelect();
       }}
       className={`flex items-center justify-between px-4 py-3 rounded-md transition-all border ${
@@ -402,7 +389,8 @@ function MobileCurrencyGrid({ onSelect }: { onSelect: () => void }) {
     { code: 'USD', symbol: '$'  },
     { code: 'EUR', symbol: '€'  },
     { code: 'SGD', symbol: 'S$' },
-    { code: 'CNY', symbol: '¥'  },
+    { code: 'Yuan', symbol: '¥'  },
+    { code: 'Yen', symbol: '¥'  },
     { code: 'WON', symbol: '₩'  },
   ];
   return (

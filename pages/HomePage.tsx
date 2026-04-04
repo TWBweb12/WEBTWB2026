@@ -57,6 +57,13 @@ export function HomePage() {
         }));
     };
 
+    // Helper to format capacity display
+    const getCapacityDisplay = (capacity: string) => {
+        if (!capacity) return capacity;
+        if (capacity.toLowerCase().includes('pax')) return capacity;
+        return capacity.replace(/orang/i, t('villa.pax', 'Pax'));
+    };
+
     return (
         <div className="min-h-screen bg-white">
             {/* SEO Meta Tags */}
@@ -122,7 +129,7 @@ export function HomePage() {
             </VideoHero>
 
             {/* Sticky Booking Bar - Secondary Persistence */}
-            <StickyBookingBar lang={i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de'} />
+            <StickyBookingBar lang={i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko'} />
 
             {/* Welcome Section */}
             <section className="py-20 px-4 bg-white">
@@ -198,18 +205,18 @@ export function HomePage() {
 
                                         <div className="p-5 md:p-8">
                                             <h3 className="font-serif text-2xl text-forest-dark mb-2">
-                                                {villa.localizedName ? (villa.localizedName[i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de'] || villa.name) : villa.name}
+                                                {villa.localizedName ? (villa.localizedName[i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko'] || villa.name) : villa.name}
                                             </h3>
                                             <p className="text-gray-500 text-sm mb-6 line-clamp-2 font-light">
                                                 {typeof villa.description === 'string'
                                                     ? villa.description
-                                                    : (villa.description[i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de'] || villa.description.id)}
+                                                    : (villa.description[i18n.language.split('-')[0] as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko'] || villa.description.id)}
                                             </p>
 
                                             <div className="flex flex-wrap items-center gap-4 md:gap-6 mb-6 md:mb-8 text-sm text-gray-500">
                                                 <div className="flex items-center gap-2">
                                                     <Users size={16} className="text-gold" />
-                                                    <span>{villa.capacity}</span>
+                                                    <span>{getCapacityDisplay(villa.capacity)}</span>
                                                 </div>
                                                 {villa.area && (
                                                     <div className="flex items-center gap-2">

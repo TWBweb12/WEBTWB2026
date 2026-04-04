@@ -51,7 +51,7 @@ const getFacilityIcon = (facility: string) => {
 
 const FacilityItem: React.FC<{ text: string | any }> = ({ text }) => {
     const { i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
     // Handle LocalizedString objects
     const displayText = typeof text === 'string' ? text : (text?.[lang] || text?.id || text?.en || '');
@@ -73,12 +73,30 @@ const FacilityItem: React.FC<{ text: string | any }> = ({ text }) => {
 
 export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
     const { t, i18n } = useTranslation();
-    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de';
+    const lang = (i18n.language?.split('-')[0] || 'id') as 'id' | 'en' | 'zh' | 'de' | 'fr' | 'ja' | 'ko';
 
     const getContent = (content: any) => {
         if (!content) return '';
         if (typeof content === 'string') return content;
         return content[lang] || content.en || content.id || '';
+    };
+
+    // Translate bed description terms based on selected language
+    const translateBeds = (bedsStr: string): string => {
+        if (!bedsStr) return '';
+        const bedTerms: Record<string, Record<string, string>> = {
+            'king bed':    { id: 'king bed', en: 'king bed', zh: '\u5927\u5e8a', de: 'Kingsize-Bett', fr: 'lit king-size', ja: '\u30ad\u30f3\u30b0\u30d9\u30c3\u30c9', ko: '\ud0b9 \uce68\ub300' },
+            'queen bed':   { id: 'queen bed', en: 'queen bed', zh: '\u5927\u5e8a', de: 'Queensize-Bett', fr: 'lit queen-size', ja: '\u30af\u30a4\u30fc\u30f3\u30d9\u30c3\u30c9', ko: '\uc650 \uce68\ub300' },
+            'single bed':  { id: 'tempat tidur single', en: 'single bed', zh: '\u5355\u4eba\u5e8a', de: 'Einzelbett', fr: 'lit simple', ja: '\u30b7\u30f3\u30b0\u30eb\u30d9\u30c3\u30c9', ko: '\uc2f1\uae00 \uce68\ub300' },
+            'trundle bed': { id: 'tempat tidur tambahan', en: 'trundle bed', zh: '\u9644\u52a0\u5e8a', de: 'Ausziehbett', fr: 'lit gigogne', ja: '\u30c8\u30e9\u30f3\u30c9\u30eb\u30d9\u30c3\u30c9', ko: '\ud2b8\ub7f0\ub4e4 \uce68\ub300' },
+            'orang':       { id: 'orang', en: 'person', zh: '\u4eba', de: 'Personen', fr: 'personnes', ja: '\u540d', ko: '\uba85' },
+        };
+        let result = bedsStr;
+        Object.entries(bedTerms).forEach(([key, translations]) => {
+            const translated = translations[lang] || translations['en'];
+            result = result.replace(new RegExp(key, 'gi'), translated);
+        });
+        return result;
     };
 
     const [isWishlisted, setIsWishlisted] = useState(false);
@@ -272,7 +290,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                 <div className="w-px h-4 bg-gray-300 hidden md:block"></div>
                                 <div className="flex items-center gap-2">
                                     <Grid3x3 size={18} className="text-forest" />
-                                    <span className="text-gray-700">{currentVilla.area} m²</span>
+                                    <span className="text-gray-700">{currentVilla.area} mÂ²</span>
                                 </div>
                             </>
                         )}
@@ -397,7 +415,7 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                     </div>
                                     <div>
                                         <p className="text-xs uppercase tracking-widest text-gray-500 mb-0.5">{t('villa.area', 'Villa Area')}</p>
-                                        <p className="font-serif text-lg text-forest-dark">{currentVilla.area} m²</p>
+                                        <p className="font-serif text-lg text-forest-dark">{currentVilla.area} mÂ²</p>
                                     </div>
                                 </div>
                             )}
@@ -454,9 +472,11 @@ export function VillaDetailPage({ villaId }: VillaDetailPageProps) {
                                     {currentVilla.bedConfiguration.map((config, idx) => (
                                         <div key={idx} className="border border-gray-100 p-4 rounded-lg">
                                             <p className="font-medium text-forest-dark mb-1">
-                                                {config.label || `${t('villa.room', 'Room')} ${config.room}`}
+                                                {config.label
+                                                    ? (typeof config.label === 'string' ? config.label : (config.label[lang] || config.label.en || config.label.id || config.label))
+                                                    : `${t('villa.room', 'Room')} ${config.room}`}
                                             </p>
-                                            <p className="text-sm text-gray-600 font-light">{config.beds}</p>
+                                            <p className="text-sm text-gray-600 font-light">{translateBeds(config.beds)}</p>
                                         </div>
                                     ))}
                                 </div>
