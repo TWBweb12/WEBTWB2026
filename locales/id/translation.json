@@ -502,6 +502,11 @@
         "selectDates": "Pilih tanggal untuk melihat estimasi harga",
         "whatsappMessageVilla": "Halo, saya ingin memesan {{villaName}}.%0A%0ACheck-in: {{checkIn}}%0ACheck-out: {{checkOut}}%0ATamu: {{guests}}%0A%0AEstimasi {{nights}} malam: {{price}}%0A%0AMohon konfirmasi ketersediaan."
     },
+    "villas": {
+        "exploreCluster": "Jelajahi Cluster",
+        "cluster": "Cluster",
+        "singleUnit": "Unit Tunggal"
+    },
     "common": {
         "learnMore": "Pelajari Lebih Lanjut",
         "close": "Tutup",

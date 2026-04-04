@@ -511,6 +511,11 @@
         "selectDates": "Select dates to see price estimate",
         "whatsappMessageVilla": "Hello, I would like to book {{villaName}}.%0A%0ACheck-in: {{checkIn}}%0ACheck-out: {{checkOut}}%0AGuests: {{guests}}%0A%0AEstimated {{nights}} night(s): {{price}}%0A%0APlease confirm availability."
     },
+    "villas": {
+        "exploreCluster": "Explore Cluster",
+        "cluster": "Cluster",
+        "singleUnit": "Single Unit"
+    },
     "common": {
         "learnMore": "Learn More",
         "close": "Close",
