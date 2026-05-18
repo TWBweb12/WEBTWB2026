@@ -5,26 +5,10 @@
  * Supports: GA4, GTM (dataLayer), Meta Pixel, TikTok Pixel,
  *           Microsoft Clarity
  * ============================================================
- * Setup .env.local:
- *   VITE_GA4_ID=G-XXXXXXXXXX
- *   VITE_GTM_ID=GTM-XXXXXXX
- *   VITE_FB_PIXEL_ID=XXXXXXXXXXXXXXXX
- *   VITE_TIKTOK_PIXEL_ID=XXXXXXXXXXXXXXXX
- *   VITE_CLARITY_ID=XXXXXXXXXX
+ * NOTE: Clarity & GTM are loaded as native script tags in index.html.
+ * This module uses window.clarity() and window.dataLayer directly.
  * ============================================================
  */
-
-import Clarity from '@microsoft/clarity';
-
-// ── Initialize Clarity ────────────────────────────────────────
-const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_ID || "vwz2siod64";
-if (typeof window !== 'undefined') {
-  try {
-    Clarity.init(CLARITY_PROJECT_ID);
-  } catch (e) {
-    console.warn("Clarity init warning:", e);
-  }
-}
 
 // ── Type Definitions ──────────────────────────────────────────
 
@@ -70,19 +54,20 @@ const ttk = (event: string, data?: Record<string, any>) => {
   if (isTTKLoaded()) (window as any).ttq.track(event, data);
 };
 
-// ── Internal Clarity Helper ───────────────────────────────────
-
+// ── Internal Clarity Helper (via native window.clarity from index.html) ──
 const clarity = (method: string, ...args: any[]) => {
   try {
+    const c = (window as any).clarity;
+    if (typeof c !== 'function') return;
     if (method === 'set' && args.length >= 2) {
-      Clarity.setTag(args[0], args[1]);
+      c('set', args[0], args[1]);
     } else if (method === 'identify' && args.length >= 1) {
-      Clarity.identify(args[0], args[1]);
+      c('identify', args[0], args[1]);
     } else if (method === 'event' && args.length >= 1) {
-      Clarity.event(args[0]);
+      c('event', args[0]);
     }
   } catch (e) {
-    console.warn("Clarity method failed", method, e);
+    // Silently ignore — Clarity not yet loaded
   }
 };
 

@@ -83,8 +83,8 @@ export default defineConfig(({ mode }) => {
       // Enable source maps for production debugging (optional)
       sourcemap: false,
 
-      // CSS code splitting
-      cssCodeSplit: true,
+      // CSS code split: false = satu file CSS statis (Fix 2 Pa Rizki)
+      cssCodeSplit: false,
 
       // Asset inlining threshold (4kb)
       assetsInlineLimit: 4096,
