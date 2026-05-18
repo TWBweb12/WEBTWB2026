@@ -51,26 +51,18 @@ export default defineConfig(({ mode }) => {
 
       // Chunk splitting strategy for optimal caching
       rollupOptions: {
+        // Exclude server-side packages — tidak boleh masuk browser bundle
+        external: ['express', 'path', 'fs', 'url', 'http', 'https', 'stream', 'crypto', 'buffer'],
+
         output: {
           manualChunks: {
-            // React core - rarely changes
             'react-vendor': ['react', 'react-dom'],
-
-            // UI libraries - medium change frequency
             'ui-vendor': ['framer-motion', 'lucide-react'],
-
-            // i18n - rarely changes
             'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-
-            // Heavy components - lazy loaded
             'carousel': ['embla-carousel-react'],
             'datepicker': ['react-datepicker', 'date-fns'],
-
-            // Utilities
             'utils': ['dompurify'],
           },
-
-          // Use content hash for better caching
           chunkFileNames: 'assets/[name]-[hash].js',
           entryFileNames: 'assets/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash].[ext]',
@@ -102,8 +94,8 @@ export default defineConfig(({ mode }) => {
         'i18next',
         'react-i18next',
       ],
-      // Exclude large dependencies that are lazy loaded
-      exclude: ['react-datepicker'],
+      // Exclude server-side packages (tidak perlu di browser)
+      exclude: ['react-datepicker', 'express'],
     },
 
     // ============================================
