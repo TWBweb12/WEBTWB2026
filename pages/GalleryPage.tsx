@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ImageGalleryModal } from '../components/features/ImageGalleryModal';
 import { PageHero } from '../components/ui/PageHero';
@@ -11,7 +11,7 @@ const GALLERY_IMAGES = {
     villas: [
         { url: '/images/fh-hero.webp', title: { en: 'Forest House', id: 'Forest House', zh: '森林别墅', de: 'Forest House' } },
         { url: '/images/mlh-hero.webp', title: { en: 'Mooi Lake House', id: 'Mooi Lake House', zh: 'Mooi Lake House', de: 'Mooi Lake House' } },
-        { url: '/images/emerald-atas-hero.webp', title: { en: 'Emerald Villas', id: 'Emerald Villas', zh: '翡翠别墅', de: 'Emerald Villas' } },
+        { url: '/images/emerald-atas-hero.webp', title: { en: 'Emerald Villas Puntang', id: 'Emerald Villas Puntang', zh: '翡翠别墅彭当', de: 'Emerald Villas Puntang' } },
         { url: '/images/villas/gordes/DSC07573(1).WEB.jpg', title: { en: 'Villa Gordes', id: 'Villa Gordes', zh: '戈尔德别墅', de: 'Villa Gordes' } },
         { url: '/images/villas/roussillon/DSC07418.WEB.jpg', title: { en: 'Villa Roussillon', id: 'Villa Roussillon', zh: '鲁西永别墅', de: 'Villa Roussillon' } },
         { url: '/images/villas/lourmarin/DSC09984.WEB.jpg', title: { en: 'Villa Lourmarin', id: 'Villa Lourmarin', zh: '卢尔马兰别墅', de: 'Villa Lourmarin' } },

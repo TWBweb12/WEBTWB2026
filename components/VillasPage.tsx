@@ -110,7 +110,7 @@ const VillasPage: React.FC<VillasPageProps> = ({ lang: propLang, onBook, onNavig
       },
       {
         id: 'emerald-villas',
-        name: 'Emerald Villas',
+        name: 'Emerald Villas Puntang',
         description: {
           id: 'Dua unit villa American Farmhouse eksklusif (Emerald Villa 01 & 02). Cocok untuk keluarga atau gathering.',
           en: 'Two exclusive American Farmhouse villa units (Emerald Villa 01 & 02). Ideal for families or gatherings.',
