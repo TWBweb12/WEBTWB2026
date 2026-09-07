@@ -211,7 +211,7 @@ function App() {
               style={{ display: 'block', cursor: 'pointer' }}
             >
               <img
-                src="/Image/pop up 1.webp"
+                src="/pop-up-1.webp"
                 alt="September Escape – Taman Wisata Bougenville"
                 style={{
                   width: '100%',
