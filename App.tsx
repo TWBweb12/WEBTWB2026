@@ -308,7 +308,6 @@ function App() {
           `}</style>
         </div>
       )}
-
       {/* --- HEADER --- */}
       <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || view !== 'home' ? 'bg-white shadow-soft py-4' : 'bg-transparent py-6'}`}>
         <div className="container mx-auto px-4 flex items-center justify-between">
